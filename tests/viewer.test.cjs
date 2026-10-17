@@ -22,7 +22,9 @@ function harness({gate, texts = ['RTU', 'RTU']} = {}) {
     return {getTextContent:async () => ({items:[{str:texts[number-1]}]})};
   }}, text:false, total:texts.length, page:1, findPages:[], findAt:-1, searchSequence:0};
   const context = vm.createContext({viewer:state, $:selector=>nodes[selector],
-    normalize:value=>String(value).toLowerCase(), changePage:page=>{state.page=page;}});
+    pageStrings:async (s,p)=>(await (await s.pdf.getPage(p)).getTextContent()).items.map(i=>i.str),
+    matchParts:(strings,term)=>strings.join('').toLowerCase().includes(term.toLowerCase())?[[]]:[],
+    renderPage:async()=>{}, normalize:value=>String(value).toLowerCase(), changePage:page=>{state.page=page;}});
   vm.runInContext(findSource, context);
   return {context, nodes, state};
 }
@@ -213,4 +215,35 @@ test('pagehide locks restored pages, clears decrypted data and body DOM, and doe
   assert.equal(focusCount,0);
   context.lockPortal();
   assert.equal(focusCount,1,'manual lock still focuses the login field');
+});
+
+
+test('HWP page search preserves visual mode and navigates matching pages', async () => {
+  const {context,state,nodes}=harness();
+  state.pdf=null;state.doc={viewer:{kind:'svg-pages'}};state.total=3;
+  context.pageStrings=async(_,p)=>p===2?['R','T','U']:['다른 내용'];
+  await context.findInDocument(false);
+  assert.equal(state.text,false);
+  assert.equal(state.page,2);
+  assert.deepEqual(Array.from(state.findPages),[2]);
+  assert.match(nodes['#findStatus'].textContent,/1개 페이지/);
+  nodes['#viewerSearch'].value='없음';await context.findInDocument(false);
+  assert.equal(state.text,false);
+  assert.match(nodes['#findStatus'].textContent,/일치하는 페이지가 없습니다/);
+});
+
+test('clearing a visual search redraws the page to remove old highlights', async () => {
+  const {context,state,nodes}=harness();let renders=0;
+  context.renderPage=async()=>{renders++;};
+  state.findTerm='RTU';state.findPages=[1];nodes['#viewerSearch'].value='';
+  await context.findInDocument(false);
+  assert.equal(renders,1);assert.equal(state.text,false);
+  assert.equal(state.findTerm,'');assert.deepEqual(Array.from(state.findPages),[]);
+});
+
+
+test('search during PDF loading waits without changing to text mode', async () => {
+  const {context,state,nodes}=harness();state.pdf=null;state.doc={viewer:{kind:'pdf'}};
+  await context.findInDocument(false);
+  assert.equal(state.text,false);assert.match(nodes['#findStatus'].textContent,/불러온 뒤/);
 });

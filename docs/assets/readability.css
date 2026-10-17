@@ -259,3 +259,21 @@ body:has(dialog[open]){overflow:hidden}
   .topbar { padding-inline: 10px; }
   .brand-bolt { display: none; }
 }
+
+/* Search overlays never alter the original canvas/image or its text layout. */
+.pdf-page, .image-page { position: relative; isolation: isolate; }
+.image-page { width: fit-content; max-width: none; margin: 0 auto 20px; line-height: 0; }
+.image-page .visual-page { margin: 0; }
+.search-highlights { position: absolute; inset: 0; pointer-events: none; overflow: hidden; mix-blend-mode: multiply; }
+.search-highlight { position: absolute; display: block; background: #ffdf00; opacity: .55; border-radius: 1px; }
+.plain-document mark { background: #ffe45c; color: #111; }
+.svg-measure-frame { position: fixed; left: -100000px; top: 0; visibility: hidden; pointer-events: none; border: 0; }
+/* PDF.js TextLayer geometry, aligned with the bundled 6.4 renderer. */
+.search-text-layer { position: absolute; inset: 0; overflow: clip; text-align: initial; line-height: 1; letter-spacing: normal; word-spacing: normal; text-size-adjust: none; transform-origin: 0 0; pointer-events: none; --min-font-size: 1; --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size)); --min-font-size-inv: calc(1 / var(--min-font-size)); }
+.search-text-layer :is(span,br) { color: transparent; position: absolute; white-space: pre; transform-origin: 0 0; }
+.search-text-layer > :not(.markedContent), .search-text-layer .markedContent span:not(.markedContent) { --font-height: 0; font-size: calc(var(--text-scale-factor) * var(--font-height)); --scale-x: 1; --rotate: 0deg; transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv)); }
+.search-text-layer .markedContent { display: contents; }
+.search-text-layer { --scale-round-x: 1px; --scale-round-y: 1px; }
+.search-text-layer[data-main-rotation="90"] { transform: rotate(90deg) translateY(-100%); }
+.search-text-layer[data-main-rotation="180"] { transform: rotate(180deg) translate(-100%, -100%); }
+.search-text-layer[data-main-rotation="270"] { transform: rotate(270deg) translateX(-100%); }

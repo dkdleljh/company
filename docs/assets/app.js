@@ -1,4 +1,5 @@
 import { Vault } from './vault.js';
+import { matchParts, parseSvg, svgStrings, pdfBoxes, svgBoxes } from './viewer-search.js';
 const $=s=>document.querySelector(s);
 const vault=new Vault();
 const PAGE_SIZE=40;
@@ -127,7 +128,7 @@ $('#documentDialog').addEventListener('click',backdrop);
 $('#documentDialog').addEventListener('close',disposeViewer);
 async function openDocument(doc){
   disposeViewer();const seq=viewerSequence;
-  viewer={doc,controller:new AbortController(),page:1,total:1,pdf:null,raw:null,text:false,findPages:[],findAt:-1,searchSequence:0};
+  viewer={doc,controller:new AbortController(),page:1,total:1,pdf:null,raw:null,text:false,findPages:[],findAt:-1,searchSequence:0,pageTexts:new Map(),svgRaw:new Map()};
   $('#viewerTitle').textContent=doc.title;$('#viewerPath').textContent=doc.relative_path;$('#viewerFormat').textContent=type(doc);
   $('#viewerNotionLink').href=safeLink(doc.notion_url);$('#viewerSearch').value='';$('#findStatus').textContent='';$('#zoomSelect').value='fit';
   $('#viewerTextMode').setAttribute('aria-pressed','false');$('#viewerTextMode').textContent='텍스트 보기';$('#viewerTextMode').hidden=!doc.search_text;
@@ -148,6 +149,7 @@ async function openDocument(doc){
     $('#viewerNote').textContent=v.fidelity==='original-bytes'?'원본 파일을 변경하지 않고 표시합니다.':v.kind==='unsupported'?v.reason:(v.kind==='pdf'||v.kind==='svg-pages')?'표·그림을 포함한 변환 미리보기입니다. 원본 프로그램과 일부 글꼴·배치가 다를 수 있습니다.':v.reason||'';
     if(v.kind==='pdf'&&/\.(xlsx?|xlsm)$/i.test(doc.relative_path))$('#viewerNote').textContent+=' 긴 시트는 나눠 표시하며, 경계의 일부 행이 겹칠 수 있습니다.';
     await renderPage();
+    if(seq===viewerSequence&&$('#viewerSearch').value.trim())findInDocument(false);
   } catch(error){if(seq===viewerSequence&&error.name!=='AbortError')showError(error.message);}
 }
 function showError(text){message(text);$('#retryLoad').hidden=false;}
@@ -163,6 +165,8 @@ function highlighted(text,term){
 }
 async function renderPage(){
   if(!viewer)return;const state=viewer,seq=++renderSequence;renderTask?.cancel();renderTask=null;
+  const term=$('#viewerSearch').value.trim();
+  const current=()=>viewer===state&&seq===renderSequence&&term===$('#viewerSearch').value.trim();
   const content=$('#viewerContent');content.replaceChildren();message('페이지를 표시하는 중입니다…');updateNavigation();
   try{
     const v=state.doc.viewer;
@@ -176,18 +180,36 @@ async function renderPage(){
       const wrapper=document.createElement('div');wrapper.className='pdf-page';const canvas=document.createElement('canvas');canvas.id='viewerCanvas';canvas.setAttribute('aria-label',`${state.page}쪽 문서 페이지. 텍스트 보기로 내용을 읽을 수 있습니다.`);
       canvas.width=Math.ceil(vp.width*ratio);canvas.height=Math.ceil(vp.height*ratio);canvas.style.width=`${vp.width}px`;canvas.style.height=`${vp.height}px`;wrapper.append(canvas);content.append(wrapper);
       renderTask=page.render({canvasContext:canvas.getContext('2d'),viewport:vp,transform:ratio===1?null:[ratio,0,0,ratio,0,0]});await renderTask.promise;
+      if(term&&current())await pdfBoxes(pdfLibrary,page,vp,wrapper,term,current);
     }else if(v.kind==='svg-pages'||v.kind==='image'){
-      const asset=v.assets[v.kind==='svg-pages'?state.page-1:0];const raw=await vault.read(asset,state.controller.signal);if(seq!==renderSequence)return;
+      const asset=v.assets[v.kind==='svg-pages'?state.page-1:0];const raw=v.kind==='svg-pages'?await readSvgPage(state,state.page):await vault.read(asset,state.controller.signal);if(seq!==renderSequence)return;
       objectURLs.forEach(URL.revokeObjectURL);objectURLs=[];
       const url=URL.createObjectURL(new Blob([raw],{type:asset.mime}));objectURLs.push(url);
       const img=document.createElement('img');img.className='visual-page';img.alt=`${state.doc.title} ${state.page}쪽`;img.src=url;
       if($('#zoomSelect').value!=='fit'){img.style.width=`${794*Number($('#zoomSelect').value)}px`;img.style.maxWidth='none';}
-      content.append(img);await img.decode();if(seq!==renderSequence)return;
+      const wrapper=document.createElement('div');wrapper.className='image-page';wrapper.append(img);content.append(wrapper);
+      await img.decode();if(seq!==renderSequence)return;
+      if(term&&v.kind==='svg-pages'&&current())await svgBoxes(raw,wrapper,term,state.controller.signal,current);
     }else{
       const box=document.createElement('div');box.className='viewer-no-result';box.textContent=v.reason||'이 파일 형식은 브라우저에서 페이지로 표시할 수 없습니다. 원본 파일을 저장하거나 Notion에서 열어 주세요.';content.append(box);
     }
     if(seq===renderSequence){$('#viewerStatus').hidden=true;content.scrollTop=0;}
   }catch(error){if(seq===renderSequence&&error.name!=='RenderingCancelledException'&&error.name!=='AbortError')showError(error.message);}
+}
+async function readSvgPage(state,p){
+  if(state.svgRaw.has(p))return state.svgRaw.get(p);
+  const raw=await vault.read(state.doc.viewer.assets[p-1],state.controller.signal);
+  if(viewer!==state)throw new DOMException('Aborted','AbortError');
+  state.svgRaw.set(p,raw);if(state.svgRaw.size>3)state.svgRaw.delete(state.svgRaw.keys().next().value);
+  return raw;
+}
+async function pageStrings(state,p){
+  if(!state.pageTexts.has(p)){
+    const pending=(async()=>state.pdf?(await (await state.pdf.getPage(p)).getTextContent()).items.filter(i=>typeof i.str==='string').map(i=>i.str):svgStrings(parseSvg(await readSvgPage(state,p))))();
+    state.pageTexts.set(p,pending);
+    pending.catch(()=>state.pageTexts.delete(p));
+  }
+  return state.pageTexts.get(p);
 }
 function changePage(n){if(!viewer)return;viewer.page=Math.min(viewer.total,Math.max(1,Math.trunc(Number(n)||1)));renderPage();}
 $('#pagePrev').addEventListener('click',()=>changePage(viewer.page-1));$('#pageNext').addEventListener('click',()=>changePage(viewer.page+1));
@@ -195,32 +217,33 @@ $('#pageNumber').addEventListener('change',e=>changePage(e.target.value));$('#zo
 $('#pageNumber').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();changePage(e.target.value);}});
 $('#viewerTextMode').addEventListener('click',()=>{if(!viewer)return;viewer.text=!viewer.text;$('#viewerTextMode').setAttribute('aria-pressed',viewer.text);$('#viewerTextMode').textContent=viewer.text?'페이지 보기':'텍스트 보기';renderPage();});
 let findTimer;
-$('#viewerSearch').addEventListener('input',()=>{clearTimeout(findTimer);findTimer=setTimeout(()=>findInDocument(false),220);});
+$('#viewerSearch').addEventListener('input',()=>{clearTimeout(findTimer);if(viewer)viewer.searchSequence++;$('#viewerContent').querySelectorAll('.search-highlights').forEach(el=>el.remove());findTimer=setTimeout(()=>findInDocument(false),220);});
 $('#viewerSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){clearTimeout(findTimer);findInDocument(true);}});
 $('#findNext').addEventListener('click',()=>findInDocument(true));
 async function findInDocument(next){
   if(!viewer)return;const state=viewer;let seq;
   try {
   const term=$('#viewerSearch').value.trim();seq=++state.searchSequence;
-  if(!term){$('#findStatus').textContent='';state.findTerm='';if(state.text)renderPage();return;}
-  if(state.pdf&&!state.text){
+  if(!term){$('#findStatus').textContent='';state.findTerm='';state.findPages=[];await renderPage();return;}
+  if(!state.text&&!state.pdf&&state.doc?.viewer.kind==='pdf'){$('#findStatus').textContent='문서를 불러온 뒤 검색합니다…';return;}
+  if(!state.text&&(state.pdf||state.doc.viewer.kind==='svg-pages')){
     if(state.findTerm!==term){
       const foundPages=[];state.findAt=-1;$('#findStatus').textContent='전체 페이지를 찾는 중…';
       for(let p=1;p<=state.total;p++){
-        const page=await state.pdf.getPage(p);const text=await page.getTextContent();
+        const strings=await pageStrings(state,p);
         if(viewer!==state||seq!==state.searchSequence)return;
-        const compact=s=>normalize(s).replace(/\s/g,'');
-        if(compact(text.items.map(i=>i.str||'').join(' ')).includes(compact(term)))foundPages.push(p);
+        if(matchParts(strings,term).length)foundPages.push(p);
+        $('#findStatus').textContent=`전체 페이지를 찾는 중… ${p} / ${state.total}`;
       }
       state.findPages=foundPages;state.findTerm=term;
     }
     if(viewer!==state||seq!==state.searchSequence)return;
-    if(!state.findPages.length){$('#findStatus').textContent='일치하는 페이지가 없습니다.';return;}
+    if(!state.findPages.length){$('#findStatus').textContent='일치하는 페이지가 없습니다.';await renderPage();return;}
     state.findAt=next?(state.findAt+1)%state.findPages.length:0;
     $('#findStatus').textContent=`${state.findAt+1} / ${state.findPages.length}개 페이지`;changePage(state.findPages[state.findAt]);
   }else{
-    if(!state.text){state.text=true;$('#viewerTextMode').setAttribute('aria-pressed','true');$('#viewerTextMode').textContent='페이지 보기';}
-    await renderPage();if(viewer!==state)return;
+    if(!state.text&&state.doc.viewer.kind!=='text'){$('#findStatus').textContent='이 형식은 페이지 내 검색을 지원하지 않습니다.';return;}
+    await renderPage();if(viewer!==state||seq!==state.searchSequence)return;
     const marks=[...$('#viewerContent').querySelectorAll('mark')];
     state.findAt=next?(state.findAt+1)%Math.max(1,marks.length):0;
     $('#findStatus').textContent=marks.length?`${state.findAt+1} / ${marks.length}개`:'일치하는 내용이 없습니다.';
