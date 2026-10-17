@@ -1,135 +1,127 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#07100d" />
-  <meta name="description" content="한국전력·전력 ICT 지식백과 개인 포털" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100d">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="전력 ICT 문서 검색과 원문 열람">
   <title>전력 ICT 지식백과</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css" />
-  <link rel="stylesheet" href="./assets/viewer.css" />
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./assets/styles.css?v=2">
+  <link rel="stylesheet" href="./assets/viewer.css?v=2">
+  <link rel="stylesheet" href="./assets/readability.css?v=2">
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-
   <section id="loginView" class="login-shell">
-    <div class="login-mark" aria-hidden="true">
-      <span class="bolt">ϟ</span>
-      <span class="ring ring-a"></span><span class="ring ring-b"></span>
-    </div>
     <main class="login-card">
-      <p class="eyebrow">PRIVATE KNOWLEDGE GRID · 01</p>
+      <p class="eyebrow">POWER ICT LIBRARY</p>
       <h1>전력 ICT<br><em>지식백과</em></h1>
-      <p class="login-copy">운영기준, 설계·시공, RTU·SCADA·EMS, OPGW와 현장 지식을 한곳에서 탐색합니다.</p>
-      <form id="loginForm" autocomplete="off">
+      <p class="login-copy">운영기준과 현장 문서를 검색하고, 표와 그림을 포함한 문서 페이지를 읽으세요.</p>
+      <form id="loginForm">
         <label for="password">접속 코드</label>
         <div class="password-row">
-          <input id="password" type="password" inputmode="text" placeholder="접속 코드를 입력하세요" required autofocus />
-          <button type="submit" aria-label="로그인">접속 <span>→</span></button>
+          <input id="password" type="password" autocomplete="current-password" placeholder="접속 코드를 입력하세요" required>
+          <button id="loginButton" type="submit">접속 <span aria-hidden="true">→</span></button>
         </div>
-        <p id="loginError" class="login-error" role="alert"></p>
+        <p id="loginError" class="login-error" role="status" aria-live="polite"></p>
       </form>
-      <div class="login-meta"><span>20 encyclopedia entries</span><span>416 source documents</span></div>
+      <p class="login-copy">문서는 접속 코드로 열립니다. 공용 기기에서는 사용 후 ‘잠금’을 눌러 주세요.</p>
+      <div class="login-meta"><span>20개 백과 문서</span><span>416개 원본 출처</span></div>
     </main>
   </section>
-
   <div id="appView" class="app-shell" hidden>
     <header class="topbar">
-      <a class="brand" href="#top"><span class="brand-bolt">ϟ</span><span>전력 ICT 지식백과</span></a>
+      <a class="brand" href="#top"><span class="brand-bolt" aria-hidden="true">ϟ</span><span>전력 ICT 지식백과</span></a>
       <div class="top-actions">
-        <span id="syncState" class="sync-state"><i></i> NOTION SNAPSHOT</span>
-        <a class="notion-home" href="https://app.notion.com/p/3fc8fb174e9e81f8b284df6312947abb" target="_blank" rel="noopener">Notion 원본 ↗</a>
+        <span id="syncState" class="sync-state"></span>
         <button id="logoutBtn" class="ghost-btn">잠금</button>
       </div>
     </header>
-
     <main id="top">
       <section class="hero">
         <div>
-          <p class="eyebrow">POWER · COMMUNICATION · CONTROL</p>
-          <h2>흩어진 전력 ICT 지식을<br><em>하나의 계통으로.</em></h2>
-          <p class="hero-copy">Notion 지식백과의 핵심 문서와 전체 원본 출처를 빠르게 검색하고 원문으로 이동하세요.</p>
+          <p class="eyebrow">찾고, 읽고, 현장에서 활용하세요</p>
+          <h2>업무에 필요한 문서,<br><em>빠르고 정확하게.</em></h2>
+          <p class="hero-copy">파일명·경로·본문을 함께 검색합니다. PDF 원본과 서식을 살린 미리보기, Notion의 원본 파일을 한곳에서 확인하세요.</p>
         </div>
         <div class="hero-stats">
-          <div><strong id="topicCount">20</strong><span>백과 문서</span></div>
-          <div><strong id="docCount">416</strong><span>원본 출처</span></div>
-          <div><strong>100%</strong><span>경로 검증</span></div>
+          <div><strong id="topicCount">—</strong><span>백과 문서</span></div>
+          <div><strong id="docCount">—</strong><span>원본 출처</span></div>
+          <div><strong id="viewableCount">—</strong><span>페이지·본문 보기</span></div>
         </div>
       </section>
-
       <section class="control-deck" aria-label="검색과 필터">
         <div class="search-box">
-          <span>⌕</span>
-          <input id="searchInput" type="search" placeholder="SCADA, OPGW, 시설기준, 파일명 검색…" />
-          <kbd>⌘ K</kbd>
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" aria-label="문서 검색" placeholder="예: OPGW 시설 · 팔공산 교체 · SCADA 운영" aria-describedby="searchHelp">
+          <kbd>Ctrl / ⌘ K</kbd>
         </div>
-        <div id="categoryFilters" class="filter-row"></div>
+        <p id="searchHelp" class="search-help">단어를 띄어 검색하면 모두 포함된 문서를 찾습니다. 제목 일치가 우선이며, 본문도 검색합니다.</p>
+        <div id="categoryFilters" class="filter-row" aria-label="분야"></div>
+        <button id="resetFilters" class="ghost-btn" type="button">검색·필터 초기화</button>
+        <p id="searchStatus" role="status" aria-live="polite"></p>
       </section>
-
-      <section class="section-block">
+      <section class="section-block sources-section" id="docSection">
         <div class="section-head">
-          <div><span class="section-no">01</span><h3>핵심 백과</h3></div>
-          <p>개념에서 운영·복구까지, 업무 흐름 중심으로 정리한 핵심 지식</p>
-        </div>
-        <div id="topicGrid" class="topic-grid" aria-live="polite"></div>
-      </section>
-
-      <section class="section-block sources-section">
-        <div class="section-head">
-          <div><span class="section-no">02</span><h3>원본 출처</h3></div>
-          <p><strong id="resultCount">416</strong>개 문서 · 검증된 Notion 원문 링크</p>
+          <div><span class="section-no">01</span><h3>원본 문서</h3></div>
+          <p><strong id="resultCount">—</strong>개 검색 결과</p>
         </div>
         <div class="source-toolbar">
-          <div id="formatFilters" class="format-filters"></div>
-          <select id="sortSelect" aria-label="정렬">
-            <option value="title">이름순</option>
-            <option value="size-desc">큰 파일순</option>
-            <option value="path">경로순</option>
-          </select>
+          <div id="formatFilters" class="format-filters" aria-label="파일 형식"></div>
+          <label>정렬 <select id="sortSelect" aria-label="정렬">
+            <option value="relevance">관련도순</option><option value="title">이름순</option>
+            <option value="size-desc">큰 파일순</option><option value="path">경로순</option>
+          </select></label>
         </div>
         <div class="table-wrap">
-          <table>
-            <thead><tr><th>문서</th><th>분야</th><th>형식</th><th>크기</th><th>웹 보기</th><th>원문</th></tr></thead>
+          <table><caption class="sr-only">검색된 원본 문서와 미리보기</caption>
+            <thead><tr><th scope="col">문서</th><th scope="col">분야</th><th scope="col">형식</th><th scope="col">크기</th><th scope="col">보기</th><th scope="col">원본 파일</th></tr></thead>
             <tbody id="documentRows"></tbody>
           </table>
         </div>
-        <button id="loadMoreBtn" class="load-more">더 보기 <span>＋</span></button>
+        <button id="loadMoreBtn" class="load-more">더 보기</button>
+      </section>
+      <section class="section-block">
+        <div class="section-head"><div><span class="section-no">02</span><h3>핵심 백과</h3></div><p>관련 개념과 업무 흐름</p></div>
+        <div id="topicGrid" class="topic-grid"></div>
       </section>
     </main>
-
-    <footer><span>전력 ICT 지식백과</span><span>Notion snapshot · 416 verified sources</span></footer>
+    <footer><span>전력 ICT 지식백과</span><span id="snapshotInfo">Notion 저장본</span></footer>
   </div>
-
-  <dialog id="topicDialog" class="topic-dialog">
-    <button id="closeDialog" class="dialog-close" aria-label="닫기">×</button>
-    <div id="dialogCategory" class="dialog-category"></div>
-    <h2 id="dialogTitle"></h2>
-    <p id="dialogSummary" class="dialog-summary"></p>
-    <article id="dialogContent" class="markdown-body"></article>
-    <a id="dialogNotionLink" class="dialog-link" target="_blank" rel="noopener">Notion 원문에서 보기 ↗</a>
+  <dialog id="topicDialog" class="topic-dialog" aria-labelledby="dialogTitle">
+    <button id="closeDialog" class="dialog-close" aria-label="백과 닫기">×</button>
+    <div id="dialogCategory" class="dialog-category"></div><h2 id="dialogTitle"></h2>
+    <p id="dialogSummary" class="dialog-summary"></p><article id="dialogContent" class="markdown-body"></article>
+    <a id="dialogNotionLink" class="dialog-link" target="_blank" rel="noopener noreferrer">Notion 원문 ↗</a>
   </dialog>
-
-  <dialog id="documentDialog" class="document-dialog">
-    <header class="viewer-header">
-      <div>
-        <p id="viewerFormat" class="dialog-category"></p>
-        <h2 id="viewerTitle">문서 미리보기</h2>
-        <p id="viewerPath" class="viewer-path"></p>
-      </div>
-      <button id="closeDocumentDialog" class="dialog-close" aria-label="닫기">×</button>
+  <dialog id="documentDialog" class="document-dialog" aria-labelledby="viewerTitle">
+    <header class="viewer-header"><div><p id="viewerFormat" class="dialog-category"></p><h2 id="viewerTitle"></h2><p id="viewerPath" class="viewer-path"></p></div>
+      <button id="closeDocumentDialog" class="dialog-close" aria-label="문서 닫기">×</button>
     </header>
     <div class="viewer-toolbar">
       <span id="viewerEngine"></span>
-      <label>본문 찾기 <input id="viewerSearch" type="search" placeholder="현재 문서에서 검색" /></label>
-      <a id="viewerNotionLink" class="dialog-link" target="_blank" rel="noopener">Notion 원본 ↗</a>
+      <a id="viewerNotionLink" class="dialog-link" target="_blank" rel="noopener noreferrer">Notion 원본 ↗</a>
+      <button id="viewerDownload" type="button" hidden>파일 저장</button>
+      <button id="viewerTextMode" type="button" aria-pressed="false">텍스트 보기</button>
     </div>
-    <div id="viewerStatus" class="viewer-status">문서를 불러오는 중입니다…</div>
-    <article id="viewerContent" class="viewer-content"></article>
+    <div class="viewer-controls">
+      <button id="pagePrev" type="button" aria-label="이전 페이지">이전</button>
+      <label>페이지 <input id="pageNumber" type="number" min="1" value="1" aria-label="페이지 번호"></label>
+      <span id="pageTotal"></span>
+      <button id="pageNext" type="button" aria-label="다음 페이지">다음</button>
+      <label>확대 <select id="zoomSelect"><option value="fit">너비 맞춤</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select></label>
+      <label>본문 찾기 <input id="viewerSearch" type="search" placeholder="현재 문서에서 찾기"></label>
+      <button id="findNext" type="button">다음 결과</button>
+      <span id="findStatus" role="status"></span>
+    </div>
+    <p id="viewerNote" class="viewer-note"></p>
+    <div id="viewerStatus" class="viewer-status" role="status"></div>
+    <button id="retryLoad" type="button" hidden>다시 불러오기</button>
+    <article id="viewerContent" class="viewer-content" tabindex="0" aria-label="문서 내용"></article>
   </dialog>
-
-  <script src="./assets/app.js" defer></script>
+  <script src="./assets/search.js?v=2" defer></script>
+  <script type="module" src="./assets/app.js?v=2"></script>
 </body>
 </html>

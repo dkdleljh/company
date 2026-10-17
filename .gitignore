@@ -1,3 +1,11 @@
 __pycache__/
 *.py[cod]
 .DS_Store
+# Local decrypted inputs, keys and encrypted data-branch working files
+/docs/data/
+/docs/previews/
+/docs/secure/objects/
+/private/
+/rendered/
+*.key
+*.pem

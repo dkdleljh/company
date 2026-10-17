@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "kdf": "PBKDF2-SHA256",
+  "iterations": 600000,
+  "salt": "cpLDqmxWuLAlFyQvdho4Sg==",
+  "wrapped_key": "fu6zGkobYNHXdnLDnpriQMFMmLuF5z556EGelbhkvNqjPTgg1T4Ll+G9r3zltSjZNBVqvh7f8dixFVhq",
+  "index": {
+    "url": "./secure/objects/adc73eff78a8624203089bad34aa4761c8cc0db4c03807ae9229bf6a8f8926b0.bin",
+    "id": "adc73eff78a8624203089bad34aa4761c8cc0db4c03807ae9229bf6a8f8926b0",
+    "sha256": "b985c44b810698b0494eab15930238f015a567e232244d07bf2e0f2dddcdcb7e",
+    "bytes": 19062190,
+    "decoded_bytes": 107644368,
+    "mime": "application/json"
+  },
+  "generated_at": "2026-10-17T11:01:16.721Z",
+  "counts": {
+    "documents": 416,
+    "topics": 20,
+    "text": 15,
+    "pdf": 299,
+    "svg-pages": 59,
+    "image": 25,
+    "unsupported": 18
+  },
+  "asset_base": "https://raw.githubusercontent.com/dkdleljh/company/a7ea25a10c01e1b19a9b8bd0aac293ad68500516/objects/"
+}
