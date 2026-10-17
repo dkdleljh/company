@@ -43,7 +43,7 @@ class SyncTests(unittest.TestCase):
   self.assertEqual(fingerprint(a),fingerprint(b));self.assertEqual(changes(a,b)['updated'],[])
 
 from unittest.mock import patch,AsyncMock
-from company_sync import update_document,refresh_topics,digest
+from company_sync import update_document,refresh_topics,digest,sync,save,load
 class NotionSyncTests(unittest.IsolatedAsyncioTestCase):
  async def test_revision_update_keeps_attachment_history_and_retries_without_duplicates(self):
   class FakeNotion:
@@ -74,5 +74,25 @@ class NotionSyncTests(unittest.IsolatedAsyncioTestCase):
    async def fetch(self,*args):return {'text':'<properties>'+json.dumps({'문서명':'New topic','분야':['ICT 공통'],'근거 문서':['https://www.notion.so/source']})+'</properties><content>New body</content>'}
   topics=await refresh_topics(FakeNotion(),[{'id':'old','url':'https://www.notion.so/old'}],'collection://test')
   self.assertEqual(len(topics),1);self.assertEqual(topics[0]['id'],'new');self.assertEqual(topics[0]['content_markdown'],'New body');self.assertEqual(topics[0]['category'],['ICT 공통'])
+
+class SyncSafetyTests(unittest.IsolatedAsyncioTestCase):
+ async def test_first_observation_waits_without_remote_mutations(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d)/'root';state=Path(d)/'state';root.mkdir();state.mkdir();(root/'a.txt').write_text('a')
+   save(state/'ledger.json',{'files':{},'entries':{}})
+   with patch('company_sync.Notion') as notion:
+    await sync({'root':str(root),'state':str(state),'settle_seconds':30})
+    notion.assert_not_called()
+   self.assertEqual(load(state/'status.json')['status'],'waiting_for_stable_files')
+ async def test_mass_deletion_preserves_last_success_before_remote_actions(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d)/'root';state=Path(d)/'state';root.mkdir();state.mkdir()
+   for i in range(20):(root/f'{i}.txt').write_text(str(i))
+   old=scan(root);save(state/'ledger.json',{'files':old,'entries':{}})
+   for i in range(6):(root/f'{i}.txt').unlink()
+   with patch('company_sync.Notion') as notion:
+    with self.assertRaisesRegex(SyncError,'mass_removal_held'):await sync({'root':str(root),'state':str(state)},force=True)
+    notion.assert_not_called()
+   self.assertEqual(load(state/'ledger.json')['files'],old)
 
 if __name__=='__main__':unittest.main()
