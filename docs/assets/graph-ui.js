@@ -70,8 +70,16 @@ export class GraphView {
   function append(){const end=Math.min(rows.length,shown+40);for(;shown<end;shown++){const row=rows[shown],li=document.createElement('li'),b=button('',()=>choose(row.node.id));const title=document.createElement('span');title.textContent=row.node.label;const reason=document.createElement('small');reason.textContent=[...new Set(row.reasons)].join(' · ');b.append(title,reason);li.append(b);list.append(li);}more.hidden=shown>=rows.length;more.textContent=`더 보기 (${shown}/${rows.length})`;}
   append();panel.append(more);
  }
- resize(){const r=$('#graphStage').getBoundingClientRect();this.width=Math.max(1,r.width);this.height=Math.max(1,r.height);const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(this.width*dpr);this.canvas.height=Math.round(this.height*dpr);this.ctx.setTransform(dpr,0,0,dpr,0,0);}
- fit(){if(!this.visible.nodes.length){this.drawSoon();return;}this.resize();const xs=this.visible.nodes.map(n=>n.x),ys=this.visible.nodes.map(n=>n.y);const minX=Math.min(...xs)-50,maxX=Math.max(...xs)+50,minY=Math.min(...ys)-50,maxY=Math.max(...ys)+50;this.camera.k=Math.min(2.3,Math.max(.12,Math.min((this.width-50)/(maxX-minX),(this.height-50)/(maxY-minY))));this.camera.x=this.width/2-(minX+maxX)/2*this.camera.k;this.camera.y=this.height/2-(minY+maxY)/2*this.camera.k;this.drawSoon();}
+ resize(preserveView=true){
+  const r=$('#graphStage').getBoundingClientRect();if(!(r.width>0&&r.height>0))return false;
+  const oldWidth=this.width,oldHeight=this.height;this.width=r.width;this.height=r.height;
+  if(preserveView&&oldWidth>0&&oldHeight>0&&(oldWidth!==this.width||oldHeight!==this.height)){
+   const old=this.camera.k,next=Math.max(.12,Math.min(6,old*Math.min(this.width,this.height)/Math.min(oldWidth,oldHeight)));
+   this.camera.x=this.width/2-(oldWidth/2-this.camera.x)*next/old;this.camera.y=this.height/2-(oldHeight/2-this.camera.y)*next/old;this.camera.k=next;
+  }
+  const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(this.width*dpr);this.canvas.height=Math.round(this.height*dpr);this.ctx.setTransform(dpr,0,0,dpr,0,0);return true;
+ }
+ fit(){if(!this.visible.nodes.length){this.drawSoon();return;}if(!this.resize(false))return;const xs=this.visible.nodes.map(n=>n.x),ys=this.visible.nodes.map(n=>n.y);const minX=Math.min(...xs)-50,maxX=Math.max(...xs)+50,minY=Math.min(...ys)-50,maxY=Math.max(...ys)+50;this.camera.k=Math.min(2.3,Math.max(.12,Math.min((this.width-50)/(maxX-minX),(this.height-50)/(maxY-minY))));this.camera.x=this.width/2-(minX+maxX)/2*this.camera.k;this.camera.y=this.height/2-(minY+maxY)/2*this.camera.k;this.drawSoon();}
  zoom(factor,p={x:this.width/2,y:this.height/2}){const old=this.camera.k,next=Math.max(.12,Math.min(6,old*factor));this.camera.x=p.x-(p.x-this.camera.x)*next/old;this.camera.y=p.y-(p.y-this.camera.y)*next/old;this.camera.k=next;this.drawSoon();}
  point(e){const r=this.canvas.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};}
  hit(p){let best=null,distance=15;for(const h of this.hitPoints){const d=Math.hypot(h.x-p.x,h.y-p.y);if(d<Math.max(10,h.r+4)&&d<distance){best=h.id;distance=d;}}return best;}

@@ -36,6 +36,7 @@ def scan(root):
     return result
 
 def fingerprint(files):return hashlib.sha256(json.dumps({p:(v['sha256'],v['size']) for p,v in files.items()},sort_keys=True).encode()).hexdigest()
+def topics_fingerprint(topics):return hashlib.sha256(json.dumps(topics,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
 def changes(old,new):
     removed=set(old)-set(new);added=set(new)-set(old);renames={}
     for p in sorted(added):
@@ -241,7 +242,7 @@ def build_and_publish(config,files,entries,topics,baseline):
     save(repo/'docs/secure/manifest.json',manifest)
     run([config['python'],'scripts/verify_public_tree.py','--documents',str(len(files)),'--topics',str(len(topics))],repo)
     run(['git','add','docs/secure/manifest.json'],repo);run(['git','commit','-m','Sync local company files after Notion verification'],repo)
-    commit=run(['git','rev-parse','HEAD'],repo);save(state/'publish-pending.json',{'commit':commit,'manifest':manifest,'files':files,'entries':entries,'synced_at':now()})
+    commit=run(['git','rev-parse','HEAD'],repo);save(state/'publish-pending.json',{'commit':commit,'manifest':manifest,'files':files,'entries':entries,'synced_at':now(),'topics_fingerprint':topics_fingerprint(topics)})
     run(['git','push','origin','HEAD:main'],repo,timeout=3600)
     verify_deploy(config,commit,manifest)
     return commit
@@ -273,7 +274,9 @@ async def sync(config,force=False):
                 run(['git','push','origin','HEAD:main'],repo)
             else:pending['commit']=remote
         await asyncio.to_thread(verify_deploy,config,pending['commit'],pending['manifest'])
-        ledger={k:pending[k] for k in ['files','entries','synced_at','commit']};save(state/'ledger.json',ledger);save(state/'publish-pending.json',None)
+        ledger={k:pending[k] for k in ['files','entries','synced_at','commit']}
+        if 'topics_fingerprint' in pending:ledger['topics_fingerprint']=pending['topics_fingerprint']
+        save(state/'ledger.json',ledger);save(state/'publish-pending.json',None)
 
     observed=load(state/'observed.json',{})
     if not force and (observed.get('fingerprint')!=mark or time.time()-observed.get('at',0)<config['settle_seconds']):
@@ -281,12 +284,18 @@ async def sync(config,force=False):
         save(state/'status.json',dict(status,status='waiting_for_stable_files',files=len(files)));return
     plan=changes(ledger['files'],files)
     if len(plan['removed'])>max(5,len(ledger['files'])//10):raise SyncError('mass_removal_held')
-    topics_cache=load(state/'topics.json');topics_due=time.time()-load(state/'topics-check.json',{}).get('at',0)>config.get('notion_poll_seconds',900)
-    if not plan['updated'] and not plan['removed'] and not force and not topics_due:
+    topics_cache=load(state/'topics.json')
+    if 'topics_fingerprint' not in ledger:
+        # Legacy caches may contain observations that were never published.
+        # Keep publication unknown until a snapshot is successfully verified.
+        ledger['topics_fingerprint']=''
+        save(state/'ledger.json',ledger)
+    topics_unpublished=not ledger['topics_fingerprint'] or (topics_cache is not None and topics_fingerprint(topics_cache)!=ledger['topics_fingerprint'])
+    topics_due=time.time()-load(state/'topics-check.json',{}).get('at',0)>config.get('notion_poll_seconds',900)
+    if not plan['updated'] and not plan['removed'] and not force and not topics_due and not topics_unpublished:
         save(state/'status.json',dict(status,status='healthy',files=len(files),last_synced_at=ledger.get('synced_at'),commit=ledger.get('commit'),changes=0));return
     entries=load(state/'notion-ledger.json',ledger['entries']);journal=load(state/'journal.json',{});jpath=state/'journal.json'
     baseline=load(config['baseline']);topics=topics_cache or baseline['topics']
-    previous_topics=json.dumps(topics,sort_keys=True,ensure_ascii=False)
     async with Notion(config['hermes']) as n:
         apply_renames(entries,plan['renamed'])
         for rel in plan['updated']:
@@ -307,11 +316,11 @@ async def sync(config,force=False):
                 entry['status']='removed';save(state/'notion-ledger.json',entries)
         topics=await refresh_topics(n,topics,config.get('notion_topics_view'))
     save(state/'topics.json',topics);save(state/'topics-check.json',{'at':time.time()})
-    if not plan['updated'] and not plan['removed'] and not force and json.dumps(topics,sort_keys=True,ensure_ascii=False)==previous_topics:
+    if not plan['updated'] and not plan['removed'] and not force and topics_fingerprint(topics)==ledger['topics_fingerprint']:
         save(state/'status.json',dict(status,status='healthy',files=len(files),last_synced_at=ledger.get('synced_at'),commit=ledger.get('commit'),changes=0));return
     save(state/'status.json',dict(status,status='building_web',files=len(files)))
     commit=await asyncio.to_thread(build_and_publish,config,files,entries,topics,baseline)
-    save(state/'ledger.json',{'files':files,'entries':entries,'synced_at':now(),'commit':commit})
+    save(state/'ledger.json',{'files':files,'entries':entries,'synced_at':now(),'commit':commit,'topics_fingerprint':topics_fingerprint(topics)})
     save(state/'publish-pending.json',None)
     save(state/'status.json',dict(status,status='healthy',files=len(files),last_synced_at=now(),commit=commit,changes=len(plan['updated'])+len(plan['removed'])))
 

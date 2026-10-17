@@ -1,4 +1,4 @@
-import { GraphView } from './graph-ui.js?v=2';
+import { GraphView } from './graph-ui.js?v=3';
 import { Vault } from './vault.js';
 import { matchParts, parseSvg, svgStrings, pdfBoxes, svgBoxes } from './viewer-search.js';
 const $=s=>document.querySelector(s);

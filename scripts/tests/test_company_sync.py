@@ -1,4 +1,4 @@
-import sys,tempfile,unittest,json,zipfile,hashlib
+import sys,tempfile,unittest,json,zipfile,hashlib,time
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from company_sync import scan,changes,fingerprint,upload_parts,SyncError,markdown_literal,apply_renames
@@ -48,7 +48,7 @@ class SyncTests(unittest.TestCase):
   self.assertEqual(fingerprint(a),fingerprint(b));self.assertEqual(changes(a,b)['updated'],[])
 
 from unittest.mock import patch,AsyncMock
-from company_sync import update_document,refresh_topics,digest,sync,save,load
+from company_sync import update_document,refresh_topics,digest,sync,save,load,topics_fingerprint
 class NotionSyncTests(unittest.IsolatedAsyncioTestCase):
  async def test_revision_update_keeps_attachment_history_and_retries_without_duplicates(self):
   class FakeNotion:
@@ -107,5 +107,91 @@ class SyncSafetyTests(unittest.IsolatedAsyncioTestCase):
     with self.assertRaisesRegex(SyncError,'mass_removal_held'):await sync({'root':str(root),'state':str(state)},force=True)
     notion.assert_not_called()
    self.assertEqual(load(state/'ledger.json')['files'],old)
+
+class TopicPublishRetryTests(unittest.IsolatedAsyncioTestCase):
+ def setUp(self):
+  self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.path=Path(self.tmp.name)
+  self.root=self.path/'root';self.state=self.path/'state';self.root.mkdir();self.state.mkdir();(self.root/'a.txt').write_text('unchanged')
+  self.files=scan(self.root);self.entries={'a.txt':dict(self.files['a.txt'],page_id='source',status='active')}
+  self.config={'root':str(self.root),'state':str(self.state),'baseline':str(self.path/'baseline.json'),'repo':str(self.path/'repo'),'hermes':'unused','settle_seconds':0,'notion_poll_seconds':900}
+  save(self.config['baseline'],{'topics':self.topics('Old'),'documents':[]})
+  save(self.state/'ledger.json',{'files':self.files,'entries':self.entries,'commit':'old','synced_at':'before','topics_fingerprint':topics_fingerprint(self.topics('Old'))})
+  save(self.state/'observed.json',{'fingerprint':fingerprint(self.files),'at':0})
+  save(self.state/'topics.json',self.topics('Old'))
+  owner=self;self.latest='Updated'
+  class FakeNotion:
+   def __init__(self,*args):pass
+   async def __aenter__(self):return self
+   async def __aexit__(self,*args):pass
+   async def fetch(self,*args):return {'text':'<properties>'+json.dumps({'문서명':owner.latest})+'</properties><content>'+owner.latest+' body</content>'}
+  notion_patch=patch('company_sync.Notion',side_effect=FakeNotion);self.notion=notion_patch.start();self.addCleanup(notion_patch.stop)
+ def topics(self,title):return [{'id':'topic','url':'https://www.notion.so/topic','title':title,'content_markdown':title+' body','source_relations':[],'related_relations':[],'summary':''}]
+ def pending(self,topics,commit='pending'):
+  save(self.state/'publish-pending.json',{'commit':commit,'manifest':{'fixture':True},'files':self.files,'entries':self.entries,'synced_at':'pending-time','topics_fingerprint':topics_fingerprint(topics)})
+ async def test_topic_only_failure_before_pending_retries_then_noops(self):
+  with patch('company_sync.build_and_publish',side_effect=[RuntimeError('render failed'),'published']) as build:
+   with self.assertRaisesRegex(RuntimeError,'render failed'):await sync(self.config)
+   self.assertIsNone(load(self.state/'publish-pending.json'))
+   self.assertEqual(load(self.state/'topics.json'),self.topics('Updated'))
+   self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],topics_fingerprint(self.topics('Old')))
+   # Same observed topics and an unexpired poll interval must still retry publication.
+   await sync(self.config);self.assertEqual(build.call_count,2)
+   self.assertEqual(load(self.state/'ledger.json')['commit'],'published')
+   self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],topics_fingerprint(self.topics('Updated')))
+   polls=self.notion.call_count;await sync(self.config)
+   self.assertEqual(build.call_count,2);self.assertEqual(self.notion.call_count,polls)
+   # An unchanged scheduled poll also remains a no-op.
+   save(self.state/'topics-check.json',{'at':0});await sync(self.config);self.assertEqual(build.call_count,2)
+ async def test_legacy_unknown_topics_retry_until_published_then_noop(self):
+  # Old versions could save new topics before failing, without a pending record.
+  ledger=load(self.state/'ledger.json');ledger.pop('topics_fingerprint');save(self.state/'ledger.json',ledger)
+  save(self.state/'topics.json',self.topics('Updated'));save(self.state/'topics-check.json',{'at':time.time()})
+  with patch('company_sync.build_and_publish',side_effect=[RuntimeError('render failed'),'published']) as build:
+   with self.assertRaisesRegex(RuntimeError,'render failed'):await sync(self.config)
+   self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],'')
+   await sync(self.config);self.assertEqual(build.call_count,2)
+   self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],topics_fingerprint(self.topics('Updated')))
+   await sync(self.config);self.assertEqual(build.call_count,2)
+ async def test_legacy_unknown_without_cache_still_publishes(self):
+  ledger=load(self.state/'ledger.json');ledger.pop('topics_fingerprint');save(self.state/'ledger.json',ledger)
+  (self.state/'topics.json').unlink();save(self.state/'topics-check.json',{'at':time.time()});self.latest='Old'
+  with patch('company_sync.build_and_publish',return_value='published') as build:
+   await sync(self.config);build.assert_called_once()
+   await sync(self.config);build.assert_called_once()
+ async def test_legacy_pending_without_topic_identity_republishes_once(self):
+  self.pending(self.topics('Old'));pending=load(self.state/'publish-pending.json');pending.pop('topics_fingerprint');save(self.state/'publish-pending.json',pending)
+  save(self.state/'topics.json',self.topics('Updated'));save(self.state/'topics-check.json',{'at':time.time()})
+  def publish(config,files,entries,topics,baseline):
+   self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],'')
+   self.assertEqual(topics,self.topics('Updated'));return 'published'
+  with patch('company_sync.run',return_value='pending'),patch('company_sync.verify_deploy'),patch('company_sync.build_and_publish',side_effect=publish) as build:
+   await sync(self.config);build.assert_called_once()
+   await sync(self.config);build.assert_called_once()
+ async def test_pending_recovery_records_its_topics_without_republishing(self):
+  def fail_after_pending(config,files,entries,topics,baseline):
+   self.pending(topics);raise SyncError('pages_verification_pending')
+  with patch('company_sync.build_and_publish',side_effect=fail_after_pending) as build:
+   with self.assertRaisesRegex(SyncError,'pages_verification_pending'):await sync(self.config)
+   with patch('company_sync.run',return_value='pending'),patch('company_sync.verify_deploy') as verify:
+    await sync(self.config)
+   verify.assert_called_once();self.assertEqual(build.call_count,1)
+   self.assertEqual(load(self.state/'ledger.json')['commit'],'pending')
+   self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],topics_fingerprint(self.topics('Updated')))
+   self.assertIsNone(load(self.state/'publish-pending.json'))
+ async def test_topics_changed_while_pending_are_published_after_recovery(self):
+  self.pending(self.topics('Updated'));save(self.state/'topics.json',self.topics('Updated'));self.latest='Newer'
+  with patch('company_sync.run',return_value='pending'),patch('company_sync.verify_deploy'),patch('company_sync.build_and_publish',return_value='newer') as build:
+   await sync(self.config)
+   self.assertEqual(build.call_count,1);self.assertEqual(build.call_args.args[3],self.topics('Newer'))
+  self.assertEqual(load(self.state/'ledger.json')['commit'],'newer')
+  self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],topics_fingerprint(self.topics('Newer')))
+ async def test_pending_fingerprint_does_not_acknowledge_a_newer_observed_cache(self):
+  self.pending(self.topics('Updated'));save(self.state/'topics.json',self.topics('Newer'));save(self.state/'topics-check.json',{'at':time.time()});self.latest='Newer'
+  def publish(config,files,entries,topics,baseline):
+   self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],topics_fingerprint(self.topics('Updated')))
+   return 'newer'
+  with patch('company_sync.run',return_value='pending'),patch('company_sync.verify_deploy'),patch('company_sync.build_and_publish',side_effect=publish) as build:
+   await sync(self.config);self.assertEqual(build.call_count,1)
+  self.assertEqual(load(self.state/'ledger.json')['topics_fingerprint'],topics_fingerprint(self.topics('Newer')))
 
 if __name__=='__main__':unittest.main()
