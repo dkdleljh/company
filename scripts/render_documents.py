@@ -31,6 +31,7 @@ from collections import Counter
 VERSION = 1
 DEFAULT_CATALOG = Path('/home/zenith/memory/documents/company-corpus/catalog.json')
 DEFAULT_OUT = Path('/home/zenith/maintenance/company-upgrade-20261017/rendered')
+SPREADSHEETS = {'.xlsx', '.xls', '.xlsm', '.ods'}
 OFFICE = {'.xlsx', '.xls', '.xlsm', '.pptx', '.ppt', '.doc', '.docx', '.odt', '.ods', '.odp'}
 TEXT = {'.txt', '.md', '.csv', '.log', '.json'}
 IMAGE = {'.jpg', '.jpeg', '.png', '.webp', '.gif', '.bmp', '.tiff', '.tif'}
@@ -347,6 +348,8 @@ def paginate_pdf(pdf, original_source):
     audit = {'pagination_version': 1, 'original_page_count': len(doc),
         'paginated_source_pages': [], 'empty_sheet_pages_normalized': [],
         'page_map': [], 'text_words_missing': 0}
+    if original_source.suffix.lower() in SPREADSHEETS:
+        audit['sheet_bookmarks'] = doc.get_toc()
     if not any(h/max(w,.00001)>2 for w,h in dimensions):
         audit['page_map'] = [{'source_page':i+1,'first_page':i+1,'last_page':i+1} for i in range(len(doc))]
         audit.update(page_count=len(doc), max_page_height_width_ratio=max(h/max(w,.00001) for w,h in dimensions))
@@ -442,6 +445,66 @@ def ensure_paginated(source, target, record, output):
     return record
 
 
+def sheet_navigation(source, pdf, record):
+    """Resolve sheet identities only against a complete, contiguous page map."""
+    import pymupdf as fitz
+    sheets = []
+    if source.suffix.lower() in {'.xlsx', '.xlsm'}:
+        with zipfile.ZipFile(source) as z:
+            root = safe_xml(z.read('xl/workbook.xml'))
+            sheets = [{'name':n.get('name',''), 'hidden':n.get('state','visible') != 'visible'}
+                      for n in root.iter() if n.tag.endswith('}sheet')]
+    page_map = record.get('page_map', [])
+    cursor = 1
+    for i, page in enumerate(page_map):
+        if (page.get('source_page') != i+1 or page.get('first_page') != cursor
+                or type(page.get('last_page')) is not int or page['last_page'] < cursor):
+            return {'sheets':[], 'sheet_navigation_version':2}
+        cursor = page['last_page']+1
+    if not page_map or cursor != record['page_count']+1:
+        return {'sheets':[], 'sheet_navigation_version':2}
+    # Fresh conversion keeps bookmarks BEFORE tall pages are split. Old caches
+    # may still contain bookmarks pointing at final page numbers.
+    bookmarks = record.get('sheet_bookmarks')
+    if bookmarks is None:
+        with fitz.open(pdf) as doc:
+            toc = doc.get_toc()
+        starts = {p['first_page']:p['source_page'] for p in page_map}
+        bookmarks = [[level,name,starts.get(page,0)] for level,name,page in toc]
+    valid = (len(bookmarks) == len(page_map)
+             and all(b[0] == 1 and b[2] == i+1 and isinstance(b[1],str) and b[1]
+                     for i,b in enumerate(bookmarks)))
+    if not sheets and valid:
+        sheets = [{'name':b[1], 'hidden':False} for b in bookmarks]
+    mapping = {}
+    names = [s['name'].strip() for s in sheets]
+    if valid and len(set(names)) == len(names) and len({b[1].strip() for b in bookmarks}) == len(bookmarks) and all(b[1].strip() in names for b in bookmarks):
+        mapping = {b[1].strip():page_map[i] for i,b in enumerate(bookmarks)}
+    elif not bookmarks and len(set(names)) == len(names) and len(sheets) == len(page_map):
+        # SinglePageSheets export: each source page is exactly one worksheet.
+        mapping = dict(zip(names,page_map))
+    result = []
+    for i, sheet in enumerate(sheets):
+        page = mapping.get(sheet['name'].strip())
+        result.append({**sheet, 'index':i+1,
+            'first_page':page['first_page'] if page else None,
+            'last_page':page['last_page'] if page else None})
+    return {'sheets':result, 'sheet_navigation_version':2}
+
+
+def ensure_sheet_navigation(source, target, record):
+    if (source.suffix.lower() not in SPREADSHEETS or record.get('kind') != 'pdf'
+            or record.get('sheet_navigation_version') == 2):
+        return record
+    interpreter = Path(os.environ.get('RENDER_PDF_PYTHON', str(DEFAULT_OUT.parent / 'render-venv/bin/python')))
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', dir=target) as temporary:
+        json.dump(record,temporary); temporary.flush()
+        result = run_bounded([str(interpreter),str(Path(__file__).resolve()),
+            '--sheets-worker',temporary.name,'--original-source',str(source)],90)
+    record.update(json.loads(result))
+    return record
+
+
 def encrypted_office(source):
     with source.open('rb') as f:
         if f.read(8) != bytes.fromhex('d0cf11e0a1b11ae1'):
@@ -473,6 +536,7 @@ def render_one(source, digest, output, timeout=90, retry=False):
                 except Exception:
                     record['search_error'] = 'text extraction unavailable'
             record = ensure_paginated(source, target, record, output)
+            record = ensure_sheet_navigation(source, target, record)
             write_json(cache, record)
             return record
     target.mkdir(parents=True, exist_ok=True)
@@ -575,6 +639,7 @@ def render_one(source, digest, output, timeout=90, retry=False):
                       reason=f'서식 변환을 완료하지 못했습니다 ({type(err).__name__}). 원본 파일을 내려받아 확인하세요.',
                       error_type=type(err).__name__)
     record = ensure_paginated(source, target, record, output)
+    record = ensure_sheet_navigation(source, target, record)
     write_json(cache, record)
     return record
 
@@ -590,8 +655,13 @@ def main():
     parser.add_argument('--retry', action='store_true')
     parser.add_argument('--office-worker')
     parser.add_argument('--paginate-worker',type=Path)
+    parser.add_argument('--sheets-worker',type=Path)
     parser.add_argument('--original-source',type=Path)
     args = parser.parse_args()
+    if args.sheets_worker:
+        record = json.loads(args.sheets_worker.read_text())
+        print(json.dumps(sheet_navigation(args.original_source,args.sheets_worker.parent / 'rendered.pdf',record)))
+        return
     if args.paginate_worker:
         print(json.dumps(paginate_pdf(args.paginate_worker,args.original_source)))
         return

@@ -80,7 +80,7 @@ async function main() {
     const copy={...doc};
     for(const k of Object.keys(copy))if(k.startsWith('preview_'))delete copy[k];
     if(originalBytes.subarray(0,64).toString('ascii').includes('<TGE MMI FILE>'))copy.format='HMI 설비 화면';
-    documents.push({...copy,search_text:text,viewer:{kind:r.kind,assets,page_count:r.page_count,reason:r.reason||'',renderer:r.renderer||'',fidelity:r.fidelity||'',source_sha256:r.source_sha256,text:textAsset,original}});
+    documents.push({...copy,search_text:text,viewer:{kind:r.kind,assets,page_count:r.page_count,sheets:r.sheets||[],reason:r.reason||'',renderer:r.renderer||'',fidelity:r.fidelity||'',source_sha256:r.source_sha256,text:textAsset,original}});
   }
   const timestamp=new Date().toISOString();
   const syncPath=path.join(sourceSite,'docs/data/sync.json');

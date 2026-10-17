@@ -1,8 +1,10 @@
 import { GraphView } from './graph-ui.js?v=3';
+import { SheetNavigation } from './viewer-sheets.js';
 import { Vault } from './vault.js';
 import { matchParts, parseSvg, svgStrings, pdfBoxes, svgBoxes } from './viewer-search.js';
 const $=s=>document.querySelector(s);
 const vault=new Vault();
+const sheetNavigation=new SheetNavigation(document, page=>changePage(page));
 const PAGE_SIZE=40;
 let topics=[],documents=[],index=null,category='전체',format='전체',query='',visible=PAGE_SIZE;
 let viewer=null,viewerSequence=0,renderSequence=0,renderTask=null,pdfLoading=null;
@@ -127,6 +129,7 @@ function backdrop(event){if(event.target!==event.currentTarget)return;const r=ev
 $('#topicDialog').addEventListener('click',backdrop);
 $('#documentRows').addEventListener('click',e=>{const path=e.target.closest('[data-preview-path]')?.dataset.previewPath;const doc=documents.find(d=>d.relative_path===path);if(doc)openDocument(doc);});
 function disposeViewer(){
+  sheetNavigation.clear();
   viewerSequence++;renderSequence++;renderTask?.cancel();renderTask=null;pdfLoading?.destroy();pdfLoading=null;
   viewer?.controller.abort();viewer?.loadingTask?.destroy();viewer=null;
   objectURLs.forEach(URL.revokeObjectURL);objectURLs=[];$('#viewerContent').replaceChildren();
@@ -153,10 +156,11 @@ async function openDocument(doc){
       const loadingTask=pdfLibrary.getDocument({data:raw.slice(),cMapUrl:new URL('./pdfjs/cmaps/',import.meta.url).href,cMapPacked:true,standardFontDataUrl:new URL('./pdfjs/standard_fonts/',import.meta.url).href,wasmUrl:new URL('./pdfjs/wasm/',import.meta.url).href,isEvalSupported:false,enableXfa:false});
       pdfLoading=loadingTask;loadingTask.onPassword=()=>{loadingTask.destroy();if(seq===viewerSequence)showError('암호로 보호된 PDF입니다. 원본 파일을 저장한 뒤 문서 비밀번호로 열어 주세요.');};
       const pdf=await loadingTask.promise;if(seq!==viewerSequence){loadingTask.destroy();return;}viewer.loadingTask=loadingTask;pdfLoading=null;viewer.pdf=pdf;viewer.total=pdf.numPages;
+      sheetNavigation.set(doc,viewer.total);
     } else if(v.kind==='svg-pages')viewer.total=v.assets.length;
     $('#viewerEngine').textContent=v.kind==='pdf'&&v.fidelity==='original-bytes'?'원본 PDF':v.kind==='svg-pages'?'한글 문서 페이지':v.kind==='pdf'?'문서 페이지 변환':v.kind==='image'?'원본 이미지':v.kind==='unsupported'?'원본 파일 안내':'본문 보기';
     $('#viewerNote').textContent=v.fidelity==='original-bytes'?'원본 파일을 변경하지 않고 표시합니다.':v.kind==='unsupported'?v.reason:(v.kind==='pdf'||v.kind==='svg-pages')?'표·그림을 포함한 변환 미리보기입니다. 원본 프로그램과 일부 글꼴·배치가 다를 수 있습니다.':v.reason||'';
-    if(v.kind==='pdf'&&/\.(xlsx?|xlsm)$/i.test(doc.relative_path))$('#viewerNote').textContent+=' 긴 시트는 나눠 표시하며, 경계의 일부 행이 겹칠 수 있습니다.';
+    if(v.kind==='pdf'&&/\.(xlsx?|xlsm|ods)$/i.test(doc.relative_path))$('#viewerNote').textContent+=' 긴 시트는 나눠 표시하며, 경계의 일부 행이 겹칠 수 있습니다.';
     await renderPage();
     if(seq===viewerSequence&&$('#viewerSearch').value.trim())findInDocument(false);
   } catch(error){if(seq===viewerSequence&&error.name!=='AbortError')showError(error.message);}
@@ -164,6 +168,7 @@ async function openDocument(doc){
 function showError(text){message(text);$('#retryLoad').hidden=false;}
 $('#retryLoad').addEventListener('click',()=>{if(viewer)openDocument(viewer.doc);});
 function updateNavigation(){if(!viewer)return;const visual=!viewer.text&&['pdf','svg-pages'].includes(viewer.doc.viewer.kind);
+  sheetNavigation.update(viewer.page,viewer.text);
   $('#pageNumber').value=viewer.page;$('#pageNumber').max=viewer.total;$('#pageTotal').textContent=`/ ${viewer.total}`;
   $('#pagePrev').disabled=!visual||viewer.page<=1;$('#pageNext').disabled=!visual||viewer.page>=viewer.total;$('#pageNumber').disabled=!visual;
   $('#zoomSelect').disabled=viewer.text||viewer.doc.viewer.kind==='unsupported'||viewer.doc.viewer.kind==='text';

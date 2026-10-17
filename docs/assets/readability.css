@@ -277,3 +277,15 @@ body:has(dialog[open]){overflow:hidden}
 .search-text-layer[data-main-rotation="90"] { transform: rotate(90deg) translateY(-100%); }
 .search-text-layer[data-main-rotation="180"] { transform: rotate(180deg) translate(-100%, -100%); }
 .search-text-layer[data-main-rotation="270"] { transform: rotate(270deg) translateX(-100%); }
+
+/* Workbook sheets and document pages are separate navigation levels. */
+.sheet-navigation { flex: 0 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 10px 24px; background: #172e22; border-bottom: 1px solid #4a6655; font-size: 14px; min-width: 0; }
+.sheet-navigation[hidden] { display: none; }
+.sheet-navigation label { white-space: nowrap; font-weight: 700; }
+#sheetSelect { flex: 0 1 360px; width: 360px; max-width: 100%; min-width: 0; min-height: 40px; padding: 8px; border: 1px solid #63806e; border-radius: 6px; background: #07100d; color: var(--paper); font: inherit; }
+#sheetPosition { min-width: 0; overflow-wrap: anywhere; color: var(--mint); }
+@media(max-width: 600px) {
+  .sheet-navigation { padding: 8px 12px; gap: 6px 10px; }
+  #sheetSelect { flex: 1 1 180px; width: 180px; }
+  #sheetPosition { flex-basis: 100%; font-size: 12px; }
+}

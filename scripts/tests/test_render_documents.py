@@ -120,6 +120,55 @@ class RenderingTests(unittest.TestCase):
                 for marker in ['FIRST_ROW','BOUNDARY_ROW','LAST_ROW','RIGHT_COLUMN']: self.assertIn(marker,text)
                 self.assertTrue(any(p.get_drawings() for p in doc))
 
+    def test_sheet_names_cover_split_pages_and_hidden_sheet(self):
+        try:
+            import pymupdf as fitz
+        except ImportError:
+            self.skipTest('run with render-venv Python')
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t); source = root / 'fixture.xlsm'; workbook(source)
+            pdf = root / 'rendered.pdf'; doc = fitz.open()
+            for _ in range(4): doc.new_page()
+            doc.save(pdf); doc.close()
+            record = {'page_count':4, 'page_map':[
+                {'source_page':1,'first_page':1,'last_page':3},
+                {'source_page':2,'first_page':4,'last_page':4}]}
+            before = r.sha256(source)
+            result = r.sheet_navigation(source,pdf,record)['sheets']
+            self.assertEqual([(s['name'],s['first_page'],s['last_page'],s['hidden']) for s in result],
+                             [('Wide',1,3,False),('Hidden',4,4,True)])
+            self.assertEqual(r.sha256(source),before)
+            # PDF bookmarks trim names; displayed names still preserve the original.
+            record['sheet_bookmarks']=[[1,' Wide ',1],[1,'Hidden',2]]
+            self.assertEqual(r.sheet_navigation(source,pdf,record)['sheets'][0]['first_page'],1)
+            # Export omitted a sheet: bookmarks identify the survivor by name.
+            record.update(page_count=1,page_map=[{'source_page':1,'first_page':1,'last_page':1}],
+                          sheet_bookmarks=[[1,'Hidden',1]])
+            result = r.sheet_navigation(source,pdf,record)['sheets']
+            self.assertIsNone(result[0]['first_page']);self.assertEqual(result[1]['first_page'],1)
+            # No bookmark means an unequal sheet/page count must not be guessed.
+            record['sheet_bookmarks']=[]
+            self.assertTrue(all(s['first_page'] is None for s in r.sheet_navigation(source,pdf,record)['sheets']))
+
+    def test_legacy_xls_bookmarks_survive_pagination(self):
+        try:
+            import pymupdf as fitz
+        except ImportError:
+            self.skipTest('run with render-venv Python')
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);source=root/'legacy.xls';source.write_bytes(b'fixture')
+            pdf=root/'rendered.pdf';doc=fitz.open()
+            page=doc.new_page(width=400,height=2200);page.insert_text((20,30),'FIRST')
+            page=doc.new_page();page.insert_text((20,30),'SECOND')
+            doc.set_toc([[1,'첫 시트',1],[1,'둘째 시트',2]]);doc.save(pdf);doc.close()
+            record=r.paginate_pdf(pdf,source)
+            result=r.sheet_navigation(source,pdf,record)['sheets']
+            self.assertGreater(result[0]['last_page'],1)
+            self.assertEqual(result[1]['first_page'],record['page_count'])
+            self.assertEqual([s['name'] for s in result],['첫 시트','둘째 시트'])
+            record['page_map'][1]['first_page']=1
+            self.assertEqual(r.sheet_navigation(source,pdf,record)['sheets'],[])
+
     def test_pdf_original_bytes_preserved(self):
         with tempfile.TemporaryDirectory() as t:
             root = Path(t); source = root / 'original.pdf'
@@ -160,6 +209,7 @@ class RenderingTests(unittest.TestCase):
             self.assertEqual(out['kind'], 'pdf', out)
             self.assertEqual(out['page_count'], 2)
             self.assertEqual(out['sheet_count'], 2)
+            self.assertEqual([(s['name'],s['first_page'],s['hidden']) for s in out['sheets']], [('Wide',1,False),('Hidden',2,True)])
             pdf = root / 'out' / out['assets'][0]['path']
             text = subprocess.run(['pdftotext', '-layout', str(pdf), '-'], capture_output=True, check=True, text=True).stdout
             self.assertIn('777', text, 'cached formula value must not be recalculated')

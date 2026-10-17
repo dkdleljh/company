@@ -98,7 +98,7 @@ function viewerHarness() {
     return nodes.get(selector);
   };
   const context = vm.createContext({
-    $, graph:{clearData(){}}, activeTopic:null, viewer:null, viewerSequence:0, renderSequence:0, renderTask:null, pdfLoading:null,
+    $, sheetNavigation:{clear(){},set(){}}, graph:{clearData(){}}, activeTopic:null, viewer:null, viewerSequence:0, renderSequence:0, renderTask:null, pdfLoading:null,
     objectURLs:[], URL:LocalURL, AbortController,
     type:doc=>doc.format, safeLink:()=> '#', message(){}, updateNavigation(){},
     renderPage:async()=>{}, showError:message=>{$('#viewerStatus').textContent=message;},

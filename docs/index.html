@@ -11,7 +11,7 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./assets/styles.css?v=2">
   <link rel="stylesheet" href="./assets/viewer.css?v=2">
-  <link rel="stylesheet" href="./assets/readability.css?v=4">
+  <link rel="stylesheet" href="./assets/readability.css?v=5">
   <link rel="stylesheet" href="./assets/graph.css?v=2">
 </head>
 <body>
@@ -123,9 +123,14 @@
       <button id="viewerDownload" type="button" hidden>파일 저장</button>
       <button id="viewerTextMode" type="button" aria-pressed="false">텍스트 보기</button>
     </div>
+    <div id="sheetNavigation" class="sheet-navigation" hidden>
+      <label for="sheetSelect">시트 <span id="sheetCount"></span></label>
+      <select id="sheetSelect" aria-label="시트 선택"></select>
+      <span id="sheetPosition" role="status" aria-live="polite"></span>
+    </div>
     <div class="viewer-controls">
       <button id="pagePrev" type="button" aria-label="이전 페이지">이전</button>
-      <label>페이지 <input id="pageNumber" type="number" min="1" value="1" aria-label="페이지 번호"></label>
+      <label><span id="pageLabel">페이지</span> <input id="pageNumber" type="number" min="1" value="1" aria-label="페이지 번호"></label>
       <span id="pageTotal"></span>
       <button id="pageNext" type="button" aria-label="다음 페이지">다음</button>
       <label>확대 <select id="zoomSelect"><option value="fit">너비 맞춤</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select></label>
@@ -162,6 +167,6 @@
   </dialog>
   <script src="./assets/graph-model.js?v=1" defer></script>
   <script src="./assets/search.js?v=2" defer></script>
-  <script type="module" src="./assets/app.js?v=8"></script>
+  <script type="module" src="./assets/app.js?v=9"></script>
 </body>
 </html>
