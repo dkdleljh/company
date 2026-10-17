@@ -43,7 +43,7 @@ $('#loginForm').addEventListener('submit',async event=>{
   finally{button.disabled=false;}
 });
 function lockPortal(focus=true){
-  closeViewer();$('#topicDialog').close();vault.lock();topics=[];documents=[];index=null;
+  closeViewer();$('#topicDialog').close();$('#categoryMenu').close();$('#menuButton').setAttribute('aria-expanded','false');$('#categoryNavigation').replaceChildren();vault.lock();topics=[];documents=[];index=null;
   $('#topicGrid').replaceChildren();$('#documentRows').replaceChildren();$('#dialogContent').replaceChildren();
   for(const id of ['viewerTitle','viewerPath','viewerEngine','viewerNote','dialogTitle','dialogSummary','dialogCategory','searchStatus','findStatus'])$('#'+id).textContent='';
   $('#viewerSearch').value='';$('#viewerNotionLink').removeAttribute('href');$('#dialogNotionLink').removeAttribute('href');
@@ -56,13 +56,37 @@ function createFilters(){
   const formats=['전체',...new Set(documents.map(type))].sort((a,b)=>a==='전체'?-1:b==='전체'?1:a.localeCompare(b,'ko'));
   $('#categoryFilters').innerHTML=cats.map(c=>`<button class="chip" type="button" data-category="${escapeHtml(c)}" aria-pressed="${c===category}">${escapeHtml(c)}</button>`).join('');
   $('#formatFilters').innerHTML=formats.map(f=>`<button class="chip" type="button" data-format="${escapeHtml(f)}" aria-pressed="${f===format}">${escapeHtml(f)}</button>`).join('');
+  $('#categoryNavigation').innerHTML=cats.map(c=>{
+    const count=window.CompanySearch.searchDocuments(index,'',{category:c}).length;
+    return `<button class="category-link" type="button" data-category="${escapeHtml(c)}" aria-pressed="${c===category}"><span>${escapeHtml(c==='전체'?'전체 문서':c)}</span><span class="category-count" aria-label="${count}개 문서">${count}</span></button>`;
+  }).join('');
   updateFilters();
 }
 function updateFilters(){document.querySelectorAll('[data-category],[data-format]').forEach(el=>{
   const on=el.dataset.category?el.dataset.category===category:el.dataset.format===format;
   el.classList.toggle('active',on);el.setAttribute('aria-pressed',on);
 });}
-$('#categoryFilters').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(b){category=b.dataset.category;visible=PAGE_SIZE;updateFilters();renderAll();}});
+function selectCategory(value){category=value;visible=PAGE_SIZE;updateFilters();renderAll();}
+$('#categoryFilters').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(b)selectCategory(b.dataset.category);});
+$('#menuButton').addEventListener('click',()=>{
+  if(!index)return;
+  $('#categoryMenu').showModal();$('#menuButton').setAttribute('aria-expanded','true');
+});
+$('#closeMenu').addEventListener('click',()=>$('#categoryMenu').close());
+$('#categoryMenu').addEventListener('close',()=>$('#menuButton').setAttribute('aria-expanded','false'));
+$('#categoryMenu').addEventListener('click',backdrop);
+$('#categoryMenu').addEventListener('keydown',e=>{
+  if(e.key!=='Tab')return;
+  const buttons=[...$('#categoryMenu').querySelectorAll('button')];
+  const first=buttons[0],last=buttons.at(-1);
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+$('#categoryNavigation').addEventListener('click',e=>{
+  const button=e.target.closest('[data-category]');if(!button)return;
+  selectCategory(button.dataset.category);$('#categoryMenu').close();
+  $('#documentHeading').focus({preventScroll:true});$('#docSection').scrollIntoView({block:'start',behavior:'instant'});
+});
 $('#formatFilters').addEventListener('click',e=>{const b=e.target.closest('[data-format]');if(b){format=b.dataset.format;visible=PAGE_SIZE;updateFilters();renderAll();}});
 $('#resetFilters').addEventListener('click',()=>{category=format='전체';query='';visible=PAGE_SIZE;$('#searchInput').value='';$('#sortSelect').value='relevance';updateFilters();renderAll();$('#searchInput').focus();});
 $('#searchInput').addEventListener('input',e=>{query=e.target.value;visible=PAGE_SIZE;renderAll();});
@@ -72,6 +96,7 @@ function renderAll(){
   if(!index)return;
   const found=window.CompanySearch.searchDocuments(index,query,{category,format,sort:$('#sortSelect').value});
   const ts=window.CompanySearch.searchTopics(index,query,{category});
+  $('#documentHeading').textContent=category==='전체'?'전체 문서':category;
   $('#resultCount').textContent=found.length;
   $('#searchStatus').textContent=`${query.trim()?`“${query.trim()}” · `:''}문서 ${found.length}개, 백과 ${ts.length}개${category!=='전체'?` · ${category}`:''}${format!=='전체'?` · ${format}`:''}`;
   $('#documentRows').innerHTML=found.slice(0,visible).map(doc=>{
@@ -214,6 +239,6 @@ $('#viewerDownload').addEventListener('click',async()=>{
   }catch(error){if(viewer===state&&error.name!=='AbortError')showError(error.message);}
   finally{if(viewer===state){button.disabled=false;button.textContent='원본 파일 저장';}}
 });
-document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'&&!$('#appView').hidden){e.preventDefault();$('#searchInput').focus();}});
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'&&!$('#appView').hidden){e.preventDefault();if($('#categoryMenu').open)$('#categoryMenu').close();if(!document.querySelector('dialog[open]'))$('#searchInput').focus();}});
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(viewer&&$('#documentDialog').open&&$('#zoomSelect').value==='fit')renderPage();},150);});
 window.addEventListener('pagehide',()=>lockPortal(false));
