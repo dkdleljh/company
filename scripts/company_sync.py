@@ -3,7 +3,7 @@
 import argparse,asyncio,datetime,fcntl,hashlib,json,mimetypes,os,re,shutil,subprocess,sys,tempfile,time,zipfile
 from pathlib import Path
 from urllib.parse import urlparse,unquote
-from company_notion import Notion,page_properties,page_body,plain
+from company_notion import Notion,NotionError,page_properties,page_body,plain
 
 class SyncError(Exception):pass
 
@@ -46,7 +46,7 @@ def changes(old,new):
 
 def run(command,cwd=None,env=None,timeout=3600):
     r=subprocess.run(command,cwd=cwd,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
-    if r.returncode:raise SyncError('command_failed:'+Path(command[0]).name)
+    if r.returncode:raise SyncError('command_failed:'+Path(command[0]).name+':'+Path(command[1]).name+':'+str(r.returncode))
     return r.stdout.decode(errors='replace').strip()
 
 def markdown_literal(value):return re.sub(r'([\\`*_{}\[\]()#+.!|>~-])',r'\\\1',str(value))
@@ -90,6 +90,10 @@ def upload_parts(source,work):
     # The existing MCP upload endpoint accepts files below 20 MiB. ZIP retains unsupported bytes exactly.
     size=source.stat().st_size;safe={'.pdf','.txt','.csv','.json','.md','.xlsx','.xls','.pptx','.ppt','.doc','.docx','.jpg','.jpeg','.png','.svg','.zip','.gz'}
     if size<19*1024**2 and source.suffix.lower() in safe:return [source]
+    if size<19*1024**2:
+        target=work/(source.name+'.zip')
+        with zipfile.ZipFile(target,'w',zipfile.ZIP_STORED) as z:z.write(source,source.name)
+        return [target]
     out=[];chunk_size=18*1024**2
     with source.open('rb') as f:
         i=0
@@ -112,12 +116,12 @@ async def upload(n,p):
             r=requests.post(created['upload_url'],headers=created.get('upload_headers',{}),files={created.get('upload_form_field','file'):(p.name,f,mimetypes.guess_type(p.name)[0] or 'application/octet-stream')},timeout=600)
         r.raise_for_status();return r.json()
     result=await asyncio.to_thread(send)
-    return {'id':created['file_upload_id'],'markdown':result.get('suggested_markdown') or created.get('suggested_markdown') or f'<file src="file-upload://{created["file_upload_id"]}"></file>'}
+    return {'id':created['file_upload_id'],'filename':p.name,'markdown':result.get('suggested_markdown') or created.get('suggested_markdown') or f'<file src="file-upload://{created["file_upload_id"]}"></file>'}
 
 async def update_document(n,config,rel,record,entry,snapshot,journal,jpath):
     pid=entry.get('page_id');key=rel+'|'+record['sha256'];job=journal.setdefault(key,{})
     if not pid:
-        rows=await n.rows(config['notion_source']);matches=[r for r in rows if plain(r['상대경로'])==rel]
+        rows=await n.rows(config.get('notion_source_view',config['notion_source']));matches=[r for r in rows if plain(r.get('상대경로'))==rel]
         if len(matches)>1:raise SyncError('duplicate_notion_paths')
         if matches:pid=matches[0]['url']
         elif job.get('create_intent'):raise SyncError('uncertain_create_requires_reconciliation')
@@ -130,8 +134,9 @@ async def update_document(n,config,rel,record,entry,snapshot,journal,jpath):
         entry['page_id']=pid;job['page_id']=pid;save(jpath,journal)
     current=await n.fetch(pid,True);props=page_properties(current)
     marker='SHA-256: '+record['sha256']
+    revision='동기화 식별자: '+hashlib.sha256((rel+'|'+record['sha256']).encode()).hexdigest()
     note=str(props.get('검증메모',''))
-    if marker in note and marker in page_body(current) and '## 자동 동기화 원본' in page_body(current) and plain(props.get('상대경로'))==rel and '로컬 삭제' not in note:
+    if marker in note and revision in page_body(current) and '## 자동 동기화 원본' in page_body(current) and plain(props.get('상대경로'))==rel and '로컬 삭제' not in note:
         if await asyncio.to_thread(verify_attachments,props.get('원본 파일',[]),record['sha256'],Path(config['state'])):
             entry.update(record,status='active',verified_at=now());return
     uploads=job.get('uploads') if time.time()-job.get('uploaded_at',0)<3300 else None
@@ -144,22 +149,39 @@ async def update_document(n,config,rel,record,entry,snapshot,journal,jpath):
     await n.call('notion-update-page',{'page_id':pid,'command':'update_properties','properties':{'원본 제목':markdown_literal(Path(rel).name),'상대경로':markdown_literal(rel),'검증메모':note,'원본 파일':[{'type':'file_upload','file_upload':{'id':u['id']}} for u in uploads]},'allow_async':False})
     current=await n.fetch(pid);body=page_body(current)
     start='## 자동 동기화 원본';end='## 기존 문서 기록'
-    content=f'{start}\n현재 로컬 파일의 원본입니다. 아래 기존 기록보다 이 첨부 파일을 우선 사용하세요.\n\n상대경로: `{rel}`\n\n{marker}\n\n'+ '\n'.join(u['markdown'] for u in uploads)+'\n\n'
-    if any(attachment_name(x)=='original-part0001.zip' for x in props.get('원본 파일',[])) or len(uploads)>1 or snapshot.suffix.lower() in {'.hwp','.hwpx'}:
-        content+='ZIP은 원본 바이트를 담습니다. ZIP 안의 part0001.bin, part0002.bin 순서대로 결합하고 위 SHA-256으로 검증하세요.\n\n'
-    match=re.search(re.escape(start)+r'.*?(?='+re.escape(end)+r')',body,re.S)
-    if match:
-        await n.call('notion-update-page',{'page_id':pid,'command':'update_content','content_updates':[{'old_str':match.group(),'new_str':content}],'allow_async':False})
+    content=f'{start}\n현재 로컬 파일의 원본입니다. 아래 기존 기록보다 이 첨부 파일을 우선 사용하세요.\n\n상대경로: `{rel}`\n\n{marker}\n\n{revision}\n\n'+ '\n'.join(u['markdown'] for u in uploads)+'\n\n'
+    if any(u.get('filename','').startswith('original-part') for u in uploads):
+        content+='분할 ZIP은 원본 바이트를 담습니다. ZIP 안의 part0001.bin, part0002.bin 순서대로 결합해 위 파일명으로 저장하고 SHA-256으로 검증하세요.\n\n'
+    elif any(u.get('filename','').endswith('.zip') for u in uploads) and snapshot.suffix.lower()!='.zip':
+        content+='ZIP을 풀면 원래 파일명과 내용 그대로 원본을 사용할 수 있습니다.\n\n'
+    if start in body:
+        # File references returned by fetch are not stable search strings in Notion.
+        # Replace only our unique heading and keep prior attachments as revision history.
+        await n.call('notion-update-page',{'page_id':pid,'command':'update_content','content_updates':[{'old_str':start,'new_str':content+'## 이전 자동 동기화 기록\n'}],'allow_async':False})
     else:
         await n.call('notion-update-page',{'page_id':pid,'command':'insert_content','position':{'type':'start'},'content':content+end+'\n','allow_async':False})
     final=await n.fetch(pid,True);props=page_properties(final)
-    if plain(props.get('상대경로'))!=rel or not await asyncio.to_thread(verify_attachments,props.get('원본 파일',[]),record['sha256'],Path(config['state'])):raise SyncError('notion_original_verification_failed')
+    if plain(props.get('상대경로'))!=rel or revision not in page_body(final) or not await asyncio.to_thread(verify_attachments,props.get('원본 파일',[]),record['sha256'],Path(config['state'])):raise SyncError('notion_original_verification_failed')
     entry.update(record,status='active',verified_at=now());job['verified']=True;save(jpath,journal)
 
-async def refresh_topics(n,topics):
+async def refresh_topics(n,topics,source=None):
     result=[]
-    for topic in topics:
-        value=await n.fetch(topic['url']);copy=dict(topic);copy['content_markdown']=page_body(value);copy['title']=value.get('title') or topic['title'];result.append(copy)
+    identity=lambda url:url.split('?')[0].rstrip('/').rsplit('/',1)[-1].replace('-','')
+    previous={identity(t['url']):t for t in topics}
+    rows=await n.rows(source,'url') if source else topics
+    if not rows:raise SyncError('empty_notion_encyclopedia_held')
+    for row in rows:
+        url=row['url'];pid=identity(url);topic=previous.get(pid,{})
+        value=await n.fetch(url);props=page_properties(value);copy=dict(topic)
+        copy.update(id=topic.get('id',pid),url=url,content_markdown=page_body(value),title=plain(props.get('문서명') or value.get('title') or topic.get('title','')))
+        for source_key,target in [('분야','category'),('근거 문서','source_relations')]:
+            if source_key in props:
+                field=props[source_key]
+                if isinstance(field,str):
+                    try:field=json.loads(field)
+                    except ValueError:field=[plain(field)] if field else []
+                copy[target]=field
+        copy.setdefault('summary','');result.append(copy)
     return result
 
 def build_and_publish(config,files,entries,topics,baseline):
@@ -272,7 +294,7 @@ async def sync(config,force=False):
                 removed=page_properties(await n.fetch(entry['page_id']))
                 if '로컬 삭제 감지' not in str(removed.get('검증메모','')):raise SyncError('notion_removal_verification_failed')
                 entry['status']='removed';save(state/'notion-ledger.json',entries)
-        topics=await refresh_topics(n,topics)
+        topics=await refresh_topics(n,topics,config.get('notion_topics_view'))
     save(state/'topics.json',topics);save(state/'topics-check.json',{'at':time.time()})
     if not plan['updated'] and not plan['removed'] and not force and json.dumps(topics,sort_keys=True,ensure_ascii=False)==previous_topics:
         save(state/'status.json',dict(status,status='healthy',files=len(files),last_synced_at=ledger.get('synced_at'),commit=ledger.get('commit'),changes=0));return
@@ -290,7 +312,7 @@ def main():
         except BlockingIOError:return
         try:asyncio.run(sync(c,args.force))
         except Exception as e:
-            message=str(e) if isinstance(e,SyncError) else type(e).__name__
+            message=str(e) if isinstance(e,(SyncError,NotionError)) else type(e).__name__
             save(state/'status.json',{'status':'error','checked_at':now(),'error':message});print(json.dumps({'status':'error','error':message}),flush=True);raise SystemExit(1)
         print(json.dumps(load(state/'status.json')),flush=True)
 if __name__=='__main__':main()
