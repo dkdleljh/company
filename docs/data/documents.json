@@ -15,7 +15,12 @@
       "md",
       "00",
       "정리결과"
-    ]
+    ],
+    "preview_id": "fd2cd9ec0a918a50fff6eaed",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "00_파일목록.csv": {
     "title": "00_파일목록.csv",
@@ -33,7 +38,12 @@
       "csv",
       "00",
       "파일목록"
-    ]
+    ],
+    "preview_id": "97a064acec30249e8c82fba1",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "00_폴더안내.md": {
     "title": "00_폴더안내.md",
@@ -51,7 +61,12 @@
       "md",
       "00",
       "폴더안내"
-    ]
+    ],
+    "preview_id": "da24b3f09cff22c46d21186a",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "00_확인필요.md": {
     "title": "00_확인필요.md",
@@ -69,7 +84,12 @@
       "md",
       "00",
       "확인필요"
-    ]
+    ],
+    "preview_id": "fc3d5a3699bcce2a923056a0",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H0-ICT-기준-0001_ICT 기반설비 시설기준_02.pdf": {
     "title": "H0-ICT-기준-0001_ICT 기반설비 시설기준_02.pdf",
@@ -101,7 +121,12 @@
       "기반설비",
       "시설기준",
       "02"
-    ]
+    ],
+    "preview_id": "3f7b1ced47a8eda9976c0af5",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H0-ICT-절차-0002_SW사업 과업심의위원회 운영절차서_02.pdf": {
     "title": "H0-ICT-절차-0002_SW사업 과업심의위원회 운영절차서_02.pdf",
@@ -134,7 +159,12 @@
       "과업심의위원회",
       "운영절차서",
       "02"
-    ]
+    ],
+    "preview_id": "bdffb37e7711485b1299ae0b",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H0-ICT-절차-0012_정보시스템구축 절차서, SW개발방법론_03.pdf": {
     "title": "H0-ICT-절차-0012_정보시스템구축 절차서, SW개발방법론_03.pdf",
@@ -167,7 +197,12 @@
       "절차서",
       "sw개발방법론",
       "03"
-    ]
+    ],
+    "preview_id": "2c47a5d1adcc57adbc9fc51c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H0-ICT-절차-0033_ICT설비 비상대응 매뉴얼_02.pdf": {
     "title": "H0-ICT-절차-0033_ICT설비 비상대응 매뉴얼_02.pdf",
@@ -199,7 +234,12 @@
       "ict설비",
       "비상대응",
       "02"
-    ]
+    ],
+    "preview_id": "a1499e94e139109bd0f24e8d",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H0-ICT-절차-0039_ICT 운영절차서_04.pdf": {
     "title": "H0-ICT-절차-0039_ICT 운영절차서_04.pdf",
@@ -230,7 +270,12 @@
       "0039",
       "운영절차서",
       "04"
-    ]
+    ],
+    "preview_id": "88955978eb262dc0be8b3316",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H0-ICT-지침-0071_ICT업무처리지침_06.pdf": {
     "title": "H0-ICT-지침-0071_ICT업무처리지침_06.pdf",
@@ -261,7 +306,12 @@
       "0071",
       "ict업무처리지침",
       "06"
-    ]
+    ],
+    "preview_id": "849a0c789064f02b4bbe6ae0",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H0-배전-절차-0010_배전자동화 업무절차서 개정_06.pdf": {
     "title": "H0-배전-절차-0010_배전자동화 업무절차서 개정_06.pdf",
@@ -295,7 +345,12 @@
       "업무절차서",
       "개정",
       "06"
-    ]
+    ],
+    "preview_id": "67433c446594185681ac285d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H1-ICT-기준-0002_변전소 구내통신설비 시설기준_02.pdf": {
     "title": "H1-ICT-기준-0002_변전소 구내통신설비 시설기준_02.pdf",
@@ -328,7 +383,12 @@
       "구내통신설비",
       "시설기준",
       "02"
-    ]
+    ],
+    "preview_id": "e8a44e9f2b1578989d37545d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H1-ICT-절차-0008_EA 업무절차서_04.pdf": {
     "title": "H1-ICT-절차-0008_EA 업무절차서_04.pdf",
@@ -360,7 +420,12 @@
       "ea",
       "업무절차서",
       "04"
-    ]
+    ],
+    "preview_id": "ec7d2a4497a302961446f940",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H1-ICT-지침-0004_해외사업 정보통신(ICT) 지원 및 운영지침_01.pdf": {
     "title": "H1-ICT-지침-0004_해외사업 정보통신(ICT) 지원 및 운영지침_01.pdf",
@@ -393,7 +458,12 @@
       "지원",
       "및",
       "운영지침"
-    ]
+    ],
+    "preview_id": "08fc770d2540cff312691f47",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/H1-통신-기준-0006_사옥 정보통신설비 설계기준_04.pdf": {
     "title": "H1-통신-기준-0006_사옥 정보통신설비 설계기준_04.pdf",
@@ -427,7 +497,12 @@
       "정보통신설비",
       "설계기준",
       "04"
-    ]
+    ],
+    "preview_id": "54f4276c6852b172fff2494e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT 기반설비 시설기준 개정전문 20200518(5차 개정).pdf": {
     "title": "ICT 기반설비 시설기준 개정전문 20200518(5차 개정).pdf",
@@ -459,7 +534,12 @@
       "20200518",
       "5차",
       "개정"
-    ]
+    ],
+    "preview_id": "a9672a41f814b9df955fb5af",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT 업무처리지침 전문_(230524).pdf": {
     "title": "ICT 업무처리지침 전문_(230524).pdf",
@@ -488,7 +568,12 @@
       "업무처리지침",
       "전문",
       "230524"
-    ]
+    ],
+    "preview_id": "591bcd023e036bbc2c957d2a",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT설비 비상대응매뉴얼_7차개정_전문.hwp": {
     "title": "ICT설비 비상대응매뉴얼_7차개정_전문.hwp",
@@ -518,7 +603,12 @@
       "비상대응매뉴얼",
       "7차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "e9b6051b359324346dc2b6d1",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 375,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT설비 비상대응매뉴얼_7차개정_전문.pdf": {
     "title": "ICT설비 비상대응매뉴얼_7차개정_전문.pdf",
@@ -548,7 +638,12 @@
       "비상대응매뉴얼",
       "7차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "5b6a84c6ec347dd57375507b",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT설비_비상대응매뉴얼(6차 개정분).hwp": {
     "title": "ICT설비_비상대응매뉴얼(6차 개정분).hwp",
@@ -578,7 +673,12 @@
       "비상대응매뉴얼",
       "6차",
       "개정분"
-    ]
+    ],
+    "preview_id": "38500bda5ee16de4a56a0400",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 409,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT업무처리지침 전문(5차)_2501.pdf": {
     "title": "ICT업무처리지침 전문(5차)_2501.pdf",
@@ -608,7 +708,12 @@
       "전문",
       "5차",
       "2501"
-    ]
+    ],
+    "preview_id": "8635d70c102b0df73eec5faa",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT업무처리지침 전문_4차(240329).pdf": {
     "title": "ICT업무처리지침 전문_4차(240329).pdf",
@@ -638,7 +743,12 @@
       "전문",
       "4차",
       "240329"
-    ]
+    ],
+    "preview_id": "984120eb90cf559745dc3ca9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT운영절차서_1차개정_전문(최종).pdf": {
     "title": "ICT운영절차서_1차개정_전문(최종).pdf",
@@ -668,7 +778,12 @@
       "1차개정",
       "전문",
       "최종"
-    ]
+    ],
+    "preview_id": "4a55217c870cd899556c8823",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT운영절차서_2차개정_전문.hwp": {
     "title": "ICT운영절차서_2차개정_전문.hwp",
@@ -697,7 +812,12 @@
       "ict운영절차서",
       "2차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "5d3bae1981d457742df0b2c2",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 862,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ICT운영절차서_2차개정_전문.pdf": {
     "title": "ICT운영절차서_2차개정_전문.pdf",
@@ -726,7 +846,12 @@
       "ict운영절차서",
       "2차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "0ee0cc009f3774331df83b45",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ict 기반설비 시설기준_6차개정_전문-복사.pdf": {
     "title": "ict 기반설비 시설기준_6차개정_전문-복사.pdf",
@@ -757,7 +882,12 @@
       "6차개정",
       "전문",
       "복사"
-    ]
+    ],
+    "preview_id": "1ae4df7cceb3097d060a5b3e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ict 운영절차서-복사.pdf": {
     "title": "ict 운영절차서-복사.pdf",
@@ -785,7 +915,12 @@
       "정보통신",
       "운영절차서",
       "복사"
-    ]
+    ],
+    "preview_id": "d061cf2750ff874bfc8b0e73",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ict업무처리지침 전문(6차).pdf": {
     "title": "ict업무처리지침 전문(6차).pdf",
@@ -814,7 +949,12 @@
       "ict업무처리지침",
       "전문",
       "6차"
-    ]
+    ],
+    "preview_id": "24e113a19c5aaaba058e4c9a",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/ict운영절차서_4차개정_전문-복사.pdf": {
     "title": "ict운영절차서_4차개정_전문-복사.pdf",
@@ -844,7 +984,12 @@
       "4차개정",
       "전문",
       "복사"
-    ]
+    ],
+    "preview_id": "d6cdb689b360204f7358c4a9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/변전소구내통신설비시설기준_3차개정_전문.pdf": {
     "title": "변전소구내통신설비시설기준_3차개정_전문.pdf",
@@ -873,7 +1018,12 @@
       "변전소구내통신설비시설기준",
       "3차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "4c5a520cba8fbe354cf66ec1",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/붙임2. 시스템 매뉴얼(사용자) (2025_07_10 02_29_58 UTC).pdf": {
     "title": "붙임2. 시스템 매뉴얼(사용자) (2025_07_10 02_29_58 UTC).pdf",
@@ -909,7 +1059,12 @@
       "29",
       "58",
       "utc"
-    ]
+    ],
+    "preview_id": "7db54695f2dd9cbc3f58354d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/붙임2. 시스템 매뉴얼(사용자).hwp": {
     "title": "붙임2. 시스템 매뉴얼(사용자).hwp",
@@ -938,7 +1093,12 @@
       "붙임2",
       "시스템",
       "사용자"
-    ]
+    ],
+    "preview_id": "d397d3fbdcef77e11930049c",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 11,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/(전문)_ICT기획처_H0-ICT-편람-0002_Ver 01_OPGW시설업무편람.pdf": {
     "title": "(전문)_ICT기획처_H0-ICT-편람-0002_Ver 01_OPGW시설업무편람.pdf",
@@ -972,7 +1132,12 @@
       "0002",
       "ver",
       "opgw시설업무편람"
-    ]
+    ],
+    "preview_id": "5763e799b4ce5e25917cc3da",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/DS-0060_04_DS-0060_전문_광전송선로설계기준(20210514).pdf": {
     "title": "DS-0060_04_DS-0060_전문_광전송선로설계기준(20210514).pdf",
@@ -1004,7 +1169,12 @@
       "전문",
       "광전송선로설계기준",
       "20210514"
-    ]
+    ],
+    "preview_id": "c2b0951ea16900671b12fce9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/H0-ICT-편람-0002_OPGW 시설 업무편람_02.pdf": {
     "title": "H0-ICT-편람-0002_OPGW 시설 업무편람_02.pdf",
@@ -1037,7 +1207,12 @@
       "시설",
       "업무편람",
       "02"
-    ]
+    ],
+    "preview_id": "6ef9c454b64f10a91a434e0c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/H0-ICT-편람-0004_배전계통 자가 광통신망 시공운영 업무편람_02.pdf": {
     "title": "H0-ICT-편람-0004_배전계통 자가 광통신망 시공운영 업무편람_02.pdf",
@@ -1073,7 +1248,12 @@
       "시공운영",
       "업무편람",
       "02"
-    ]
+    ],
+    "preview_id": "0d5da73f7a0923deb3aca2ba",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/H0-기술-기준-0016_자가 통신망 배전설비 이용업무 처리기준_02.pdf": {
     "title": "H0-기술-기준-0016_자가 통신망 배전설비 이용업무 처리기준_02.pdf",
@@ -1109,7 +1289,12 @@
       "이용업무",
       "처리기준",
       "02"
-    ]
+    ],
+    "preview_id": "6b2655e252748df2c0853a87",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/OPGW시스템 매뉴얼_관리자용 (2025_07_10 02_29_58 UTC).pdf": {
     "title": "OPGW시스템 매뉴얼_관리자용 (2025_07_10 02_29_58 UTC).pdf",
@@ -1144,7 +1329,12 @@
       "29",
       "58",
       "utc"
-    ]
+    ],
+    "preview_id": "b96d620ef2a43707ec2da75a",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/OPGW시스템 매뉴얼_관리자용.hwp": {
     "title": "OPGW시스템 매뉴얼_관리자용.hwp",
@@ -1172,7 +1362,12 @@
       "광통신",
       "opgw시스템",
       "관리자용"
-    ]
+    ],
+    "preview_id": "dd16e06b8408459fec4c1d87",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 22,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/OPGW시스템 매뉴얼_관리자용.pdf": {
     "title": "OPGW시스템 매뉴얼_관리자용.pdf",
@@ -1200,7 +1395,12 @@
       "광통신",
       "opgw시스템",
       "관리자용"
-    ]
+    ],
+    "preview_id": "c36496341c62656a20e0f657",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/배전계통 자가 광통신망 운영지침.hwp": {
     "title": "배전계통 자가 광통신망 운영지침.hwp",
@@ -1230,7 +1430,12 @@
       "자가",
       "광통신망",
       "운영지침"
-    ]
+    ],
+    "preview_id": "54a3965b6f3aafcd4031b0ef",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 244,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/붙임 1. opgw 시설 업무편람(4차개정).pdf": {
     "title": "붙임 1. opgw 시설 업무편람(4차개정).pdf",
@@ -1261,7 +1466,12 @@
       "시설",
       "업무편람",
       "4차개정"
-    ]
+    ],
+    "preview_id": "51cccbab23e274cae14eaac5",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/붙임 2. opgw 시설 업무편람 개정비교표(4차개정).pdf": {
     "title": "붙임 2. opgw 시설 업무편람 개정비교표(4차개정).pdf",
@@ -1293,7 +1503,12 @@
       "업무편람",
       "개정비교표",
       "4차개정"
-    ]
+    ],
+    "preview_id": "893535418e9d7843c8e43959",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/H0-ICT-절차-0046_소프트웨어 개발보안 절차서_04.pdf": {
     "title": "H0-ICT-절차-0046_소프트웨어 개발보안 절차서_04.pdf",
@@ -1325,7 +1540,12 @@
       "개발보안",
       "절차서",
       "04"
-    ]
+    ],
+    "preview_id": "7280cfb66363ec7567df0f03",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/H0-통신-절차-0023_정보보호설비 운영절차서_04.pdf": {
     "title": "H0-통신-절차-0023_정보보호설비 운영절차서_04.pdf",
@@ -1356,7 +1576,12 @@
       "정보보호설비",
       "운영절차서",
       "04"
-    ]
+    ],
+    "preview_id": "1a9a17b6f07ac12169d8a4b2",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/H0-통신-절차-0023_정보보호설비 운영절차서_05.pdf": {
     "title": "H0-통신-절차-0023_정보보호설비 운영절차서_05.pdf",
@@ -1387,7 +1612,12 @@
       "정보보호설비",
       "운영절차서",
       "05"
-    ]
+    ],
+    "preview_id": "972c77e0eb56f4dffc5e7710",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/H0-통신-절차-0036_전력제어시스템 보안관리업무절차서_06.pdf": {
     "title": "H0-통신-절차-0036_전력제어시스템 보안관리업무절차서_06.pdf",
@@ -1418,7 +1648,12 @@
       "전력제어시스템",
       "보안관리업무절차서",
       "06"
-    ]
+    ],
+    "preview_id": "2d4d8481b4af40a65d050dd4",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/H0-통신-절차-0036_전력제어시스템 보안관리업무절차서_07.pdf": {
     "title": "H0-통신-절차-0036_전력제어시스템 보안관리업무절차서_07.pdf",
@@ -1449,7 +1684,12 @@
       "전력제어시스템",
       "보안관리업무절차서",
       "07"
-    ]
+    ],
+    "preview_id": "bee219c5f92a7f8726fd17c0",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/보안업무 처리지침 개정 전문 12차개정.pdf": {
     "title": "보안업무 처리지침 개정 전문 12차개정.pdf",
@@ -1478,7 +1718,12 @@
       "개정",
       "전문",
       "12차개정"
-    ]
+    ],
+    "preview_id": "94f7a38feaa351d436c4dfda",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/사이버 침해사고 대응절차 편람.pdf": {
     "title": "사이버 침해사고 대응절차 편람.pdf",
@@ -1506,7 +1751,12 @@
       "침해사고",
       "대응절차",
       "편람"
-    ]
+    ],
+    "preview_id": "195d4e953d64f72a564a050a",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/01_업무기준_매뉴얼/보안/정보보안업무기본지침 개정(6차) 전문_최종-복사.pdf": {
     "title": "정보보안업무기본지침 개정(6차) 전문_최종-복사.pdf",
@@ -1536,7 +1786,12 @@
       "전문",
       "최종",
       "복사"
-    ]
+    ],
+    "preview_id": "1619a584ea559529dfc0e459",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/업무위탁_계약/21~22년 ICT 업무위탁 책자최종본(0404).pdf": {
     "title": "21~22년 ICT 업무위탁 책자최종본(0404).pdf",
@@ -1567,7 +1822,12 @@
       "ict",
       "책자최종본",
       "0404"
-    ]
+    ],
+    "preview_id": "c5b559d96910a1a8bdc8618a",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/01_업무기준_매뉴얼/업무위탁_계약/21년 AMI분야 계약책자(최종)_220120.pdf": {
     "title": "21년 AMI분야 계약책자(최종)_220120.pdf",
@@ -1598,7 +1858,12 @@
       "계약책자",
       "최종",
       "220120"
-    ]
+    ],
+    "preview_id": "216bb2dae6d0d9a9c43fda99",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★.pdf": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★.pdf",
@@ -1632,7 +1897,12 @@
       "세부절차",
       "구성변경반영",
       "최종"
-    ]
+    ],
+    "preview_id": "337274754de12f8cb7ac6b3e",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_1.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_1.jpg",
@@ -1668,7 +1938,12 @@
       "구성변경반영",
       "최종",
       "1"
-    ]
+    ],
+    "preview_id": "2d4e43d702011b2278237b2c",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_10.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_10.jpg",
@@ -1704,7 +1979,12 @@
       "구성변경반영",
       "최종",
       "10"
-    ]
+    ],
+    "preview_id": "d486e3e26cb280d9b7bdcc18",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_2.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_2.jpg",
@@ -1740,7 +2020,12 @@
       "구성변경반영",
       "최종",
       "2"
-    ]
+    ],
+    "preview_id": "fa14a373bf1fa2218dbc9e22",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_3.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_3.jpg",
@@ -1776,7 +2061,12 @@
       "구성변경반영",
       "최종",
       "3"
-    ]
+    ],
+    "preview_id": "83c0472f04a5a69a2a1eeaad",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_4.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_4.jpg",
@@ -1812,7 +2102,12 @@
       "구성변경반영",
       "최종",
       "4"
-    ]
+    ],
+    "preview_id": "763ec3ca13de6725bf37cacc",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_5.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_5.jpg",
@@ -1848,7 +2143,12 @@
       "구성변경반영",
       "최종",
       "5"
-    ]
+    ],
+    "preview_id": "04835dfac4a374f9dca759ed",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_6.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_6.jpg",
@@ -1884,7 +2184,12 @@
       "구성변경반영",
       "최종",
       "6"
-    ]
+    ],
+    "preview_id": "c0d70d09c2b47d964e36b2f1",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_7.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_7.jpg",
@@ -1920,7 +2225,12 @@
       "구성변경반영",
       "최종",
       "7"
-    ]
+    ],
+    "preview_id": "89ef2e8261e4ce3f8b9b018e",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_8.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_8.jpg",
@@ -1956,7 +2266,12 @@
       "구성변경반영",
       "최종",
       "8"
-    ]
+    ],
+    "preview_id": "d7413d55c9845bbe548b5c9e",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/TCTIP_회선전환/붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_9.jpg": {
     "title": "붙임3. EMS RTU 디지털 전환작업 세부절차_구성변경반영_최종★_9.jpg",
@@ -1992,7 +2307,12 @@
       "구성변경반영",
       "최종",
       "9"
-    ]
+    ],
+    "preview_id": "e7ee935f178c927f5b5b3df1",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/기준_절차/H0-ICT-절차-0047_SCADA 운영업무 절차서_01.pdf": {
     "title": "H0-ICT-절차-0047_SCADA 운영업무 절차서_01.pdf",
@@ -2025,7 +2345,12 @@
       "0047",
       "운영업무",
       "절차서"
-    ]
+    ],
+    "preview_id": "6b1d03977861906e9d108e68",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/기준_절차/H0-송변-절차-0002_계통운영센터 SCADA 후비시스템 운전절차서_07.pdf": {
     "title": "H0-송변-절차-0002_계통운영센터 SCADA 후비시스템 운전절차서_07.pdf",
@@ -2060,7 +2385,12 @@
       "후비시스템",
       "운전절차서",
       "07"
-    ]
+    ],
+    "preview_id": "3b5bed1c20a246f052e42675",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/02_RTU_SCADA_EMS/기준_절차/전문_변전소 scada 포인트 선정 절차서(2차).pdf": {
     "title": "전문_변전소 scada 포인트 선정 절차서(2차).pdf",
@@ -2094,7 +2424,12 @@
       "선정",
       "절차서",
       "2차"
-    ]
+    ],
+    "preview_id": "02808c37dec69db588cb5ecd",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/03_TRS_DAS_ADMS/교육_매뉴얼/D-TRS중계국통합감시_Renobit_2차사업_사용자가이드_v0.5_20220321.pptx": {
     "title": "D-TRS중계국통합감시_Renobit_2차사업_사용자가이드_v0.5_20220321.pptx",
@@ -2131,7 +2466,12 @@
       "v0",
       "5",
       "20220321"
-    ]
+    ],
+    "preview_id": "f5c20fc14f880a92fef9be5e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/교육_매뉴얼/TRS메뉴얼.zip": {
     "title": "TRS메뉴얼.zip",
@@ -2161,7 +2501,12 @@
       "교육",
       "매뉴얼",
       "trs메뉴얼"
-    ]
+    ],
+    "preview_id": "ae11b7d337e7ea8a84799e60",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/교육_매뉴얼/[RENOBIT.2.0] 사용자 매뉴얼(국문)_220718-복사.pdf": {
     "title": "[RENOBIT.2.0] 사용자 매뉴얼(국문)_220718-복사.pdf",
@@ -2196,7 +2541,12 @@
       "국문",
       "220718",
       "복사"
-    ]
+    ],
+    "preview_id": "78c05469a9e7bd6f447b5b70",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/교육_매뉴얼/○ 배전선로 간선 분할과 연계 설명자료.hwp": {
     "title": "○ 배전선로 간선 분할과 연계 설명자료.hwp",
@@ -2229,7 +2579,12 @@
       "분할과",
       "연계",
       "설명자료"
-    ]
+    ],
+    "preview_id": "28aec5500e0e2536db544455",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 8,
+    "preview_redacted": false
   },
   "01_전사공통/03_TRS_DAS_ADMS/교육_매뉴얼/★DTRS TB3소개.pptx": {
     "title": "★DTRS TB3소개.pptx",
@@ -2260,7 +2615,12 @@
       "매뉴얼",
       "dtrs",
       "tb3소개"
-    ]
+    ],
+    "preview_id": "14d325a007a5d6aff1c6210f",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/교육_매뉴얼/교육자료_PPT_최종본_220622.pdf": {
     "title": "교육자료_PPT_최종본_220622.pdf",
@@ -2292,7 +2652,12 @@
       "ppt",
       "최종본",
       "220622"
-    ]
+    ],
+    "preview_id": "9c4209d71fb20ff2d06943f1",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/교육_매뉴얼/배전자동화 광단말 NMS 사용자 교재 v2.0.1.pdf": {
     "title": "배전자동화 광단말 NMS 사용자 교재 v2.0.1.pdf",
@@ -2328,7 +2693,12 @@
       "v2",
       "0",
       "1"
-    ]
+    ],
+    "preview_id": "28ac09b37f2f18156274954f",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/기준_절차/DAS 업무절차서(전문)_4차개정_전문-복사.pdf": {
     "title": "DAS 업무절차서(전문)_4차개정_전문-복사.pdf",
@@ -2360,7 +2730,12 @@
       "전문",
       "4차개정",
       "복사"
-    ]
+    ],
+    "preview_id": "8135f1efcd1362af55a872f4",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/기준_절차/DAS 업무절차서(전문)_4차개정_전문.hwp": {
     "title": "DAS 업무절차서(전문)_4차개정_전문.hwp",
@@ -2391,7 +2766,12 @@
       "업무절차서",
       "전문",
       "4차개정"
-    ]
+    ],
+    "preview_id": "336bb949db60b3be18207441",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 10,
+    "preview_redacted": false
   },
   "01_전사공통/03_TRS_DAS_ADMS/기준_절차/DAS 유지보수 업무처리절차서 개정(12차) 전문_최종(211129)_등록용.hwp": {
     "title": "DAS 유지보수 업무처리절차서 개정(12차) 전문_최종(211129)_등록용.hwp",
@@ -2427,7 +2807,12 @@
       "최종",
       "211129",
       "등록용"
-    ]
+    ],
+    "preview_id": "04d3780b3d705611b39ae223",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 298,
+    "preview_redacted": false
   },
   "01_전사공통/03_TRS_DAS_ADMS/기준_절차/GS-5985-0002_배전자동화용 디지털TRS 데이터 단말기_03.pdf": {
     "title": "GS-5985-0002_배전자동화용 디지털TRS 데이터 단말기_03.pdf",
@@ -2462,7 +2847,12 @@
       "디지털trs",
       "데이터",
       "단말기"
-    ]
+    ],
+    "preview_id": "f4575c7e64f1dc06773c14e8",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/기준_절차/H0-배전-절차-0009_DAS 유지보수 업무처리 절차서_10.pdf": {
     "title": "H0-배전-절차-0009_DAS 유지보수 업무처리 절차서_10.pdf",
@@ -2497,7 +2887,12 @@
       "업무처리",
       "절차서",
       "10"
-    ]
+    ],
+    "preview_id": "5deab39d5877019f4da1d040",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/기준_절차/H0-배전-절차-0067_ADMS 유지보수 절차서_04.pdf": {
     "title": "H0-배전-절차-0067_ADMS 유지보수 절차서_04.pdf",
@@ -2531,7 +2926,12 @@
       "유지보수",
       "절차서",
       "04"
-    ]
+    ],
+    "preview_id": "37de1d42bb0159d2e7f79a2f",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/기준_절차/H0-배전-절차-0078_ADMS 장애대응 실무매뉴얼_01.pdf": {
     "title": "H0-배전-절차-0078_ADMS 장애대응 실무매뉴얼_01.pdf",
@@ -2564,7 +2964,12 @@
       "0078",
       "장애대응",
       "실무매뉴얼"
-    ]
+    ],
+    "preview_id": "a2b919c9e7701d2a0d5be5a2",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/본사_전국보고/260428_배전센터 진도점검 종합보고V3(본사).pdf": {
     "title": "260428_배전센터 진도점검 종합보고V3(본사).pdf",
@@ -2596,7 +3001,12 @@
       "배전센터",
       "진도점검",
       "종합보고v3"
-    ]
+    ],
+    "preview_id": "7590f30bbf9defa3f815ee97",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/본사_전국보고/ADMS통신망통합관리시스템개발(구축결과보고회의자료)-260728-수정1.pdf": {
     "title": "ADMS통신망통합관리시스템개발(구축결과보고회의자료)-260728-수정1.pdf",
@@ -2628,7 +3038,12 @@
       "구축결과보고회의자료",
       "260728",
       "수정1"
-    ]
+    ],
+    "preview_id": "580f11f9ad073ffe97de0d97",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/평가지표/(참고)DAS용 무선 통신성공률 지표.pdf": {
     "title": "(참고)DAS용 무선 통신성공률 지표.pdf",
@@ -2659,7 +3074,12 @@
       "무선",
       "통신성공률",
       "지표"
-    ]
+    ],
+    "preview_id": "a20e49be1aedc4e446ba2cb5",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/평가지표/TRS 내부평가지표(24년).hwp": {
     "title": "TRS 내부평가지표(24년).hwp",
@@ -2687,7 +3107,12 @@
       "adms",
       "내부평가지표",
       "24년"
-    ]
+    ],
+    "preview_id": "24cbd69d619b2c8eb4ab6e67",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 1,
+    "preview_redacted": false
   },
   "01_전사공통/03_TRS_DAS_ADMS/평가지표/[참고2]DAS용 무선 통신성공률 지표-복사.pdf": {
     "title": "[참고2]DAS용 무선 통신성공률 지표-복사.pdf",
@@ -2719,7 +3144,12 @@
       "통신성공률",
       "지표",
       "복사"
-    ]
+    ],
+    "preview_id": "6f73ed72211d9dfd30cbfc83",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/03_TRS_DAS_ADMS/평가지표/내부평가 지표정의서_DAS용 TRS 통신성공율-복사.pdf": {
     "title": "내부평가 지표정의서_DAS용 TRS 통신성공율-복사.pdf",
@@ -2750,7 +3180,12 @@
       "das용",
       "통신성공율",
       "복사"
-    ]
+    ],
+    "preview_id": "c3670b7a4e3ed16d29819e28",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/04_설계_공사/OPGW_업무조정/아운(네트)-1836 opgw 공사 및 작업 안전강화 위한 업무조정(안)_서명본.hwp": {
     "title": "아운(네트)-1836 opgw 공사 및 작업 안전강화 위한 업무조정(안)_서명본.hwp",
@@ -2786,7 +3221,12 @@
       "위한",
       "안",
       "서명본"
-    ]
+    ],
+    "preview_id": "faa07889ec8b09c9c59ef227",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 31,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/OPGW_업무조정/아운(네트)-1882 opgw 공사 및 작업 안전강화 위한 업무조정 시행 알림.pdf": {
     "title": "아운(네트)-1882 opgw 공사 및 작업 안전강화 위한 업무조정 시행 알림.pdf",
@@ -2822,7 +3262,12 @@
       "위한",
       "시행",
       "알림"
-    ]
+    ],
+    "preview_id": "b812b770cdc7ef6a87e59004",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/04_설계_공사/공사비_산출참고/배전자동화 무선통신망 구축공사비 산출 내역.hwp": {
     "title": "배전자동화 무선통신망 구축공사비 산출 내역.hwp",
@@ -2854,7 +3299,12 @@
       "구축공사비",
       "산출",
       "내역"
-    ]
+    ],
+    "preview_id": "42955daef7113cf3039a94fe",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 1,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/(전문)_ICT운영처_H1-ICT-편람-0001_Ver 02_정보통신공사감리업무편람.pdf": {
     "title": "(전문)_ICT운영처_H1-ICT-편람-0001_Ver 02_정보통신공사감리업무편람.pdf",
@@ -2889,7 +3339,12 @@
       "ver",
       "02",
       "정보통신공사감리업무편람"
-    ]
+    ],
+    "preview_id": "96f95846cfc394b1696ee86e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/04_설계_공사/기준_편람/1. 정보통신공사 작업절차서.hwp": {
     "title": "1. 정보통신공사 작업절차서.hwp",
@@ -2919,7 +3374,12 @@
       "1",
       "정보통신공사",
       "작업절차서"
-    ]
+    ],
+    "preview_id": "e51c27e39c47aae00ce11c35",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 83,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-ICT-절차-0037_전력통신설비 고객부담공사 업무처리 절차_01.pdf": {
     "title": "H0-ICT-절차-0037_전력통신설비 고객부담공사 업무처리 절차_01.pdf",
@@ -2953,7 +3413,12 @@
       "전력통신설비",
       "고객부담공사",
       "업무처리"
-    ]
+    ],
+    "preview_id": "ddcdbd9c4dfe6d63a3c92f14",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-ICT-편람-0006_정보통신공사 감리 업무편람_04.pdf": {
     "title": "H0-ICT-편람-0006_정보통신공사 감리 업무편람_04.pdf",
@@ -2986,7 +3451,12 @@
       "정보통신공사",
       "감리",
       "업무편람"
-    ]
+    ],
+    "preview_id": "e7df5c7e2bd37b52aa0aa0fd",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-송변-기준-0034_지중송전 운영업무 기준_13.pdf": {
     "title": "H0-송변-기준-0034_지중송전 운영업무 기준_13.pdf",
@@ -3019,7 +3489,12 @@
       "지중송전",
       "운영업무",
       "13"
-    ]
+    ],
+    "preview_id": "e323ced30ed9f5c13ca26ab5",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-송변-기준-0037_가공송전공사 감리업무 기준서_13.pdf": {
     "title": "H0-송변-기준-0037_가공송전공사 감리업무 기준서_13.pdf",
@@ -3053,7 +3528,12 @@
       "감리업무",
       "기준서",
       "13"
-    ]
+    ],
+    "preview_id": "d14d79ffb59cea8d26b0124d",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-송변-기준-0038_가공송전선로 시공기준_08.pdf": {
     "title": "H0-송변-기준-0038_가공송전선로 시공기준_08.pdf",
@@ -3086,7 +3566,12 @@
       "가공송전선로",
       "시공기준",
       "08"
-    ]
+    ],
+    "preview_id": "f9049c4a72c1618e12991fb8",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-송변-기준-0052_지중송전공사 감리업무 기준_07.pdf": {
     "title": "H0-송변-기준-0052_지중송전공사 감리업무 기준_07.pdf",
@@ -3119,7 +3604,12 @@
       "지중송전공사",
       "감리업무",
       "07"
-    ]
+    ],
+    "preview_id": "55a394f02ac54cb8b063842d",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-송변-기준-0055_가공송전 운영업무 기준_15.pdf": {
     "title": "H0-송변-기준-0055_가공송전 운영업무 기준_15.pdf",
@@ -3152,7 +3642,12 @@
       "가공송전",
       "운영업무",
       "15"
-    ]
+    ],
+    "preview_id": "68e364b56df6191670171283",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H0-송변-편람-0012_송전철탑 기초 보강 설계 및 시공 편람_05.pdf": {
     "title": "H0-송변-편람-0012_송전철탑 기초 보강 설계 및 시공 편람_05.pdf",
@@ -3188,7 +3683,12 @@
       "및",
       "시공",
       "05"
-    ]
+    ],
+    "preview_id": "3b4857edfc94ebb7d07589e3",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/H1-통신-절차-0047_정보통신공사 작업절차서_04.pdf": {
     "title": "H1-통신-절차-0047_정보통신공사 작업절차서_04.pdf",
@@ -3221,7 +3721,12 @@
       "0047",
       "정보통신공사",
       "작업절차서"
-    ]
+    ],
+    "preview_id": "1b317f87a3724739ab393316",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/04_설계_공사/기준_편람/ict 공사기간 산정 잠정기준 알림(문서)-사내.hwp": {
     "title": "ict 공사기간 산정 잠정기준 알림(문서)-사내.hwp",
@@ -3255,7 +3760,12 @@
       "알림",
       "문서",
       "사내"
-    ]
+    ],
+    "preview_id": "45ab13133ab466bccf12ab8e",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "01_전사공통/04_설계_공사/기준_편람/붙임3.정보통신공사감리업무편람(안)_4차.pdf": {
     "title": "붙임3.정보통신공사감리업무편람(안)_4차.pdf",
@@ -3286,7 +3796,12 @@
       "정보통신공사감리업무편람",
       "안",
       "4차"
-    ]
+    ],
+    "preview_id": "faaeab647da3ce11ce298ea8",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/04_설계_공사/품셈/2024_상반기_표준품셈.pdf": {
     "title": "2024_상반기_표준품셈.pdf",
@@ -3314,7 +3829,12 @@
       "2024",
       "상반기",
       "표준품셈"
-    ]
+    ],
+    "preview_id": "4b2d0a6428eb78ccd48d3a7b",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/OPGW/opgw 드론점검 결과 및 점검영상 등록 요청-사내.hwp": {
     "title": "opgw 드론점검 결과 및 점검영상 등록 요청-사내.hwp",
@@ -3347,7 +3867,12 @@
       "등록",
       "요청",
       "사내"
-    ]
+    ],
+    "preview_id": "8253837a4d35bf1272428baa",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "01_전사공통/05_점검_안전_드론/OPGW/★ OPGW 드론점검 영상관련 조사양식 (수정_점검일자 추가) 전체 취합파일_250613 ★.xlsx": {
     "title": "★ OPGW 드론점검 영상관련 조사양식 (수정_점검일자 추가) 전체 취합파일_250613 ★.xlsx",
@@ -3383,7 +3908,12 @@
       "전체",
       "취합파일",
       "250613"
-    ]
+    ],
+    "preview_id": "ec2344b8b1ef13dfb3c6a1ed",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/OPGW/붙임1. 본부별 불량점검 및 사후정비 종합실적(양식).hwp": {
     "title": "붙임1. 본부별 불량점검 및 사후정비 종합실적(양식).hwp",
@@ -3416,7 +3946,12 @@
       "사후정비",
       "종합실적",
       "양식"
-    ]
+    ],
+    "preview_id": "edfd0c3a19f155293e6cbf9b",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 9,
+    "preview_redacted": false
   },
   "01_전사공통/05_점검_안전_드론/OPGW/아운(네트)-323 opgw 드론점검 결과 및 점검영상 제출 요청.pdf": {
     "title": "아운(네트)-323 opgw 드론점검 결과 및 점검영상 제출 요청.pdf",
@@ -3451,7 +3986,12 @@
       "점검영상",
       "제출",
       "요청"
-    ]
+    ],
+    "preview_id": "e4a560e6f6b5823fd77d8727",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/OPGW/아운(네트)-708 opgw 점검중복 최소화 방안 도출 tf 결과보고(등록).pdf": {
     "title": "아운(네트)-708 opgw 점검중복 최소화 방안 도출 tf 결과보고(등록).pdf",
@@ -3487,7 +4027,12 @@
       "tf",
       "결과보고",
       "등록"
-    ]
+    ],
+    "preview_id": "8f7b4981b1bb50e35b956028",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/(1차개정)안전작업수칙(ICT) 전문-복사.pdf": {
     "title": "(1차개정)안전작업수칙(ICT) 전문-복사.pdf",
@@ -3520,7 +4065,12 @@
       "ict",
       "전문",
       "복사"
-    ]
+    ],
+    "preview_id": "2f4efd0b53b62097a1861681",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/(1차개정)안전작업수칙(ICT) 전문.hwp": {
     "title": "(1차개정)안전작업수칙(ICT) 전문.hwp",
@@ -3552,7 +4102,12 @@
       "안전작업수칙",
       "ict",
       "전문"
-    ]
+    ],
+    "preview_id": "399d9dab7e9815ff7765feda",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 221,
+    "preview_redacted": false
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/20241217_건설공사분야 안전작업수칙 1차개정 전문.pdf": {
     "title": "20241217_건설공사분야 안전작업수칙 1차개정 전문.pdf",
@@ -3585,7 +4140,12 @@
       "안전작업수칙",
       "1차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "0a96832a23fbfd3b35178050",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/20241217_용역분야 안전작업수칙 제정 전문.pdf": {
     "title": "20241217_용역분야 안전작업수칙 제정 전문.pdf",
@@ -3618,7 +4178,12 @@
       "안전작업수칙",
       "제정",
       "전문"
-    ]
+    ],
+    "preview_id": "7cbccb5f0306b5b234847bff",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/B1-송변-절차-0086_드론 운영업무 절차서_02.pdf": {
     "title": "B1-송변-절차-0086_드론 운영업무 절차서_02.pdf",
@@ -3652,7 +4217,12 @@
       "운영업무",
       "절차서",
       "02"
-    ]
+    ],
+    "preview_id": "bc2ec544a8a0bdb2a2acc3bd",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/H0-송변-절차-0071_휴전작업 운영 절차서(23차)_전문.pdf": {
     "title": "H0-송변-절차-0071_휴전작업 운영 절차서(23차)_전문.pdf",
@@ -3688,7 +4258,12 @@
       "절차서",
       "23차",
       "전문"
-    ]
+    ],
+    "preview_id": "69f36cedd27820c943e3b7e3",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/H0-재난-절차-0006_재난안전통신망(PS-LTE) 운영절차서_02.pdf": {
     "title": "H0-재난-절차-0006_재난안전통신망(PS-LTE) 운영절차서_02.pdf",
@@ -3724,7 +4299,12 @@
       "lte",
       "운영절차서",
       "02"
-    ]
+    ],
+    "preview_id": "f47272428389bb7c9f3b1fe0",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/opgw 드론점검 결과 및 점검영상 등록 요청-사내 (2025_07_10 02_29_58 UTC).pdf": {
     "title": "opgw 드론점검 결과 및 점검영상 등록 요청-사내 (2025_07_10 02_29_58 UTC).pdf",
@@ -3767,7 +4347,12 @@
       "29",
       "58",
       "utc"
-    ]
+    ],
+    "preview_id": "57d8e57e212a80811f0b5171",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/전문_송변전 표준복구절차서(9차).pdf": {
     "title": "전문_송변전 표준복구절차서(9차).pdf",
@@ -3799,7 +4384,12 @@
       "송변전",
       "표준복구절차서",
       "9차"
-    ]
+    ],
+    "preview_id": "09135c7f8056b82df0a511ff",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/정보통신설비고장복구절차서(20190515).hwp": {
     "title": "정보통신설비고장복구절차서(20190515).hwp",
@@ -3829,7 +4419,12 @@
       "절차",
       "정보통신설비고장복구절차서",
       "20190515"
-    ]
+    ],
+    "preview_id": "a22bfe2515de00daa964c236",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 30,
+    "preview_redacted": false
   },
   "01_전사공통/05_점검_안전_드론/기준_절차/정보통신설비고장복구절차서(20190515).pdf": {
     "title": "정보통신설비고장복구절차서(20190515).pdf",
@@ -3859,7 +4454,12 @@
       "절차",
       "정보통신설비고장복구절차서",
       "20190515"
-    ]
+    ],
+    "preview_id": "25c25770fce3403f2125dfb9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/빈양식/선로별 드론점검 결과보고서_양식(내장철탑).xlsx": {
     "title": "선로별 드론점검 결과보고서_양식(내장철탑).xlsx",
@@ -3891,7 +4491,12 @@
       "결과보고서",
       "양식",
       "내장철탑"
-    ]
+    ],
+    "preview_id": "0d70a57546321a3a382da0dd",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/05_점검_안전_드론/빈양식/선로별 드론점검 결과보고서_양식(현수철탑).xlsx": {
     "title": "선로별 드론점검 결과보고서_양식(현수철탑).xlsx",
@@ -3923,7 +4528,12 @@
       "결과보고서",
       "양식",
       "현수철탑"
-    ]
+    ],
+    "preview_id": "7e66aac3a2e8a41d0159a784",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/06_현황_자산/자산단위표/250707 자산단위표(개정).pdf": {
     "title": "250707 자산단위표(개정).pdf",
@@ -3950,7 +4560,12 @@
       "자산",
       "250707",
       "개정"
-    ]
+    ],
+    "preview_id": "c046a9a76f8f4b9d64153fba",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/07_전원설비/기준_규격/GS-6130-0050_07_[전문_GS-6130-0050]무정전전원공급장치.hwp": {
     "title": "GS-6130-0050_07_[전문_GS-6130-0050]무정전전원공급장치.hwp",
@@ -3981,7 +4596,12 @@
       "0050",
       "전문",
       "무정전전원공급장치"
-    ]
+    ],
+    "preview_id": "d02dacb57cc9315a1950a0f0",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 20,
+    "preview_redacted": false
   },
   "01_전사공통/07_전원설비/제품_카탈로그/Inverter 카다로그_3~5KVA.pdf": {
     "title": "Inverter 카다로그_3~5KVA.pdf",
@@ -4011,7 +4631,12 @@
       "카다로그",
       "3",
       "5kva"
-    ]
+    ],
+    "preview_id": "e4c5dfe0651c5fb4023e3fea",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/07_전원설비/제품_카탈로그/정류기카다로그_(한국판)_Datasheet_Flatpack S 1U system_20150212_SESUGI (1)-1.pdf": {
     "title": "정류기카다로그_(한국판)_Datasheet_Flatpack S 1U system_20150212_SESUGI (1)-1.pdf",
@@ -4047,7 +4672,12 @@
       "20150212",
       "sesugi",
       "1"
-    ]
+    ],
+    "preview_id": "84673abf465e38a9e97e0864",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/08_인사_노무_총무/H0-노무-지침-0023_06_사택업무처리지침개정전문_등록.hwp": {
     "title": "H0-노무-지침-0023_06_사택업무처리지침개정전문_등록.hwp",
@@ -4078,7 +4708,12 @@
       "06",
       "사택업무처리지침개정전문",
       "등록"
-    ]
+    ],
+    "preview_id": "6c28384eaea5f3cd4bf8718a",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 54,
+    "preview_redacted": false
   },
   "01_전사공통/08_인사_노무_총무/규정/노무0100_취업규칙(제55차)_241223.hwp": {
     "title": "노무0100_취업규칙(제55차)_241223.hwp",
@@ -4108,7 +4743,12 @@
       "취업규칙",
       "제55차",
       "241223"
-    ]
+    ],
+    "preview_id": "1c5e499f3f12b5a694d48385",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 13,
+    "preview_redacted": false
   },
   "01_전사공통/08_인사_노무_총무/규정/노무0100_취업규칙(제55차)_241223.pdf": {
     "title": "노무0100_취업규칙(제55차)_241223.pdf",
@@ -4138,7 +4778,12 @@
       "취업규칙",
       "제55차",
       "241223"
-    ]
+    ],
+    "preview_id": "3e5dcd5cb2ceefe6498e95c0",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/08_인사_노무_총무/규정/노무0100_취업규칙(제55차)_241223__별도본_fc2259f2.pdf": {
     "title": "노무0100_취업규칙(제55차)_241223__별도본_fc2259f2.pdf",
@@ -4170,7 +4815,12 @@
       "241223",
       "별도본",
       "fc2259f2"
-    ]
+    ],
+    "preview_id": "ace4412190047742450f0a40",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/08_인사_노무_총무/규정/노무1400_연봉및복리후생관리규정(제38차)_250428.hwp": {
     "title": "노무1400_연봉및복리후생관리규정(제38차)_250428.hwp",
@@ -4200,7 +4850,12 @@
       "연봉및복리후생관리규정",
       "제38차",
       "250428"
-    ]
+    ],
+    "preview_id": "10ad1af461674a4e13357610",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 8,
+    "preview_redacted": false
   },
   "01_전사공통/08_인사_노무_총무/규정/노무1400_연봉및복리후생관리규정(제38차)_250428.pdf": {
     "title": "노무1400_연봉및복리후생관리규정(제38차)_250428.pdf",
@@ -4230,7 +4885,12 @@
       "연봉및복리후생관리규정",
       "제38차",
       "250428"
-    ]
+    ],
+    "preview_id": "e10bc48af6bc9bc2f235fed0",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/08_인사_노무_총무/규정/총무1200_총무규정(제63차)_250122 (1).hwp": {
     "title": "총무1200_총무규정(제63차)_250122 (1).hwp",
@@ -4261,7 +4921,12 @@
       "제63차",
       "250122",
       "1"
-    ]
+    ],
+    "preview_id": "73d0466131f84ef17a630535",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 49,
+    "preview_redacted": false
   },
   "01_전사공통/08_인사_노무_총무/규정/총무1200_총무규정(제63차)_250122 (1).pdf": {
     "title": "총무1200_총무규정(제63차)_250122 (1).pdf",
@@ -4292,7 +4957,12 @@
       "제63차",
       "250122",
       "1"
-    ]
+    ],
+    "preview_id": "ff180644192f5687afde32af",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/08_인사_노무_총무/성과급/복사본 2018 성과급 시뮬레이션-미래혁신팀-사업소공지용(0624)-2.xlsx": {
     "title": "복사본 2018 성과급 시뮬레이션-미래혁신팀-사업소공지용(0624)-2.xlsx",
@@ -4326,7 +4996,12 @@
       "사업소공지용",
       "0624",
       "2"
-    ]
+    ],
+    "preview_id": "c816d1efca273307e2c5f931",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/08_인사_노무_총무/성과급/성과급계산기(250620).xlsx": {
     "title": "성과급계산기(250620).xlsx",
@@ -4355,7 +5030,12 @@
       "총무",
       "성과급계산기",
       "250620"
-    ]
+    ],
+    "preview_id": "066ec3ce737866ac0fb8bfe9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/2. RTU 기본 이해_이상영.pdf": {
     "title": "2. RTU 기본 이해_이상영.pdf",
@@ -4386,7 +5066,12 @@
       "기본",
       "이해",
       "이상영"
-    ]
+    ],
+    "preview_id": "1128e60086fdf169c6f119b9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/3. SCADA시스템 개요_이상영.pdf": {
     "title": "3. SCADA시스템 개요_이상영.pdf",
@@ -4417,7 +5102,12 @@
       "scada시스템",
       "개요",
       "이상영"
-    ]
+    ],
+    "preview_id": "fe581cd9dba41887ddb4c8d6",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/4. 변전설비이해(ICT)_정준혁.pdf": {
     "title": "4. 변전설비이해(ICT)_정준혁.pdf",
@@ -4448,7 +5138,12 @@
       "변전설비이해",
       "ict",
       "정준혁"
-    ]
+    ],
+    "preview_id": "a96c528e5a462f78536392d6",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/5-1. 다기능 RTU 교육 자료_제나드.pdf": {
     "title": "5-1. 다기능 RTU 교육 자료_제나드.pdf",
@@ -4480,7 +5175,12 @@
       "다기능",
       "자료",
       "제나드"
-    ]
+    ],
+    "preview_id": "849cb2cf2915a55dcb1b9b80",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/5-2. SCADA 시스템 유지보수_제나드.pdf": {
     "title": "5-2. SCADA 시스템 유지보수_제나드.pdf",
@@ -4512,7 +5212,12 @@
       "시스템",
       "유지보수",
       "제나드"
-    ]
+    ],
+    "preview_id": "87b7510e9dc9e3794a29fca0",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/6. SCADA 다기능 정보전송장치 시스템_유호.pdf": {
     "title": "6. SCADA 다기능 정보전송장치 시스템_유호.pdf",
@@ -4544,7 +5249,12 @@
       "정보전송장치",
       "시스템",
       "유호"
-    ]
+    ],
+    "preview_id": "45b1e3946d37ee89c8798613",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/7. 주요 장애사례 분석_이상영.pdf": {
     "title": "7. 주요 장애사례 분석_이상영.pdf",
@@ -4576,7 +5286,12 @@
       "장애사례",
       "분석",
       "이상영"
-    ]
+    ],
+    "preview_id": "1c266a5efabb7e85d779691d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/RTU_SCADA_교육/8. 인재개발원 RTU 교육_유호.pdf": {
     "title": "8. 인재개발원 RTU 교육_유호.pdf",
@@ -4606,7 +5321,12 @@
       "8",
       "인재개발원",
       "유호"
-    ]
+    ],
+    "preview_id": "cbbdd8791ecd0a40bfc05711",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/기타/2025_KEPCO_04.pdf": {
     "title": "2025_KEPCO_04.pdf",
@@ -4634,7 +5354,12 @@
       "2025",
       "kepco",
       "04"
-    ]
+    ],
+    "preview_id": "448c5e33987954d23ce6e698",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/기타/RMA 생성 방법.pdf": {
     "title": "RMA 생성 방법.pdf",
@@ -4662,7 +5387,12 @@
       "rma",
       "생성",
       "방법"
-    ]
+    ],
+    "preview_id": "19a3127af8f9733aca71f810",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/기타/공공정보화사업_단계별_사업관리가이드(2023.2).pdf": {
     "title": "공공정보화사업_단계별_사업관리가이드(2023.2).pdf",
@@ -4692,7 +5422,12 @@
       "사업관리가이드",
       "2023",
       "2"
-    ]
+    ],
+    "preview_id": "30b795e047dcef511977d37d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/사내행사/2026 한국전력 팬미팅 세부운영계획안_0730_선수단 공유용.pdf": {
     "title": "2026 한국전력 팬미팅 세부운영계획안_0730_선수단 공유용.pdf",
@@ -4724,7 +5459,12 @@
       "0730",
       "선수단",
       "공유용"
-    ]
+    ],
+    "preview_id": "218e6d5bec399afdd15a15fe",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/09_교육_행사/사내행사/2027 캘린더 사진 공모전 시행 안내.pdf": {
     "title": "2027 캘린더 사진 공모전 시행 안내.pdf",
@@ -4755,7 +5495,12 @@
       "공모전",
       "시행",
       "안내"
-    ]
+    ],
+    "preview_id": "9ccfb18bcec3fcb2a719c482",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "01_전사공통/09_교육_행사/사내행사/「ai 크리ai터 콘테스트」 시행 안내 및 참-사내.hwp": {
     "title": "「ai 크리ai터 콘테스트」 시행 안내 및 참-사내.hwp",
@@ -4788,7 +5533,12 @@
       "및",
       "참",
       "사내"
-    ]
+    ],
+    "preview_id": "b55d7faedbf7e9ec4ed23230",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "01_전사공통/09_교육_행사/사내행사/붙임1_ai 크리ai터 콘테스트 시행계획(안).pdf": {
     "title": "붙임1_ai 크리ai터 콘테스트 시행계획(안).pdf",
@@ -4819,7 +5569,12 @@
       "콘테스트",
       "시행계획",
       "안"
-    ]
+    ],
+    "preview_id": "be2aa18688e8aaba54d403d8",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "01_전사공통/09_교육_행사/사내행사/붙임2_콘텐츠 제작 개요서(양식).hwp": {
     "title": "붙임2_콘텐츠 제작 개요서(양식).hwp",
@@ -4849,7 +5604,12 @@
       "제작",
       "개요서",
       "양식"
-    ]
+    ],
+    "preview_id": "292baa64db8d0828d7dd43cf",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "02_한전_경기본부/00_본부안내.md": {
     "title": "00_본부안내.md",
@@ -4872,7 +5632,12 @@
       "경기본부",
       "00",
       "본부안내"
-    ]
+    ],
+    "preview_id": "bc061ffdd58bbf97791415f5",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/01_RTU_SCADA/구성도/240112_RTU구성도.xlsx": {
     "title": "240112_RTU구성도.xlsx",
@@ -4901,7 +5666,12 @@
       "scada",
       "240112",
       "rtu구성도"
-    ]
+    ],
+    "preview_id": "c2c71d91a70dace706fc3281",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/01_RTU_SCADA/구성도/240925_RTU구성도_포승 DI+3_추가.xlsx": {
     "title": "240925_RTU구성도_포승 DI+3_추가.xlsx",
@@ -4934,7 +5704,12 @@
       "di",
       "3",
       "추가"
-    ]
+    ],
+    "preview_id": "df3ad80bc78a853139b9d70e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/01_RTU_SCADA/구성도/250805_RTU구성도_고덕2_업데이트.xlsx": {
     "title": "250805_RTU구성도_고덕2_업데이트.xlsx",
@@ -4965,7 +5740,12 @@
       "rtu구성도",
       "고덕2",
       "업데이트"
-    ]
+    ],
+    "preview_id": "0b9e786240f9c3bcb336453c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/01_RTU_SCADA/구성도/250805_RTU구성도_고덕2_업데이트__별도본_b263299f.xlsx": {
     "title": "250805_RTU구성도_고덕2_업데이트__별도본_b263299f.xlsx",
@@ -4998,7 +5778,12 @@
       "업데이트",
       "별도본",
       "b263299f"
-    ]
+    ],
+    "preview_id": "116a770a20397eb4ed645128",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/01_RTU_SCADA/구성도/251224_RTU구성도_평택화력_업데이트.xlsx": {
     "title": "251224_RTU구성도_평택화력_업데이트.xlsx",
@@ -5029,7 +5814,12 @@
       "rtu구성도",
       "평택화력",
       "업데이트"
-    ]
+    ],
+    "preview_id": "57e0b32f2440faf59031110d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/01_RTU_SCADA/구성도/251224_RTU구성도_평택화력_업데이트__별도본_d99357bc.xlsx": {
     "title": "251224_RTU구성도_평택화력_업데이트__별도본_d99357bc.xlsx",
@@ -5062,7 +5852,12 @@
       "업데이트",
       "별도본",
       "d99357bc"
-    ]
+    ],
+    "preview_id": "c22180a08b55a8e773166699",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/(중요)SCADA광모뎀 계통도_평택전력_금암반영_20231231.xlsx": {
     "title": "(중요)SCADA광모뎀 계통도_평택전력_금암반영_20231231.xlsx",
@@ -5095,7 +5890,12 @@
       "평택전력",
       "금암반영",
       "20231231"
-    ]
+    ],
+    "preview_id": "6d8f29873273d27f440c3467",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/(중요)SCADA광모뎀 계통도_평택전력_희곡반영_20251002.xlsx": {
     "title": "(중요)SCADA광모뎀 계통도_평택전력_희곡반영_20251002.xlsx",
@@ -5128,7 +5928,12 @@
       "평택전력",
       "희곡반영",
       "20251002"
-    ]
+    ],
+    "preview_id": "2181bbf461423247509250be",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/(중요)송변전광단말 계통도_평택전력_금암예정_20231231.pptx": {
     "title": "(중요)송변전광단말 계통도_평택전력_금암예정_20231231.pptx",
@@ -5161,7 +5966,12 @@
       "평택전력",
       "금암예정",
       "20231231"
-    ]
+    ],
+    "preview_id": "f5c41e3eb6e2d81d241eac1e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/1_광계통도_경기(종합)_210601.xlsx": {
     "title": "1_광계통도_경기(종합)_210601.xlsx",
@@ -5194,7 +6004,12 @@
       "경기",
       "종합",
       "210601"
-    ]
+    ],
+    "preview_id": "ecdb3ddfaabf5c783de4fb41",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/[241016] 송변전광단말 링 계통도(경기본부).xlsx": {
     "title": "[241016] 송변전광단말 링 계통도(경기본부).xlsx",
@@ -5225,7 +6040,12 @@
       "241016",
       "송변전광단말",
       "링"
-    ]
+    ],
+    "preview_id": "a23061045068de2d9638ba82",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/[경기본부 KepCIT] 계통도(25.10)_원본.xlsx": {
     "title": "[경기본부 KepCIT] 계통도(25.10)_원본.xlsx",
@@ -5257,7 +6077,12 @@
       "25",
       "10",
       "원본"
-    ]
+    ],
+    "preview_id": "30da722dbb6c97220dde3b2f",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/[경기본부 KepCIT] 계통도(25.10)_최신.xlsx": {
     "title": "[경기본부 KepCIT] 계통도(25.10)_최신.xlsx",
@@ -5289,7 +6114,12 @@
       "25",
       "10",
       "최신"
-    ]
+    ],
+    "preview_id": "0d4eeff20c33d68a38595b3e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/◆2022-10_차세대 KEPCIT 계통도(경기본부).xlsx": {
     "title": "◆2022-10_차세대 KEPCIT 계통도(경기본부).xlsx",
@@ -5321,7 +6151,12 @@
       "10",
       "차세대",
       "kepcit"
-    ]
+    ],
+    "preview_id": "479184f8464138020f9dc225",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/02_OPGW_광통신/계통도_선번/통합_계통도.xlsx": {
     "title": "통합_계통도.xlsx",
@@ -5350,7 +6185,12 @@
       "계통도",
       "선번",
       "통합"
-    ]
+    ],
+    "preview_id": "c14a6ae1d7ce4fcf26abbb66",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/250805-구성도.xlsx": {
     "title": "250805-구성도.xlsx",
@@ -5381,7 +6221,12 @@
       "광선로",
       "250805",
       "구성도"
-    ]
+    ],
+    "preview_id": "31e11198137ebe621053a259",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/250805-붙임_임시설계서v2.xlsx": {
     "title": "250805-붙임_임시설계서v2.xlsx",
@@ -5413,7 +6258,12 @@
       "250805",
       "붙임",
       "임시설계서v2"
-    ]
+    ],
+    "preview_id": "62cac8bbfb688b017fccc9c3",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/250805-포승-청북 구성도_240425 배포용.xlsx": {
     "title": "250805-포승-청북 구성도_240425 배포용.xlsx",
@@ -5448,7 +6298,12 @@
       "구성도",
       "240425",
       "배포용"
-    ]
+    ],
+    "preview_id": "54755736d670ce172a035d56",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/toms 조회.xlsx": {
     "title": "toms 조회.xlsx",
@@ -5479,7 +6334,12 @@
       "광선로",
       "toms",
       "조회"
-    ]
+    ],
+    "preview_id": "2e06ecdb45c9d2372876fa85",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/toms 지지물 조회.xlsx": {
     "title": "toms 지지물 조회.xlsx",
@@ -5511,7 +6371,12 @@
       "toms",
       "지지물",
       "조회"
-    ]
+    ],
+    "preview_id": "1a82d616dd8032be0da5586e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/계통도및시공방법.pdf": {
     "title": "계통도및시공방법.pdf",
@@ -5540,7 +6405,12 @@
       "opgw",
       "광선로",
       "계통도및시공방법"
-    ]
+    ],
+    "preview_id": "b4a64c5999eddf7abc046152",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/송부_공사설계서_삼죽분기TL OPGW 긴급 복구공사_v6.0.xlsx": {
     "title": "송부_공사설계서_삼죽분기TL OPGW 긴급 복구공사_v6.0.xlsx",
@@ -5576,7 +6446,12 @@
       "복구공사",
       "v6",
       "0"
-    ]
+    ],
+    "preview_id": "6e2cd4dfdc235ee52971d639",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/위해개소사진대장(포승-청북).pdf": {
     "title": "위해개소사진대장(포승-청북).pdf",
@@ -5607,7 +6482,12 @@
       "위해개소사진대장",
       "포승",
       "청북"
-    ]
+    ],
+    "preview_id": "696b41b63d4f274e93be9e06",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/위해개소사진대장.pdf": {
     "title": "위해개소사진대장.pdf",
@@ -5636,7 +6516,12 @@
       "opgw",
       "광선로",
       "위해개소사진대장"
-    ]
+    ],
+    "preview_id": "b9fdc60cbdb344b7d0597877",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/청북평택 가공지선.xlsx": {
     "title": "청북평택 가공지선.xlsx",
@@ -5667,7 +6552,12 @@
       "광선로",
       "청북평택",
       "가공지선"
-    ]
+    ],
+    "preview_id": "1192f005d5c7df528e55e488",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/청북평택 기별대장.xlsx": {
     "title": "청북평택 기별대장.xlsx",
@@ -5698,7 +6588,12 @@
       "광선로",
       "청북평택",
       "기별대장"
-    ]
+    ],
+    "preview_id": "9c64e55de365546772aa4617",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/청북평택 지지물현황.xlsx": {
     "title": "청북평택 지지물현황.xlsx",
@@ -5729,7 +6624,12 @@
       "광선로",
       "청북평택",
       "지지물현황"
-    ]
+    ],
+    "preview_id": "44f20122fbfad00a026d151e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/포승청북 가공지선.xlsx": {
     "title": "포승청북 가공지선.xlsx",
@@ -5760,7 +6660,12 @@
       "광선로",
       "포승청북",
       "가공지선"
-    ]
+    ],
+    "preview_id": "3b632b8bd8066d2142e85167",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/포승청북 기별대장.xlsx": {
     "title": "포승청북 기별대장.xlsx",
@@ -5791,7 +6696,12 @@
       "광선로",
       "포승청북",
       "기별대장"
-    ]
+    ],
+    "preview_id": "46d4176deef9797367f31074",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/포승청북 지지물현황.xlsx": {
     "title": "포승청북 지지물현황.xlsx",
@@ -5822,7 +6732,12 @@
       "광선로",
       "포승청북",
       "지지물현황"
-    ]
+    ],
+    "preview_id": "ff334124c6e6824dac4c8241",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/OPGW_광선로/포승청북,청북평택.jpg": {
     "title": "포승청북,청북평택.jpg",
@@ -5853,7 +6768,12 @@
       "광선로",
       "포승청북",
       "청북평택"
-    ]
+    ],
+    "preview_id": "6c626e5f87742217b7efb115",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/PS-LTE_비상통신망/복사본 (붙임1) 공사설계서(비상통신망)_군포.xlsx": {
     "title": "복사본 (붙임1) 공사설계서(비상통신망)_군포.xlsx",
@@ -5887,7 +6807,12 @@
       "붙임1",
       "공사설계서",
       "군포"
-    ]
+    ],
+    "preview_id": "df151573f84fa96435a015f3",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_01.jpg": {
     "title": "계통도_화면캡처_01.jpg",
@@ -5918,7 +6843,12 @@
       "화면캡처",
       "계통도",
       "01"
-    ]
+    ],
+    "preview_id": "946e6b185a4f0b0a12466d21",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_02.jpg": {
     "title": "계통도_화면캡처_02.jpg",
@@ -5948,7 +6878,12 @@
       "도면",
       "화면캡처",
       "계통도"
-    ]
+    ],
+    "preview_id": "8b5bfeeaabcdb05117bdad81",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_03.jpg": {
     "title": "계통도_화면캡처_03.jpg",
@@ -5978,7 +6913,12 @@
       "도면",
       "화면캡처",
       "계통도"
-    ]
+    ],
+    "preview_id": "979f1651a6841a3e592df86d",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_04.jpg": {
     "title": "계통도_화면캡처_04.jpg",
@@ -6009,7 +6949,12 @@
       "화면캡처",
       "계통도",
       "04"
-    ]
+    ],
+    "preview_id": "e4849df72c9065dbcf268ddf",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_05.jpg": {
     "title": "계통도_화면캡처_05.jpg",
@@ -6040,7 +6985,12 @@
       "화면캡처",
       "계통도",
       "05"
-    ]
+    ],
+    "preview_id": "85ee9df08550804c833b1636",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_06.jpg": {
     "title": "계통도_화면캡처_06.jpg",
@@ -6071,7 +7021,12 @@
       "화면캡처",
       "계통도",
       "06"
-    ]
+    ],
+    "preview_id": "2dd49ab5c07b7cbdfe6995ec",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_07.jpg": {
     "title": "계통도_화면캡처_07.jpg",
@@ -6102,7 +7057,12 @@
       "화면캡처",
       "계통도",
       "07"
-    ]
+    ],
+    "preview_id": "b7bc6b87b8af1d3188bd29da",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_09.jpg": {
     "title": "계통도_화면캡처_09.jpg",
@@ -6133,7 +7093,12 @@
       "화면캡처",
       "계통도",
       "09"
-    ]
+    ],
+    "preview_id": "f549a6ac9ed8dbef52253fb6",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/03_설계_공사/도면_화면캡처/계통도_화면캡처_10.jpg": {
     "title": "계통도_화면캡처_10.jpg",
@@ -6164,7 +7129,12 @@
       "화면캡처",
       "계통도",
       "10"
-    ]
+    ],
+    "preview_id": "9db4047a87092f958a3b0372",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/04_점검_안전/2026-04-30_드론점검/154kV 봉담-남수원TL_선로별 드론점검 결과보고서_양식(내장철탑).xlsx": {
     "title": "154kV 봉담-남수원TL_선로별 드론점검 결과보고서_양식(내장철탑).xlsx",
@@ -6201,7 +7171,12 @@
       "결과보고서",
       "양식",
       "내장철탑"
-    ]
+    ],
+    "preview_id": "63cd12ede5072a70522ccb9c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/04_점검_안전/2026-04-30_드론점검/154kV 봉담-남수원TL_선로별 드론점검 결과보고서_양식(현수철탑).xlsx": {
     "title": "154kV 봉담-남수원TL_선로별 드론점검 결과보고서_양식(현수철탑).xlsx",
@@ -6238,7 +7213,12 @@
       "결과보고서",
       "양식",
       "현수철탑"
-    ]
+    ],
+    "preview_id": "be9ec7fdfb2034479eab4308",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/04_점검_안전/2026-04-30_드론점검/154kV 산본-안양TL_선로별 드론점검 결과보고서_양식(내장철탑).xlsx": {
     "title": "154kV 산본-안양TL_선로별 드론점검 결과보고서_양식(내장철탑).xlsx",
@@ -6275,7 +7255,12 @@
       "결과보고서",
       "양식",
       "내장철탑"
-    ]
+    ],
+    "preview_id": "cab769512afe00695debff4d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/04_점검_안전/2026-04-30_드론점검/154kV 산본-안양TL_선로별 드론점검 결과보고서_양식(현수철탑).xlsx": {
     "title": "154kV 산본-안양TL_선로별 드론점검 결과보고서_양식(현수철탑).xlsx",
@@ -6312,7 +7297,12 @@
       "결과보고서",
       "양식",
       "현수철탑"
-    ]
+    ],
+    "preview_id": "fe518b036d3b9c37be329218",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/04_점검_안전/2026-04-30_드론점검/260430_사업소별 점검 종합실적_군포전력-제출.hwp": {
     "title": "260430_사업소별 점검 종합실적_군포전력-제출.hwp",
@@ -6346,7 +7336,12 @@
       "종합실적",
       "군포전력",
       "제출"
-    ]
+    ],
+    "preview_id": "3f640741bf2cf8fe96e5ff55",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 8,
+    "preview_redacted": false
   },
   "02_한전_경기본부/04_점검_안전/2026-04-30_드론점검/산본안양 4호(#1좌-#2우) OPGW 이도불량.jpg": {
     "title": "산본안양 4호(#1좌-#2우) OPGW 이도불량.jpg",
@@ -6382,7 +7377,12 @@
       "2우",
       "opgw",
       "이도불량"
-    ]
+    ],
+    "preview_id": "c9ebe7b2277fe70fa934dd4e",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/04_점검_안전/OPGW_사진대장/위해개소사진대장 (4).xls": {
     "title": "위해개소사진대장 (4).xls",
@@ -6413,7 +7413,12 @@
       "사진대장",
       "위해개소사진대장",
       "4"
-    ]
+    ],
+    "preview_id": "33b8c813a2c1b7e97171f942",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/04_점검_안전/OPGW_사진대장/위해개소사진대장.xls": {
     "title": "위해개소사진대장.xls",
@@ -6443,7 +7448,12 @@
       "opgw",
       "사진대장",
       "위해개소사진대장"
-    ]
+    ],
+    "preview_id": "c7379265e8acf540af8e8bb6",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/04_점검_안전/전국참고표_포함/경기본부_★ OPGW 드론점검 영상관련 조사양식 (수정_점검일자 추가) 전체 취합파일_250613 ★.xlsx": {
     "title": "경기본부_★ OPGW 드론점검 영상관련 조사양식 (수정_점검일자 추가) 전체 취합파일_250613 ★.xlsx",
@@ -6482,7 +7492,12 @@
       "전체",
       "취합파일",
       "250613"
-    ]
+    ],
+    "preview_id": "1525261f98fb33dfe73a6e2c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/05_설비현황_자산/+250213_케이블타워 현황_경기본부.xlsx": {
     "title": "+250213_케이블타워 현황_경기본부.xlsx",
@@ -6511,7 +7526,12 @@
       "250213",
       "케이블타워",
       "현황"
-    ]
+    ],
+    "preview_id": "19a7bdad0ee3426132b7041d",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/05_설비현황_자산/250326_변전소 건설 현황.hwp": {
     "title": "250326_변전소 건설 현황.hwp",
@@ -6540,7 +7560,12 @@
       "변전소",
       "건설",
       "현황"
-    ]
+    ],
+    "preview_id": "3caf8481d3bc27d9122ca478",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 4,
+    "preview_redacted": false
   },
   "02_한전_경기본부/05_설비현황_자산/관내 154계통도(최용문).xlsx": {
     "title": "관내 154계통도(최용문).xlsx",
@@ -6569,7 +7594,12 @@
       "관내",
       "154계통도",
       "최용문"
-    ]
+    ],
+    "preview_id": "15d14a0b004adf46166f31c6",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/05_설비현황_자산/붙임2_전력구 비상통신망 구축현황.xlsx": {
     "title": "붙임2_전력구 비상통신망 구축현황.xlsx",
@@ -6599,7 +7629,12 @@
       "전력구",
       "비상통신망",
       "구축현황"
-    ]
+    ],
+    "preview_id": "32fa41b2819b9886ec3f043d",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/05_설비현황_자산/붙임2_전력구 비상통신망 구축현황__별도본_c9c77be5.xlsx": {
     "title": "붙임2_전력구 비상통신망 구축현황__별도본_c9c77be5.xlsx",
@@ -6631,7 +7666,12 @@
       "구축현황",
       "별도본",
       "c9c77be5"
-    ]
+    ],
+    "preview_id": "f22d68ef50807aa70520c9e9",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/05_설비현황_자산/지하전력구 비상통신망 구축현황_평택.xlsx": {
     "title": "지하전력구 비상통신망 구축현황_평택.xlsx",
@@ -6661,7 +7701,12 @@
       "비상통신망",
       "구축현황",
       "평택"
-    ]
+    ],
+    "preview_id": "906d72d4f79a99a6a3d5090e",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/05_설비현황_자산/출장거리표_2025(250221).xlsx": {
     "title": "출장거리표_2025(250221).xlsx",
@@ -6690,7 +7735,12 @@
       "출장거리표",
       "2025",
       "250221"
-    ]
+    ],
+    "preview_id": "54d25fee021b045a67c914a6",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "02_한전_경기본부/80_RTU_DB_백업/20240930 포승 작업중.mm": {
     "title": "20240930 포승 작업중.mm",
@@ -6720,7 +7770,12 @@
       "20240930",
       "포승",
       "작업중"
-    ]
+    ],
+    "preview_id": "f78752be34bd869f15b28fd1",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/80_RTU_DB_백업/20241212 포승 작업중.mm": {
     "title": "20241212 포승 작업중.mm",
@@ -6750,7 +7805,12 @@
       "20241212",
       "포승",
       "작업중"
-    ]
+    ],
+    "preview_id": "f483f283b3010ee12b61a22f",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/80_RTU_DB_백업/20250311 고덕2 작업전 - 복사본.RDB": {
     "title": "20250311 고덕2 작업전 - 복사본.RDB",
@@ -6780,7 +7840,12 @@
       "고덕2",
       "작업전",
       "복사본"
-    ]
+    ],
+    "preview_id": "c13ec1ced2a4320b817efd5d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/80_RTU_DB_백업/20250312 오산 A 작업전 - 복사본.HDB": {
     "title": "20250312 오산 A 작업전 - 복사본.HDB",
@@ -6812,7 +7877,12 @@
       "a",
       "작업전",
       "복사본"
-    ]
+    ],
+    "preview_id": "cc6b58b5da30d573191416a4",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/80_RTU_DB_백업/★★★★★RTU구성도_20250124_backup.xlsx": {
     "title": "★★★★★RTU구성도_20250124_backup.xlsx",
@@ -6842,7 +7912,12 @@
       "rtu구성도",
       "20250124",
       "backup"
-    ]
+    ],
+    "preview_id": "bfccc0a418da391cbdb288fa",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/80_RTU_DB_백업/서안성 20250311 A 작업전 - 복사본.HDB": {
     "title": "서안성 20250311 A 작업전 - 복사본.HDB",
@@ -6874,7 +7949,12 @@
       "a",
       "작업전",
       "복사본"
-    ]
+    ],
+    "preview_id": "f2c0720152284ec1eb39117e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/90_작업중_초안/설계/설계서 검토 및 수정 할 부분.hwpx": {
     "title": "설계서 검토 및 수정 할 부분.hwpx",
@@ -6906,7 +7986,12 @@
       "수정",
       "할",
       "부분"
-    ]
+    ],
+    "preview_id": "e6f501f3296aa36b65092c36",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "02_한전_경기본부/90_작업중_초안/설계/수정중_1. 공사설계서(240923)평택x.xlsx": {
     "title": "수정중_1. 공사설계서(240923)평택x.xlsx",
@@ -6938,7 +8023,12 @@
       "공사설계서",
       "240923",
       "평택x"
-    ]
+    ],
+    "preview_id": "b05f781a5876791243181664",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/00_본부안내.md": {
     "title": "00_본부안내.md",
@@ -6961,7 +8051,12 @@
       "전북본부",
       "00",
       "본부안내"
-    ]
+    ],
+    "preview_id": "2bc8e2aa7f71c4eb1737e955",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/교육_연계자료/TRS 배전자동화(ADMS) 연계기능 참고자료_오픈다임_220525.hwp": {
     "title": "TRS 배전자동화(ADMS) 연계기능 참고자료_오픈다임_220525.hwp",
@@ -6994,7 +8089,12 @@
       "참고자료",
       "오픈다임",
       "220525"
-    ]
+    ],
+    "preview_id": "0009ece13917d22a307d9f89",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 5,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/군산_영등_회선/14.군산-영등PTPU.pptx": {
     "title": "14.군산-영등PTPU.pptx",
@@ -7025,7 +8125,12 @@
       "회선",
       "14",
       "영등ptpu"
-    ]
+    ],
+    "preview_id": "13879bb6bb3129620b89a243",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/01_TRS/군산_영등_회선/24.군산-영등PTPU.pptx": {
     "title": "24.군산-영등PTPU.pptx",
@@ -7056,7 +8161,12 @@
       "회선",
       "24",
       "영등ptpu"
-    ]
+    ],
+    "preview_id": "27391ecf2b72252ace62b114",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/01_TRS/군산_영등_회선/4.군산-영등PTPU.pptx": {
     "title": "4.군산-영등PTPU.pptx",
@@ -7087,7 +8197,12 @@
       "회선",
       "4",
       "영등ptpu"
-    ]
+    ],
+    "preview_id": "d1aa3a21cd558327e229229f",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/01_TRS/기지국_현황/TRS 기지국 설비현황.hwp": {
     "title": "TRS 기지국 설비현황.hwp",
@@ -7115,7 +8230,12 @@
       "기지국",
       "현황",
       "설비현황"
-    ]
+    ],
+    "preview_id": "1328e753eb8a2340f97c55f3",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 3,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/기지국_현황/TRS 기지국(중계소) 필요성220509.hwp": {
     "title": "TRS 기지국(중계소) 필요성220509.hwp",
@@ -7144,7 +8264,12 @@
       "현황",
       "중계소",
       "필요성220509"
-    ]
+    ],
+    "preview_id": "d01a7c4749878a6eab66ea34",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/기지국_현황/TRS기지국 지도.PNG": {
     "title": "TRS기지국 지도.PNG",
@@ -7174,7 +8299,12 @@
       "현황",
       "trs기지국",
       "지도"
-    ]
+    ],
+    "preview_id": "426b02b387afa8dce100e291",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/기지국_현황/TRS위치.jpg": {
     "title": "TRS위치.jpg",
@@ -7203,7 +8333,12 @@
       "기지국",
       "현황",
       "trs위치"
-    ]
+    ],
+    "preview_id": "2187f988368ef6f615c1cabd",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/기지국_현황/TRS위치.pptx": {
     "title": "TRS위치.pptx",
@@ -7232,7 +8367,12 @@
       "기지국",
       "현황",
       "trs위치"
-    ]
+    ],
+    "preview_id": "570692b10a5034b73ad9a1c5",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/01_TRS/기지국_현황/전북본부 TRS 기지국 현황(2306).hwp": {
     "title": "전북본부 TRS 기지국 현황(2306).hwp",
@@ -7260,7 +8400,12 @@
       "기지국",
       "현황",
       "2306"
-    ]
+    ],
+    "preview_id": "d3dc2e3f7b4c2f217e32e9b6",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 1,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/81.구매계획보고서 및 견적서.pdf": {
     "title": "81.구매계획보고서 및 견적서.pdf",
@@ -7293,7 +8438,12 @@
       "구매계획보고서",
       "및",
       "견적서"
-    ]
+    ],
+    "preview_id": "99cca2f525c1ec807e48a100",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/82.수리불가 판정서.pdf": {
     "title": "82.수리불가 판정서.pdf",
@@ -7325,7 +8475,12 @@
       "82",
       "수리불가",
       "판정서"
-    ]
+    ],
+    "preview_id": "0109ba55862242af96375234",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/83.'25년 3분기 예방점검 보고서.pdf": {
     "title": "83.'25년 3분기 예방점검 보고서.pdf",
@@ -7359,7 +8514,12 @@
       "3분기",
       "예방점검",
       "보고서"
-    ]
+    ],
+    "preview_id": "42e72b8ed6cdbc1e69e53e5b",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/8견적서(광대역무선장치ODU_엔티에스_20260805.pdf": {
     "title": "8견적서(광대역무선장치ODU_엔티에스_20260805.pdf",
@@ -7392,7 +8552,12 @@
       "광대역무선장치odu",
       "엔티에스",
       "20260805"
-    ]
+    ],
+    "preview_id": "c68bc199f11cd4bc174a4586",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/8견적서(휴웨이브)_광대역무선장치 ODU_20260805.pdf": {
     "title": "8견적서(휴웨이브)_광대역무선장치 ODU_20260805.pdf",
@@ -7426,7 +8591,12 @@
       "광대역무선장치",
       "odu",
       "20260805"
-    ]
+    ],
+    "preview_id": "e670daaaebf9078a4dcf37c4",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/8낙뢰 보고.hwp": {
     "title": "8낙뢰 보고.hwp",
@@ -7457,7 +8627,12 @@
       "교체",
       "8낙뢰",
       "보고"
-    ]
+    ],
+    "preview_id": "1f0457a4202ec1e0febbbf27",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/8팔공산 TRS 기지국 무선통신장치(Wimax) 교체 시행.hwp": {
     "title": "8팔공산 TRS 기지국 무선통신장치(Wimax) 교체 시행.hwp",
@@ -7491,7 +8666,12 @@
       "무선통신장치",
       "wimax",
       "시행"
-    ]
+    ],
+    "preview_id": "309ce5189c157fd5a0eb8ff6",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 1,
+    "preview_redacted": false
   },
   "03_한전_전북본부/01_TRS/팔공산_장수_무선장치_교체/무선광대역_ODU_제품수리내역서_260507.pdf": {
     "title": "무선광대역_ODU_제품수리내역서_260507.pdf",
@@ -7524,7 +8704,12 @@
       "odu",
       "제품수리내역서",
       "260507"
-    ]
+    ],
+    "preview_id": "9a76a8ead83bff2d06ccd0e5",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_선로내역서_1안(구내만 포설).pdf": {
     "title": "23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_선로내역서_1안(구내만 포설).pdf",
@@ -7566,7 +8751,12 @@
       "1안",
       "구내만",
       "포설"
-    ]
+    ],
+    "preview_id": "951e29a89ee9bf3d1efb46eb",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_선로내역서_2안(외부+구내포설).pdf": {
     "title": "23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_선로내역서_2안(외부+구내포설).pdf",
@@ -7608,7 +8798,12 @@
       "2안",
       "외부",
       "구내포설"
-    ]
+    ],
+    "preview_id": "dcca98ab983048d74e786e4d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_행정도_1안(구내만 포설).pdf": {
     "title": "23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_행정도_1안(구내만 포설).pdf",
@@ -7650,7 +8845,12 @@
       "1안",
       "구내만",
       "포설"
-    ]
+    ],
+    "preview_id": "8585439cb3cd92fa9e68feaf",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_행정도_2안(외부+구내포설).pdf": {
     "title": "23년_원인자(100%)_전주 덕진_직할 배전센터 DAS실 통신설비 이설_미주_행정도_2안(외부+구내포설).pdf",
@@ -7692,7 +8892,12 @@
       "2안",
       "외부",
       "구내포설"
-    ]
+    ],
+    "preview_id": "29b3e04724558d112dcc5a1c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/KDN_직할,익산지사 설비배치도_2601.xlsx": {
     "title": "KDN_직할,익산지사 설비배치도_2601.xlsx",
@@ -7727,7 +8932,12 @@
       "익산지사",
       "설비배치도",
       "2601"
-    ]
+    ],
+    "preview_id": "6c7dba6fab1238a726f95cbc",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/다스실배치도_이설후 배치 반영_박승광 추가 검토분_설계시 참고용_230307.xlsx": {
     "title": "다스실배치도_이설후 배치 반영_박승광 추가 검토분_설계시 참고용_230307.xlsx",
@@ -7766,7 +8976,12 @@
       "설계시",
       "참고용",
       "230307"
-    ]
+    ],
+    "preview_id": "603529b36fef51f048464a87",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/배전센터 전원 및 공조설비 세부내역.xlsx": {
     "title": "배전센터 전원 및 공조설비 세부내역.xlsx",
@@ -7800,7 +9015,12 @@
       "및",
       "공조설비",
       "세부내역"
-    ]
+    ],
+    "preview_id": "0a80c92ec5054d42dcc92901",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/붙임.1_군산지사 신사옥 ict설비 이설 공사설계서.xlsx": {
     "title": "붙임.1_군산지사 신사옥 ict설비 이설 공사설계서.xlsx",
@@ -7836,7 +9056,12 @@
       "신사옥",
       "ict설비",
       "공사설계서"
-    ]
+    ],
+    "preview_id": "251b15d888c4c5b9e0acc101",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/붙임2.adms통신망 통합관리시스템 개선의견_전북.hwpx": {
     "title": "붙임2.adms통신망 통합관리시스템 개선의견_전북.hwpx",
@@ -7870,7 +9095,12 @@
       "통합관리시스템",
       "개선의견",
       "전북"
-    ]
+    ],
+    "preview_id": "5c4900f7b56b1b14755b7bc0",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/통합_배전센터 통신실 배치도★_20260820.xlsm": {
     "title": "통합_배전센터 통신실 배치도★_20260820.xlsm",
@@ -7903,7 +9133,12 @@
       "통신실",
       "배치도",
       "20260820"
-    ]
+    ],
+    "preview_id": "99a78c859651d029a00f7371",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/02_DAS_ADMS/통신방식_운용현황/DAS 통신방식별 운용현황 취합분(260706).xlsx": {
     "title": "DAS 통신방식별 운용현황 취합분(260706).xlsx",
@@ -7935,7 +9170,12 @@
       "통신방식별",
       "취합분",
       "260706"
-    ]
+    ],
+    "preview_id": "a2c4051716a010652ec4a1c6",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/02_DAS_ADMS/통신방식_운용현황/DAS 통신방식별 운용현황 취합분(260709).xlsx": {
     "title": "DAS 통신방식별 운용현황 취합분(260709).xlsx",
@@ -7967,7 +9207,12 @@
       "통신방식별",
       "취합분",
       "260709"
-    ]
+    ],
+    "preview_id": "4c348d2337c41c6442152906",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/149-1.SES26-05-21(한전KDN전북사업처_고창_박환태)인버터 3kVA_정류기 48V 70A-1.xlsx": {
     "title": "149-1.SES26-05-21(한전KDN전북사업처_고창_박환태)인버터 3kVA_정류기 48V 70A-1.xlsx",
@@ -8008,7 +9253,12 @@
       "정류기",
       "48v",
       "70a"
-    ]
+    ],
+    "preview_id": "8bf34c773f5f81221de1cd5b",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/149-2-1.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A_수기일렉.pdf": {
     "title": "149-2-1.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A_수기일렉.pdf",
@@ -8049,7 +9299,12 @@
       "48v",
       "70a",
       "수기일렉"
-    ]
+    ],
+    "preview_id": "ddb966bad1842013ecf4634b",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/149-2.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A.pdf": {
     "title": "149-2.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A.pdf",
@@ -8088,7 +9343,12 @@
       "정류기",
       "48v",
       "70a"
-    ]
+    ],
+    "preview_id": "4355d3f7c4aed802a1bab7f6",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/2.149-2.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A.pdf": {
     "title": "2.149-2.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A.pdf",
@@ -8127,7 +9387,12 @@
       "정류기",
       "48v",
       "70a"
-    ]
+    ],
+    "preview_id": "21f34de3395e1e3b43e64641",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/2.149-2.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A.xlsx": {
     "title": "2.149-2.SES26-05-21(한전 전북본부_고창_조학)인버터 3kVA_정류기 48V 70A.xlsx",
@@ -8167,7 +9432,12 @@
       "정류기",
       "48v",
       "70a"
-    ]
+    ],
+    "preview_id": "b17d849690081ceee3aaa80b",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/20260813_171711.jpg": {
     "title": "20260813_171711.jpg",
@@ -8198,7 +9468,12 @@
       "교체",
       "20260813",
       "171711"
-    ]
+    ],
+    "preview_id": "22042119d6ddacfc5e17528e",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/KDN 공문.pdf": {
     "title": "KDN 공문.pdf",
@@ -8228,7 +9503,12 @@
       "교체",
       "kdn",
       "공문"
-    ]
+    ],
+    "preview_id": "bbbcf971fc95cca97eb7d434",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/구매계획 및 보고서, 가격검토서_신양식(결재X).hwp": {
     "title": "구매계획 및 보고서, 가격검토서_신양식(결재X).hwp",
@@ -8262,7 +9542,12 @@
       "가격검토서",
       "신양식",
       "결재x"
-    ]
+    ],
+    "preview_id": "bc0bd52edf81cbb297fdec80",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 4,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/송곡 기지국 전원설비 교체 계획서.hwp": {
     "title": "송곡 기지국 전원설비 교체 계획서.hwp",
@@ -8292,7 +9577,12 @@
       "교체",
       "기지국",
       "계획서"
-    ]
+    ],
+    "preview_id": "ea7da213ce64f0e8faaa2085",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 11,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/수리불가 확인서.pdf": {
     "title": "수리불가 확인서.pdf",
@@ -8322,7 +9612,12 @@
       "교체",
       "수리불가",
       "확인서"
-    ]
+    ],
+    "preview_id": "4320b4fe8ff30237f5145da6",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "03_한전_전북본부/04_전원설비/송곡_고창_교체/수정_149-1.SES26-05-21(한전KDN전북사업처_고창_박환태)인버터 3kVA_정류기 48V 70A-1.xlsx": {
     "title": "수정_149-1.SES26-05-21(한전KDN전북사업처_고창_박환태)인버터 3kVA_정류기 48V 70A-1.xlsx",
@@ -8364,7 +9659,12 @@
       "정류기",
       "48v",
       "70a"
-    ]
+    ],
+    "preview_id": "4afe4306b5f2f8e5384da2fa",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "03_한전_전북본부/90_작업중_초안/송곡_전원교체/수정중_송곡 기지국 전원설비 교체 계획서.hwp": {
     "title": "수정중_송곡 기지국 전원설비 교체 계획서.hwp",
@@ -8397,7 +9697,12 @@
       "전원설비",
       "교체",
       "계획서"
-    ]
+    ],
+    "preview_id": "898910cf1676007b2a23ebb0",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 12,
+    "preview_redacted": false
   },
   "03_한전_전북본부/90_작업중_초안/송곡_전원교체/수정중_송곡 기지국 전원설비 교체 계획서__별도본_fc3374cf.hwp": {
     "title": "수정중_송곡 기지국 전원설비 교체 계획서__별도본_fc3374cf.hwp",
@@ -8432,7 +9737,12 @@
       "계획서",
       "별도본",
       "fc3374cf"
-    ]
+    ],
+    "preview_id": "955b9ccc7cea90579f30c5d2",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 7,
+    "preview_redacted": false
   },
   "03_한전_전북본부/90_작업중_초안/인수인계/배전자동화 무선통신망 구축 및 운영 인수인계서_초안(안원모).hwp": {
     "title": "배전자동화 무선통신망 구축 및 운영 인수인계서_초안(안원모).hwp",
@@ -8465,7 +9775,12 @@
       "운영",
       "인수인계서",
       "안원모"
-    ]
+    ],
+    "preview_id": "53e7410552a716038610676b",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 13,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/경남본부/생활참고/★ [경남본부] 경남지역맛집지도.pdf": {
     "title": "★ [경남본부] 경남지역맛집지도.pdf",
@@ -8489,7 +9804,12 @@
       "타지역",
       "참고자료",
       "경남지역맛집지도"
-    ]
+    ],
+    "preview_id": "c91ad9012bfcb2671b8104fb",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/남서울본부/배전센터/(배전센터공사 설계서) 붙임1_공사설계서(계약의뢰).xlsx": {
     "title": "(배전센터공사 설계서) 붙임1_공사설계서(계약의뢰).xlsx",
@@ -8518,7 +9838,12 @@
       "붙임1",
       "공사설계서",
       "계약의뢰"
-    ]
+    ],
+    "preview_id": "e25912234f6ec49b00a0084b",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "04_타지역_참고자료/남서울본부/배전센터/250214_남서울본부 광역 배전센터 추진(안)_최종.pdf": {
     "title": "250214_남서울본부 광역 배전센터 추진(안)_최종.pdf",
@@ -8546,7 +9871,12 @@
       "추진",
       "안",
       "최종"
-    ]
+    ],
+    "preview_id": "b15036c75c7f909b17f8d8e2",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/1. 논산지사 이설관련 회선 이설요청(통신사).hwp": {
     "title": "1. 논산지사 이설관련 회선 이설요청(통신사).hwp",
@@ -8577,7 +9907,12 @@
       "회선",
       "이설요청",
       "통신사"
-    ]
+    ],
+    "preview_id": "ee7abdac05927a9e0b56b923",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 1,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/1. 이설작업계획(안).hwp": {
     "title": "1. 이설작업계획(안).hwp",
@@ -8605,7 +9940,12 @@
       "1",
       "이설작업계획",
       "안"
-    ]
+    ],
+    "preview_id": "9e03a7adb8f8ff81b3430d3a",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 11,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/2. 논산지사 이설작업계획.hwp": {
     "title": "2. 논산지사 이설작업계획.hwp",
@@ -8633,7 +9973,12 @@
       "2",
       "논산지사",
       "이설작업계획"
-    ]
+    ],
+    "preview_id": "91597ad56cabcfee59052679",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 13,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/2. 서천지사 이설작업요청(통신사).hwp": {
     "title": "2. 서천지사 이설작업요청(통신사).hwp",
@@ -8662,7 +10007,12 @@
       "서천지사",
       "이설작업요청",
       "통신사"
-    ]
+    ],
+    "preview_id": "31081e500a15252048a42c32",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 1,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/[드림라인]한전 서천지사 구내 이전 광케이블 시설공사_드림라인.pdf": {
     "title": "[드림라인]한전 서천지사 구내 이전 광케이블 시설공사_드림라인.pdf",
@@ -8694,7 +10044,12 @@
       "이전",
       "광케이블",
       "시설공사"
-    ]
+    ],
+    "preview_id": "5c2d4c995ef1833a028c13e9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/공사설계서_배전센터통합.xlsx": {
     "title": "공사설계서_배전센터통합.xlsx",
@@ -8722,7 +10077,12 @@
       "이설사례",
       "공사설계서",
       "배전센터통합"
-    ]
+    ],
+    "preview_id": "e87e4614aa301bf361705344",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/드림라인 공문.hwp": {
     "title": "드림라인 공문.hwp",
@@ -8749,7 +10109,12 @@
       "이설사례",
       "드림라인",
       "공문"
-    ]
+    ],
+    "preview_id": "a893e6454ce5e6d44b6675ce",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 1,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/배전센터통합_최종본_260120.hwp": {
     "title": "배전센터통합_최종본_260120.hwp",
@@ -8777,7 +10142,12 @@
       "배전센터통합",
       "최종본",
       "260120"
-    ]
+    ],
+    "preview_id": "d37a1a27a256c087b1c84450",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 17,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/서천지사 설비이전 계획서-드림라인.hwp": {
     "title": "서천지사 설비이전 계획서-드림라인.hwp",
@@ -8806,7 +10176,12 @@
       "설비이전",
       "계획서",
       "드림라인"
-    ]
+    ],
+    "preview_id": "7be14c228f23f87c16fc29f6",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/대전세종충남본부/배전센터_이설사례/세종지사 das설비 이설 계획(안).hwp": {
     "title": "세종지사 das설비 이설 계획(안).hwp",
@@ -8836,7 +10211,12 @@
       "이설",
       "계획",
       "안"
-    ]
+    ],
+    "preview_id": "b10429f876d2682d55551902",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 21,
+    "preview_redacted": false
   },
   "04_타지역_참고자료/업무외_기존보존자료/2026950030 동탄2신도시 동탄역 디에트르 퍼스티지 입주자모집광고문 (1).pdf": {
     "title": "2026950030 동탄2신도시 동탄역 디에트르 퍼스티지 입주자모집광고문 (1).pdf",
@@ -8867,7 +10247,12 @@
       "퍼스티지",
       "입주자모집광고문",
       "1"
-    ]
+    ],
+    "preview_id": "a159453ab540d6c02f470e42",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "04_타지역_참고자료/업무외_기존보존자료/[붙임1]+제11회+광주광역시+공공데이터+활용+창업경진대회+모집공고문 (1).pdf": {
     "title": "[붙임1]+제11회+광주광역시+공공데이터+활용+창업경진대회+모집공고문 (1).pdf",
@@ -8899,7 +10284,12 @@
       "창업경진대회",
       "모집공고문",
       "1"
-    ]
+    ],
+    "preview_id": "318aea27d9c10b6b39474699",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "70_소프트웨어/이동형_공사현장_모니터링/SmartTSM2_20230421(일반)_수정.apk": {
     "title": "SmartTSM2_20230421(일반)_수정.apk",
@@ -8928,7 +10318,12 @@
       "20230421",
       "일반",
       "수정"
-    ]
+    ],
+    "preview_id": "7b54509f1a6afa7d284e263a",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/DotNetFX472/NDP472-KB4054530-x86-x64-AllOS-ENU.exe": {
     "title": "NDP472-KB4054530-x86-x64-AllOS-ENU.exe",
@@ -8969,7 +10364,12 @@
       "x64",
       "allos",
       "enu"
-    ]
+    ],
+    "preview_id": "d3d95931076b1705ec29dc13",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/DotNetFX472/NDP472-KB4054530-x86-x64-AllOS-KOR.exe": {
     "title": "NDP472-KB4054530-x86-x64-AllOS-KOR.exe",
@@ -9010,7 +10410,12 @@
       "x64",
       "allos",
       "kor"
-    ]
+    ],
+    "preview_id": "9de5eeae21f672c88c83b583",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/SmartBlackBoxSetup.msi": {
     "title": "SmartBlackBoxSetup.msi",
@@ -9045,7 +10450,12 @@
       "5",
       "230419",
       "smartblackboxsetup"
-    ]
+    ],
+    "preview_id": "095663fe772a49b5335e80c4",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/setup.exe": {
     "title": "setup.exe",
@@ -9080,7 +10490,12 @@
       "5",
       "230419",
       "setup"
-    ]
+    ],
+    "preview_id": "c1fe408deb647162cc23a402",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/vcredist_x86/vcredist_x86.exe": {
     "title": "vcredist_x86.exe",
@@ -9117,7 +10532,12 @@
       "230419",
       "vcredist",
       "x86"
-    ]
+    ],
+    "preview_id": "6e12683c1a642ecdd4682600",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "70_소프트웨어/이동형_공사현장_모니터링/화면구성관리 및 실시간영상 정보.pptx": {
     "title": "화면구성관리 및 실시간영상 정보.pptx",
@@ -9146,7 +10566,12 @@
       "및",
       "실시간영상",
       "정보"
-    ]
+    ],
+    "preview_id": "92fec9b438462a8bdfa53930",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "90_본부확인필요/TRS_환경감시/1124-월간 설명자료_TRS 환경감시 고도화.hwp": {
     "title": "1124-월간 설명자료_TRS 환경감시 고도화.hwp",
@@ -9173,7 +10598,12 @@
       "월간",
       "설명자료",
       "고도화"
-    ]
+    ],
+    "preview_id": "90b381f81493fd0166d24b60",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "90_본부확인필요/경기_전북_혼재초안/[경기표기혼재_검토] (작성중)20260713_TRS_설비_구성도.xlsx": {
     "title": "[경기표기혼재_검토] (작성중)20260713_TRS_설비_구성도.xlsx",
@@ -9205,7 +10635,12 @@
       "trs",
       "설비",
       "구성도"
-    ]
+    ],
+    "preview_id": "9d325e39301826e8126602af",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "90_본부확인필요/경기내용_전북명칭불일치/[경기내용_전북명칭불일치] 작성중_[전북본부]_TRS구성도_20260707.xlsx": {
     "title": "[경기내용_전북명칭불일치] 작성중_[전북본부]_TRS구성도_20260707.xlsx",
@@ -9233,7 +10668,12 @@
       "전북본부",
       "trs구성도",
       "20260707"
-    ]
+    ],
+    "preview_id": "0c3de8deca56bcf1043340d2",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "90_본부확인필요/빈초안/작성중_(종합)_2_광선로.xlsx": {
     "title": "작성중_(종합)_2_광선로.xlsx",
@@ -9259,7 +10699,12 @@
       "종합",
       "2",
       "광선로"
-    ]
+    ],
+    "preview_id": "7097183a7ad7acf11d94a13c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "90_본부확인필요/설계_메모/20250626_153214_최용문.txt": {
     "title": "20250626_153214_최용문.txt",
@@ -9286,7 +10731,12 @@
       "20250626",
       "153214",
       "최용문"
-    ]
+    ],
+    "preview_id": "22df7718990faf218194f764",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "90_본부확인필요/설비교체_판정표/84.설비교체 판정표.pdf": {
     "title": "84.설비교체 판정표.pdf",
@@ -9310,7 +10760,12 @@
       "설비교체",
       "판정표",
       "84"
-    ]
+    ],
+    "preview_id": "5791b3391dc6c70c6d154b7d",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/00_보안자료안내.md": {
     "title": "00_보안자료안내.md",
@@ -9332,7 +10787,12 @@
       "보안자료",
       "00",
       "보안자료안내"
-    ]
+    ],
+    "preview_id": "2e7aa9fa75f7154989dd08c9",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/01_전사공통/01_업무기준_매뉴얼/보안/H0-ICT-절차-0044_네트워크 보안관리 절차서_09.pdf": {
     "title": "H0-ICT-절차-0044_네트워크 보안관리 절차서_09.pdf",
@@ -9367,7 +10827,12 @@
       "보안관리",
       "절차서",
       "09"
-    ]
+    ],
+    "preview_id": "136ec5086a5bc302a7073cff",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/01_전사공통/03_TRS_DAS_ADMS/교육_전북사례포함/TRS 교육자료_2207.pptx": {
     "title": "TRS 교육자료_2207.pptx",
@@ -9401,7 +10866,12 @@
       "전북사례포함",
       "교육자료",
       "2207"
-    ]
+    ],
+    "preview_id": "6e384f28c6145cac8e1ec459",
+    "preview_engine": "OOXML slide parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/01_전사공통/10_전국_다본부_자료/90_작업중_초안/작성중_(종합)_1_전화.xlsx": {
     "title": "작성중_(종합)_1_전화.xlsx",
@@ -9438,7 +10908,12 @@
       "종합",
       "1",
       "전화"
-    ]
+    ],
+    "preview_id": "91d3205ecaa2119081babeb2",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/01_전사공통/10_전국_다본부_자료/TRS_호남권/TRS 계통도_260101.xlsx": {
     "title": "TRS 계통도_260101.xlsx",
@@ -9472,7 +10947,12 @@
       "호남권",
       "계통도",
       "260101"
-    ]
+    ],
+    "preview_id": "7e2c39838ccaba5c7860e3c3",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "95_보안자료/01_전사공통/10_전국_다본부_자료/전화/(종합)_1_전화.xlsx": {
     "title": "(종합)_1_전화.xlsx",
@@ -9504,7 +10984,12 @@
       "자료",
       "종합",
       "1"
-    ]
+    ],
+    "preview_id": "cb56e974577b1377d1dc9d33",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/01_전사공통/계정정보/이동형_현장모니터링_계정정보.txt": {
     "title": "이동형_현장모니터링_계정정보.txt",
@@ -9531,7 +11016,12 @@
       "전사공통",
       "이동형",
       "현장모니터링"
-    ]
+    ],
+    "preview_id": "60cd408ddae323635c824062",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "95_보안자료/02_한전_경기본부/02_OPGW_광통신/계통도_선번/231006-OFD통합선번장(경기본부).xlsx": {
     "title": "231006-OFD통합선번장(경기본부).xlsx",
@@ -9564,7 +11054,12 @@
       "선번",
       "231006",
       "ofd통합선번장"
-    ]
+    ],
+    "preview_id": "80a2cacde2e1ad7b4fd36074",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(12대역)EMS_RTU-전력거래소간 디지털회선 전환대상IP조사V2_경기본부.pdf": {
     "title": "(12대역)EMS_RTU-전력거래소간 디지털회선 전환대상IP조사V2_경기본부.pdf",
@@ -9599,7 +11094,12 @@
       "전력거래소간",
       "디지털회선",
       "전환대상ip조사v2"
-    ]
+    ],
+    "preview_id": "a90eb6ab5fc380a563a11c40",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(12대역)EMS_RTU-전력거래소간 디지털회선 전환대상IP조사V2_경기본부_1.jpg": {
     "title": "(12대역)EMS_RTU-전력거래소간 디지털회선 전환대상IP조사V2_경기본부_1.jpg",
@@ -9636,7 +11136,12 @@
       "디지털회선",
       "전환대상ip조사v2",
       "1"
-    ]
+    ],
+    "preview_id": "eb69ad27384b81b2f3f0b715",
+    "preview_engine": "browser image viewer",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(중요)변전소별 시리얼IP주소(통합단말&송광치 L3)_250912.xlsx": {
     "title": "(중요)변전소별 시리얼IP주소(통합단말&송광치 L3)_250912.xlsx",
@@ -9673,7 +11178,12 @@
       "송광치",
       "l3",
       "250912"
-    ]
+    ],
+    "preview_id": "338a30619a27d8c5f189e0a1",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용.xls": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용.xls",
@@ -9709,7 +11219,12 @@
       "차세대kepcit반영",
       "20231226",
       "인쇄용"
-    ]
+    ],
+    "preview_id": "a5e15c68770547d1d829522d",
+    "preview_engine": "reviewed-classification",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용.xlsx": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용.xlsx",
@@ -9745,7 +11260,12 @@
       "차세대kepcit반영",
       "20231226",
       "인쇄용"
-    ]
+    ],
+    "preview_id": "7f15a6c8a0e120024df667ad",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용__별도본_4cb2913b.xls": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용__별도본_4cb2913b.xls",
@@ -9783,7 +11303,12 @@
       "인쇄용",
       "별도본",
       "4cb2913b"
-    ]
+    ],
+    "preview_id": "e10fc0a68b218bd9a75dff19",
+    "preview_engine": "reviewed-classification",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250312.xlsx": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250312.xlsx",
@@ -9818,7 +11343,12 @@
       "ofd선번",
       "차세대kepcit반영",
       "20250312"
-    ]
+    ],
+    "preview_id": "a39bda19547a6a8735e73b09",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250318.xlsx": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250318.xlsx",
@@ -9853,7 +11383,12 @@
       "ofd선번",
       "차세대kepcit반영",
       "20250318"
-    ]
+    ],
+    "preview_id": "96a80386c80056dd9af81581",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/_(중요)평택전력지사 OFD선번_금암_방여울_반영_.xlsx": {
     "title": "_(중요)평택전력지사 OFD선번_금암_방여울_반영_.xlsx",
@@ -9889,7 +11424,12 @@
       "금암",
       "방여울",
       "반영"
-    ]
+    ],
+    "preview_id": "80641293f1519dc35fbc3fd8",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/_(중요)평택전력지사 OFD선번_북동탄_우회_반영_20250610.xlsx": {
     "title": "_(중요)평택전력지사 OFD선번_북동탄_우회_반영_20250610.xlsx",
@@ -9926,7 +11466,12 @@
       "우회",
       "반영",
       "20250610"
-    ]
+    ],
+    "preview_id": "de02c50fd9073fe5c75bf67f",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/경기본부 위성전화 현황_240101.xlsx": {
     "title": "경기본부 위성전화 현황_240101.xlsx",
@@ -9959,7 +11504,12 @@
       "위성전화",
       "현황",
       "240101"
-    ]
+    ],
+    "preview_id": "849a352e58d93ad5890cbd27",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/경기본부_변전소 주소('24.10).xlsx": {
     "title": "경기본부_변전소 주소('24.10).xlsx",
@@ -9992,7 +11542,12 @@
       "변전소",
       "24",
       "10"
-    ]
+    ],
+    "preview_id": "5a394f6ad10c0bfbf800425f",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/02_한전_경기본부/06_네트워크_주소_연락처/출장거리표(주소포함)_20250710.xlsx": {
     "title": "출장거리표(주소포함)_20250710.xlsx",
@@ -10025,7 +11580,12 @@
       "출장거리표",
       "주소포함",
       "20250710"
-    ]
+    ],
+    "preview_id": "36945431dcd29a83ce6b175b",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/01_TRS/기지국_현황/TRS기지국.zip": {
     "title": "TRS기지국.zip",
@@ -10057,7 +11617,12 @@
       "기지국",
       "현황",
       "trs기지국"
-    ]
+    ],
+    "preview_id": "fc174fe8a864cfadd8f85189",
+    "preview_engine": "ZIP directory reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/01_TRS/기지국_현황/도식도 전북(220707)V2.pptx": {
     "title": "도식도 전북(220707)V2.pptx",
@@ -10092,7 +11657,12 @@
       "전북",
       "220707",
       "v2"
-    ]
+    ],
+    "preview_id": "17ecb93a7ce4854d3b154b18",
+    "preview_engine": "OOXML slide parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/02_DAS_ADMS/네트워크_계통도/네트워크계통도.xlsx": {
     "title": "네트워크계통도.xlsx",
@@ -10125,7 +11695,12 @@
       "네트워크",
       "계통도",
       "네트워크계통도"
-    ]
+    ],
+    "preview_id": "c614742c06eff3da4ac8342b",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/02_DAS_ADMS/네트워크_계통도/네트워크계통도_팔공산IDU반영.xlsx": {
     "title": "네트워크계통도_팔공산IDU반영.xlsx",
@@ -10159,7 +11734,12 @@
       "계통도",
       "네트워크계통도",
       "팔공산idu반영"
-    ]
+    ],
+    "preview_id": "cfb35d18b04277b45d436109",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/02_DAS_ADMS/배전센터_이설_배치/전북 DAS망 네트워크 구성도.pdf": {
     "title": "전북 DAS망 네트워크 구성도.pdf",
@@ -10195,7 +11775,12 @@
       "das망",
       "네트워크",
       "구성도"
-    ]
+    ],
+    "preview_id": "d68bd57de6a12e1856cd7692",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/06_네트워크_주소_연락처/D-TRS SITE 주소 및 출입 방법.xlsx": {
     "title": "D-TRS SITE 주소 및 출입 방법.xlsx",
@@ -10231,7 +11816,12 @@
       "및",
       "출입",
       "방법"
-    ]
+    ],
+    "preview_id": "a9bab3919ded6d0055fb8697",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/06_네트워크_주소_연락처/D-TRS 이동중계국 환경감시 고도화 1식 사업_전북본부_IP LIST_221218.xlsx": {
     "title": "D-TRS 이동중계국 환경감시 고도화 1식 사업_전북본부_IP LIST_221218.xlsx",
@@ -10271,7 +11861,12 @@
       "ip",
       "list",
       "221218"
-    ]
+    ],
+    "preview_id": "95b5cb576ff396177f13d21a",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/06_네트워크_주소_연락처/DTRS_IP(KDN).xlsx": {
     "title": "DTRS_IP(KDN).xlsx",
@@ -10304,7 +11899,12 @@
       "dtrs",
       "ip",
       "kdn"
-    ]
+    ],
+    "preview_id": "152386e582394d0405eb7171",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/06_네트워크_주소_연락처/KDN 전북사업처 사선번호_최종.xlsx": {
     "title": "KDN 전북사업처 사선번호_최종.xlsx",
@@ -10338,7 +11938,12 @@
       "전북사업처",
       "사선번호",
       "최종"
-    ]
+    ],
+    "preview_id": "f2b526663409f42f901ab674",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/06_네트워크_주소_연락처/전북본부 환경감시고도화_IP LIST.xlsx": {
     "title": "전북본부 환경감시고도화_IP LIST.xlsx",
@@ -10371,7 +11976,12 @@
       "환경감시고도화",
       "ip",
       "list"
-    ]
+    ],
+    "preview_id": "18e04aa755007cf5497e3ddc",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/03_한전_전북본부/06_네트워크_주소_연락처/통합_TRS_IP_네트워크_모음_20260818.xlsx": {
     "title": "통합_TRS_IP_네트워크_모음_20260818.xlsx",
@@ -10406,7 +12016,12 @@
       "ip",
       "모음",
       "20260818"
-    ]
+    ],
+    "preview_id": "0af662b97ba62087a8dd45b9",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/90_본부확인필요/경기내용_전북명칭불일치/[경기내용_전북명칭불일치] 작성중_[전북본부]_OFD선번_20260707.xlsx": {
     "title": "[경기내용_전북명칭불일치] 작성중_[전북본부]_OFD선번_20260707.xlsx",
@@ -10437,7 +12052,12 @@
       "전북본부",
       "ofd선번",
       "20260707"
-    ]
+    ],
+    "preview_id": "ee8d1157ef5bbe7b58263642",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/90_본부확인필요/경기내용_전북명칭불일치/[경기내용_전북명칭불일치] 작성중_[전북본부]_출장거리표(주소포함)_2026707.xlsx": {
     "title": "[경기내용_전북명칭불일치] 작성중_[전북본부]_출장거리표(주소포함)_2026707.xlsx",
@@ -10469,7 +12089,12 @@
       "출장거리표",
       "주소포함",
       "2026707"
-    ]
+    ],
+    "preview_id": "b1732f31f6d1d9276d7886a9",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/90_본부확인필요/암호화_내용미확인/TRS 네트워크 현황(IP, 서버 등).xlsx": {
     "title": "TRS 네트워크 현황(IP, 서버 등).xlsx",
@@ -10502,7 +12127,12 @@
       "ip",
       "서버",
       "등"
-    ]
+    ],
+    "preview_id": "51177ccfe685147f95e07bf3",
+    "preview_engine": "reviewed-classification",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "95_보안자료/98_정리기록/2026-08-09_이전안내/README.md": {
     "title": "README.md",
@@ -10531,7 +12161,12 @@
       "09",
       "이전안내",
       "readme"
-    ]
+    ],
+    "preview_id": "8f018705976417275a68050c",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/01_전사공통/10_전국_다본부_자료/90_작업중_초안/296_5af64061/(종합)_1_전화.xlsx": {
     "title": "(종합)_1_전화.xlsx",
@@ -10574,7 +12209,12 @@
       "종합",
       "1",
       "전화"
-    ]
+    ],
+    "preview_id": "446364ed32f33ea8b18f26f0",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/01_전사공통/계정정보/295_0806a0b3/이동형_현장모니터링_계정정보_중복.txt": {
     "title": "이동형_현장모니터링_계정정보_중복.txt",
@@ -10609,7 +12249,12 @@
       "이동형",
       "현장모니터링",
       "중복"
-    ]
+    ],
+    "preview_id": "e24d77b9c69666ade9c8cee1",
+    "preview_engine": "UTF-8 text reader",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "95_보안자료/99_동일내용_중복보존/02_한전_경기본부/02_OPGW_광통신/계통도_선번/337_15b3dbd9/231006-OFD통합선번장(경기본부).xlsx": {
     "title": "231006-OFD통합선번장(경기본부).xlsx",
@@ -10649,7 +12294,12 @@
       "15b3dbd9",
       "231006",
       "ofd통합선번장"
-    ]
+    ],
+    "preview_id": "ffd51c8cc0af436929955bb7",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/02_한전_경기본부/06_네트워크_주소_연락처/297_1e8ea238/작성중_(중요)변전소별 시리얼IP주소(통합단말&송광치 L3)_250912.xlsx": {
     "title": "작성중_(중요)변전소별 시리얼IP주소(통합단말&송광치 L3)_250912.xlsx",
@@ -10694,7 +12344,12 @@
       "송광치",
       "l3",
       "250912"
-    ]
+    ],
+    "preview_id": "c95dcbe98a5e8b57e28cf796",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/02_한전_경기본부/06_네트워크_주소_연락처/298_ae4d8139/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용.xlsx": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20231226_인쇄용.xlsx",
@@ -10737,7 +12392,12 @@
       "차세대kepcit반영",
       "20231226",
       "인쇄용"
-    ]
+    ],
+    "preview_id": "dd5b39d4f3e62418b48b7bed",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/02_한전_경기본부/06_네트워크_주소_연락처/299_ba5c0d00/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250312.xlsx": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250312.xlsx",
@@ -10779,7 +12439,12 @@
       "ofd선번",
       "차세대kepcit반영",
       "20250312"
-    ]
+    ],
+    "preview_id": "b159b4d4d0d3fcb117d37bb1",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/02_한전_경기본부/06_네트워크_주소_연락처/300_47230f0d/(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250318.xlsx": {
     "title": "(중요)평택전력지사 OFD선번_차세대KepCIT반영_20250318.xlsx",
@@ -10821,7 +12486,12 @@
       "ofd선번",
       "차세대kepcit반영",
       "20250318"
-    ]
+    ],
+    "preview_id": "dbe8552d0ae1bd681993d51d",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/02_한전_경기본부/06_네트워크_주소_연락처/301_4e4d0e5d/경기본부 위성전화 현황_240101.xlsx": {
     "title": "경기본부 위성전화 현황_240101.xlsx",
@@ -10861,7 +12531,12 @@
       "위성전화",
       "현황",
       "240101"
-    ]
+    ],
+    "preview_id": "e0649e7218d01890cea4642c",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "95_보안자료/99_동일내용_중복보존/02_한전_경기본부/06_네트워크_주소_연락처/302_1c61e107/경기본부_변전소 주소('24.10).xlsx": {
     "title": "경기본부_변전소 주소('24.10).xlsx",
@@ -10901,7 +12576,12 @@
       "변전소",
       "24",
       "10"
-    ]
+    ],
+    "preview_id": "7bef1a0116b3dd14e3956390",
+    "preview_engine": "OOXML worksheet parser",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "98_정리기록/2026-08-09_이전안내/00_폴더안내.md": {
     "title": "00_폴더안내.md",
@@ -10928,7 +12608,12 @@
       "이전안내",
       "00",
       "폴더안내"
-    ]
+    ],
+    "preview_id": "2e196b4d6329792656c714b6",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "98_정리기록/2026-08-09_이전안내/README.md": {
     "title": "README.md",
@@ -10954,7 +12639,12 @@
       "09",
       "이전안내",
       "readme"
-    ]
+    ],
+    "preview_id": "e2c1ed7873fe83e487d43b20",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/313_8e0e9ee1/ICT 기반설비 시설기준 개정전문 20200518(5차 개정).pdf": {
     "title": "ICT 기반설비 시설기준 개정전문 20200518(5차 개정).pdf",
@@ -10993,7 +12683,12 @@
       "20200518",
       "5차",
       "개정"
-    ]
+    ],
+    "preview_id": "ec9684298f0796f3f1a147fe",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/314_7bf0ce54/ICT설비 비상대응매뉴얼_7차개정_전문.pdf": {
     "title": "ICT설비 비상대응매뉴얼_7차개정_전문.pdf",
@@ -11030,7 +12725,12 @@
       "비상대응매뉴얼",
       "7차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "dae256f867167ae33ca97755",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/315_e0c405d3/ICT운영절차서_2차개정_전문.pdf": {
     "title": "ICT운영절차서_2차개정_전문.pdf",
@@ -11066,7 +12766,12 @@
       "ict운영절차서",
       "2차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "bdee3d8d920c4229bf567c3a",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/318_3bf6d7d2/변전소구내통신설비시설기준_3차개정_전문.pdf": {
     "title": "변전소구내통신설비시설기준_3차개정_전문.pdf",
@@ -11102,7 +12807,12 @@
       "변전소구내통신설비시설기준",
       "3차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "f33a17920e7dbff194af71d5",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/350_6a4c2689/H0-ICT-기준-0001_ICT 기반설비 시설기준_02.pdf": {
     "title": "H0-ICT-기준-0001_ICT 기반설비 시설기준_02.pdf",
@@ -11141,7 +12851,12 @@
       "기반설비",
       "시설기준",
       "02"
-    ]
+    ],
+    "preview_id": "b9f271390723cf61806341db",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/352_4e858909/H0-ICT-절차-0012_정보시스템구축 절차서, SW개발방법론_03.pdf": {
     "title": "H0-ICT-절차-0012_정보시스템구축 절차서, SW개발방법론_03.pdf",
@@ -11181,7 +12896,12 @@
       "절차서",
       "sw개발방법론",
       "03"
-    ]
+    ],
+    "preview_id": "8a8e4e95d55f0b13856fb92c",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/355_b5ff895d/H0-ICT-절차-0039_ICT 운영절차서_04.pdf": {
     "title": "H0-ICT-절차-0039_ICT 운영절차서_04.pdf",
@@ -11219,7 +12939,12 @@
       "0039",
       "운영절차서",
       "04"
-    ]
+    ],
+    "preview_id": "a6c592b50d188f8f9a8899b2",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/359_ed48a24a/H0-ICT-지침-0071_ICT업무처리지침_06.pdf": {
     "title": "H0-ICT-지침-0071_ICT업무처리지침_06.pdf",
@@ -11257,7 +12982,12 @@
       "0071",
       "ict업무처리지침",
       "06"
-    ]
+    ],
+    "preview_id": "24eda9feede7e529a5ad0421",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/381_14410abc/H1-ICT-기준-0002_변전소 구내통신설비 시설기준_02.pdf": {
     "title": "H1-ICT-기준-0002_변전소 구내통신설비 시설기준_02.pdf",
@@ -11297,7 +13027,12 @@
       "구내통신설비",
       "시설기준",
       "02"
-    ]
+    ],
+    "preview_id": "9c4874a9e00311ebfe487def",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/382_21e5e2db/H1-ICT-절차-0008_EA 업무절차서_04.pdf": {
     "title": "H1-ICT-절차-0008_EA 업무절차서_04.pdf",
@@ -11336,7 +13071,12 @@
       "ea",
       "업무절차서",
       "04"
-    ]
+    ],
+    "preview_id": "2893f29e90775d2897e9d53d",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/383_1e757c23/H1-ICT-지침-0004_해외사업 정보통신(ICT) 지원 및 운영지침_01.pdf": {
     "title": "H1-ICT-지침-0004_해외사업 정보통신(ICT) 지원 및 운영지침_01.pdf",
@@ -11376,7 +13116,12 @@
       "지원",
       "및",
       "운영지침"
-    ]
+    ],
+    "preview_id": "43371c8885469ffef9e8f2dd",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/384_5fa5da9a/H1-통신-기준-0006_사옥 정보통신설비 설계기준_04.pdf": {
     "title": "H1-통신-기준-0006_사옥 정보통신설비 설계기준_04.pdf",
@@ -11417,7 +13162,12 @@
       "정보통신설비",
       "설계기준",
       "04"
-    ]
+    ],
+    "preview_id": "912217410c1e3eb62ed56f2f",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/386_32464d04/ICT 업무처리지침 전문_(230524).pdf": {
     "title": "ICT 업무처리지침 전문_(230524).pdf",
@@ -11453,7 +13203,12 @@
       "업무처리지침",
       "전문",
       "230524"
-    ]
+    ],
+    "preview_id": "63ce946985aff38016060a8f",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/387_e49cddef/ICT설비_비상대응매뉴얼(6차 개정분).hwp": {
     "title": "ICT설비_비상대응매뉴얼(6차 개정분).hwp",
@@ -11490,7 +13245,12 @@
       "비상대응매뉴얼",
       "6차",
       "개정분"
-    ]
+    ],
+    "preview_id": "62d713e6904acb1620e185c4",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 409,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/388_894fa880/ICT업무처리지침 전문(5차)_2501.pdf": {
     "title": "ICT업무처리지침 전문(5차)_2501.pdf",
@@ -11527,7 +13287,12 @@
       "전문",
       "5차",
       "2501"
-    ]
+    ],
+    "preview_id": "95949dacbdbd7ce1ae2827a3",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/389_b121b34d/ICT업무처리지침 전문_4차(240329).pdf": {
     "title": "ICT업무처리지침 전문_4차(240329).pdf",
@@ -11564,7 +13329,12 @@
       "전문",
       "4차",
       "240329"
-    ]
+    ],
+    "preview_id": "b78d86266ce2b63c5c583680",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/390_41d5731f/ICT운영절차서_1차개정_전문(최종).pdf": {
     "title": "ICT운영절차서_1차개정_전문(최종).pdf",
@@ -11601,7 +13371,12 @@
       "1차개정",
       "전문",
       "최종"
-    ]
+    ],
+    "preview_id": "5905d3af0250088930b3b6b7",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/395_4816f401/ict 운영절차서-복사.pdf": {
     "title": "ict 운영절차서-복사.pdf",
@@ -11636,7 +13411,12 @@
       "4816f401",
       "운영절차서",
       "복사"
-    ]
+    ],
+    "preview_id": "9a240e84eae38229b99bb556",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/396_4e872061/ict업무처리지침 전문(6차).pdf": {
     "title": "ict업무처리지침 전문(6차).pdf",
@@ -11672,7 +13452,12 @@
       "ict업무처리지침",
       "전문",
       "6차"
-    ]
+    ],
+    "preview_id": "d51b085637758f84aa20b502",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/ICT_정보통신/397_3e73930e/ict운영절차서_4차개정_전문-복사.pdf": {
     "title": "ict운영절차서_4차개정_전문-복사.pdf",
@@ -11709,7 +13494,12 @@
       "4차개정",
       "전문",
       "복사"
-    ]
+    ],
+    "preview_id": "da9b88eb02dab306d716b132",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/307_f0fa2260/(전문)_ICT기획처_H0-ICT-편람-0002_Ver 01_OPGW시설업무편람.pdf": {
     "title": "(전문)_ICT기획처_H0-ICT-편람-0002_Ver 01_OPGW시설업무편람.pdf",
@@ -11750,7 +13540,12 @@
       "0002",
       "ver",
       "opgw시설업무편람"
-    ]
+    ],
+    "preview_id": "223bae8f7884f4361b8d5a71",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/312_b1d0c791/DS-0060_04_DS-0060_전문_광전송선로설계기준(20210514).pdf": {
     "title": "DS-0060_04_DS-0060_전문_광전송선로설계기준(20210514).pdf",
@@ -11789,7 +13584,12 @@
       "전문",
       "광전송선로설계기준",
       "20210514"
-    ]
+    ],
+    "preview_id": "9524e18bec967bfaaec71e9b",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/319_d2ab5dc1/붙임 1. opgw 시설 업무편람(4차개정).pdf": {
     "title": "붙임 1. opgw 시설 업무편람(4차개정).pdf",
@@ -11827,7 +13627,12 @@
       "시설",
       "업무편람",
       "4차개정"
-    ]
+    ],
+    "preview_id": "a7693ba9de084631214620e4",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/320_73927af2/붙임 2. opgw 시설 업무편람 개정비교표(4차개정).pdf": {
     "title": "붙임 2. opgw 시설 업무편람 개정비교표(4차개정).pdf",
@@ -11866,7 +13671,12 @@
       "업무편람",
       "개정비교표",
       "4차개정"
-    ]
+    ],
+    "preview_id": "6299b10ad047354a160a6400",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/360_5c3f2348/H0-ICT-편람-0002_OPGW 시설 업무편람_02.pdf": {
     "title": "H0-ICT-편람-0002_OPGW 시설 업무편람_02.pdf",
@@ -11906,7 +13716,12 @@
       "시설",
       "업무편람",
       "02"
-    ]
+    ],
+    "preview_id": "305d51c128b9e2ff1de8f700",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/361_ffab30b3/H0-ICT-편람-0004_배전계통 자가 광통신망 시공운영 업무편람_02.pdf": {
     "title": "H0-ICT-편람-0004_배전계통 자가 광통신망 시공운영 업무편람_02.pdf",
@@ -11949,7 +13764,12 @@
       "시공운영",
       "업무편람",
       "02"
-    ]
+    ],
+    "preview_id": "a2af1f36b42cd662db395296",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/OPGW_광통신/399_928c1e3c/배전계통 자가 광통신망 운영지침.hwp": {
     "title": "배전계통 자가 광통신망 운영지침.hwp",
@@ -11986,7 +13806,12 @@
       "자가",
       "광통신망",
       "운영지침"
-    ]
+    ],
+    "preview_id": "1bab0af91bdca6477bb9a71b",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 244,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/보안/357_d1e6d2db/H0-ICT-절차-0046_소프트웨어 개발보안 절차서_04.pdf": {
     "title": "H0-ICT-절차-0046_소프트웨어 개발보안 절차서_04.pdf",
@@ -12025,7 +13850,12 @@
       "개발보안",
       "절차서",
       "04"
-    ]
+    ],
+    "preview_id": "aa66daa11e07717b07dc7307",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/보안/377_d8946ff6/H0-통신-절차-0023_정보보호설비 운영절차서_04.pdf": {
     "title": "H0-통신-절차-0023_정보보호설비 운영절차서_04.pdf",
@@ -12063,7 +13893,12 @@
       "정보보호설비",
       "운영절차서",
       "04"
-    ]
+    ],
+    "preview_id": "269b59abb8c1372f4d88c9e8",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/보안/379_12a0cc57/H0-통신-절차-0036_전력제어시스템 보안관리업무절차서_06.pdf": {
     "title": "H0-통신-절차-0036_전력제어시스템 보안관리업무절차서_06.pdf",
@@ -12101,7 +13936,12 @@
       "전력제어시스템",
       "보안관리업무절차서",
       "06"
-    ]
+    ],
+    "preview_id": "ba58ddb535e282b7add5693e",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/보안/400_9c24f187/보안업무 처리지침 개정 전문 12차개정.pdf": {
     "title": "보안업무 처리지침 개정 전문 12차개정.pdf",
@@ -12137,7 +13977,12 @@
       "개정",
       "전문",
       "12차개정"
-    ]
+    ],
+    "preview_id": "aa8e466ae73ba0963750e3e5",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/01_업무기준_매뉴얼/보안/406_9a20159a/정보보안업무기본지침 개정(6차) 전문_최종-복사.pdf": {
     "title": "정보보안업무기본지침 개정(6차) 전문_최종-복사.pdf",
@@ -12174,7 +14019,12 @@
       "전문",
       "최종",
       "복사"
-    ]
+    ],
+    "preview_id": "d1484c0cf0aaffc5f7ef87f8",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/03_TRS_DAS_ADMS/기준_절차/345_9e05603a/DAS 업무절차서(전문)_4차개정_전문-복사.pdf": {
     "title": "DAS 업무절차서(전문)_4차개정_전문-복사.pdf",
@@ -12213,7 +14063,12 @@
       "전문",
       "4차개정",
       "복사"
-    ]
+    ],
+    "preview_id": "19c3388399a0e9b332e327cc",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/03_TRS_DAS_ADMS/기준_절차/346_87d2c758/DAS 업무절차서(전문)_4차개정_전문.hwp": {
     "title": "DAS 업무절차서(전문)_4차개정_전문.hwp",
@@ -12251,7 +14106,12 @@
       "업무절차서",
       "전문",
       "4차개정"
-    ]
+    ],
+    "preview_id": "253dafc32c615f6b3c2f8474",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 10,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/03_TRS_DAS_ADMS/기준_절차/347_15c3c0ce/DAS 유지보수 업무처리절차서 개정(12차) 전문_최종(211129)_등록용.hwp": {
     "title": "DAS 유지보수 업무처리절차서 개정(12차) 전문_최종(211129)_등록용.hwp",
@@ -12294,7 +14154,12 @@
       "최종",
       "211129",
       "등록용"
-    ]
+    ],
+    "preview_id": "1551958b04c2d680d2625bae",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 298,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/03_TRS_DAS_ADMS/기준_절차/348_63efd0db/GS-5985-0002_배전자동화용 디지털TRS 데이터 단말기_03.pdf": {
     "title": "GS-5985-0002_배전자동화용 디지털TRS 데이터 단말기_03.pdf",
@@ -12336,7 +14201,12 @@
       "디지털trs",
       "데이터",
       "단말기"
-    ]
+    ],
+    "preview_id": "3d226033e5b88a069949965c",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/03_TRS_DAS_ADMS/기준_절차/365_b28e34fb/H0-배전-절차-0009_DAS 유지보수 업무처리 절차서_10.pdf": {
     "title": "H0-배전-절차-0009_DAS 유지보수 업무처리 절차서_10.pdf",
@@ -12378,7 +14248,12 @@
       "업무처리",
       "절차서",
       "10"
-    ]
+    ],
+    "preview_id": "350c16272df8f808febc54e8",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/03_TRS_DAS_ADMS/기준_절차/366_7c558d4e/H0-배전-절차-0067_ADMS 유지보수 절차서_04.pdf": {
     "title": "H0-배전-절차-0067_ADMS 유지보수 절차서_04.pdf",
@@ -12419,7 +14294,12 @@
       "유지보수",
       "절차서",
       "04"
-    ]
+    ],
+    "preview_id": "048ba5743522a66d6d5790e4",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/03_TRS_DAS_ADMS/기준_절차/367_41979e13/H0-배전-절차-0078_ADMS 장애대응 실무매뉴얼_01.pdf": {
     "title": "H0-배전-절차-0078_ADMS 장애대응 실무매뉴얼_01.pdf",
@@ -12459,7 +14339,12 @@
       "0078",
       "장애대응",
       "실무매뉴얼"
-    ]
+    ],
+    "preview_id": "4f3b887e85c6f4cef19106d6",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/04_설계_공사/기준_편람/216_ef0fc6df/1. 정보통신공사 작업절차서.hwp": {
     "title": "1. 정보통신공사 작업절차서.hwp",
@@ -12496,7 +14381,12 @@
       "1",
       "정보통신공사",
       "작업절차서"
-    ]
+    ],
+    "preview_id": "15577432e262fcd5013b2e70",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 83,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/04_설계_공사/기준_편람/308_79f965b3/(전문)_ICT운영처_H1-ICT-편람-0001_Ver 02_정보통신공사감리업무편람.pdf": {
     "title": "(전문)_ICT운영처_H1-ICT-편람-0001_Ver 02_정보통신공사감리업무편람.pdf",
@@ -12538,7 +14428,12 @@
       "ver",
       "02",
       "정보통신공사감리업무편람"
-    ]
+    ],
+    "preview_id": "4107f98ba9450c487b830712",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/04_설계_공사/기준_편람/321_f85ee3cb/붙임3.정보통신공사감리업무편람(안)_4차.pdf": {
     "title": "붙임3.정보통신공사감리업무편람(안)_4차.pdf",
@@ -12576,7 +14471,12 @@
       "정보통신공사감리업무편람",
       "안",
       "4차"
-    ]
+    ],
+    "preview_id": "7ccf6c5edf2e112b8f351d63",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/04_설계_공사/기준_편람/362_ed9ca2c3/H0-ICT-편람-0006_정보통신공사 감리 업무편람_04.pdf": {
     "title": "H0-ICT-편람-0006_정보통신공사 감리 업무편람_04.pdf",
@@ -12616,7 +14516,12 @@
       "정보통신공사",
       "감리",
       "업무편람"
-    ]
+    ],
+    "preview_id": "48f8a13e0c7c878c8b409fd8",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/04_설계_공사/기준_편람/385_d26301ce/H1-통신-절차-0047_정보통신공사 작업절차서_04.pdf": {
     "title": "H1-통신-절차-0047_정보통신공사 작업절차서_04.pdf",
@@ -12656,7 +14561,12 @@
       "0047",
       "정보통신공사",
       "작업절차서"
-    ]
+    ],
+    "preview_id": "1036e1c865a8c601a5e63d4d",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/04_설계_공사/기준_편람/394_e6c9f22c/ict 공사기간 산정 잠정기준 알림(문서)-사내.hwp": {
     "title": "ict 공사기간 산정 잠정기준 알림(문서)-사내.hwp",
@@ -12697,7 +14607,12 @@
       "알림",
       "문서",
       "사내"
-    ]
+    ],
+    "preview_id": "43127da9098beeece7b58e83",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 2,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/04_설계_공사/품셈/309_e64ba557/2024_상반기_표준품셈.pdf": {
     "title": "2024_상반기_표준품셈.pdf",
@@ -12732,7 +14647,12 @@
       "2024",
       "상반기",
       "표준품셈"
-    ]
+    ],
+    "preview_id": "91523c7e0e1666e787793eb8",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/05_점검_안전_드론/기준_절차/000_5350bfb9/(1차개정)안전작업수칙(ICT) 전문-복사.pdf": {
     "title": "(1차개정)안전작업수칙(ICT) 전문-복사.pdf",
@@ -12772,7 +14692,12 @@
       "ict",
       "전문",
       "복사"
-    ]
+    ],
+    "preview_id": "ec8c8c000b5035cd4b47ab3b",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/05_점검_안전_드론/기준_절차/001_d605444e/(1차개정)안전작업수칙(ICT) 전문.hwp": {
     "title": "(1차개정)안전작업수칙(ICT) 전문.hwp",
@@ -12811,7 +14736,12 @@
       "안전작업수칙",
       "ict",
       "전문"
-    ]
+    ],
+    "preview_id": "03270d65cc65a192768b4159",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 221,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/05_점검_안전_드론/기준_절차/237_bb854a67/20241217_건설공사분야 안전작업수칙 1차개정 전문.pdf": {
     "title": "20241217_건설공사분야 안전작업수칙 1차개정 전문.pdf",
@@ -12851,7 +14781,12 @@
       "안전작업수칙",
       "1차개정",
       "전문"
-    ]
+    ],
+    "preview_id": "ab7ca7f54c20e4d595012fa4",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/05_점검_안전_드론/기준_절차/238_26d7e096/20241217_용역분야 안전작업수칙 제정 전문.pdf": {
     "title": "20241217_용역분야 안전작업수칙 제정 전문.pdf",
@@ -12891,7 +14826,12 @@
       "안전작업수칙",
       "제정",
       "전문"
-    ]
+    ],
+    "preview_id": "03de13adced734855e248deb",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/05_점검_안전_드론/기준_절차/376_4f824ddd/H0-재난-절차-0006_재난안전통신망(PS-LTE) 운영절차서_02.pdf": {
     "title": "H0-재난-절차-0006_재난안전통신망(PS-LTE) 운영절차서_02.pdf",
@@ -12934,7 +14874,12 @@
       "lte",
       "운영절차서",
       "02"
-    ]
+    ],
+    "preview_id": "345ce585b3809b17a54132a9",
+    "preview_engine": "poppler pdftotext",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/05_점검_안전_드론/빈양식/304_16d152ff/선로별 드론점검 결과보고서_양식(내장철탑).xlsx": {
     "title": "선로별 드론점검 결과보고서_양식(내장철탑).xlsx",
@@ -12973,7 +14918,12 @@
       "결과보고서",
       "양식",
       "내장철탑"
-    ]
+    ],
+    "preview_id": "179743363a86a3cb9b53e218",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/05_점검_안전_드론/빈양식/305_ff45c9e8/선로별 드론점검 결과보고서_양식(현수철탑).xlsx": {
     "title": "선로별 드론점검 결과보고서_양식(현수철탑).xlsx",
@@ -13012,7 +14962,12 @@
       "결과보고서",
       "양식",
       "현수철탑"
-    ]
+    ],
+    "preview_id": "a0f82427e3025d7ae3ae3c51",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/08_인사_노무_총무/364_b2236613/H0-노무-지침-0023_06_사택업무처리지침개정전문_등록.hwp": {
     "title": "H0-노무-지침-0023_06_사택업무처리지침개정전문_등록.hwp",
@@ -13050,7 +15005,12 @@
       "06",
       "사택업무처리지침개정전문",
       "등록"
-    ]
+    ],
+    "preview_id": "0023d03458c41bfca9f3a8c6",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 54,
+    "preview_redacted": false
   },
   "99_보존_중복/01_전사공통/09_교육_행사/기타/310_b43f2533/2025_KEPCO_04.pdf": {
     "title": "2025_KEPCO_04.pdf",
@@ -13085,7 +15045,12 @@
       "2025",
       "kepco",
       "04"
-    ]
+    ],
+    "preview_id": "d7c6c66aa19e211b3e1baa37",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/01_전사공통/09_교육_행사/기타/316_abad1d03/RMA 생성 방법 (1).pdf": {
     "title": "RMA 생성 방법 (1).pdf",
@@ -13121,7 +15086,12 @@
       "생성",
       "방법",
       "1"
-    ]
+    ],
+    "preview_id": "781b46d11cdb06268a244734",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/01_RTU_SCADA/구성도/338_d11257ac/240925_RTU구성도_포승 DI+3_추가.xlsx": {
     "title": "240925_RTU구성도_포승 DI+3_추가.xlsx",
@@ -13161,7 +15131,12 @@
       "di",
       "3",
       "추가"
-    ]
+    ],
+    "preview_id": "f1305ff33a139292ac85a08e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/02_OPGW_광통신/계통도_선번/306_78025fe5/통합_계통도.xlsx": {
     "title": "통합_계통도.xlsx",
@@ -13197,7 +15172,12 @@
       "306",
       "78025fe5",
       "통합"
-    ]
+    ],
+    "preview_id": "4b53f93dd502ea20f3a235e0",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/02_OPGW_광통신/계통도_선번/333_dca0398e/(중요)SCADA광모뎀 계통도_평택전력_금암반영_20231231.xlsx": {
     "title": "(중요)SCADA광모뎀 계통도_평택전력_금암반영_20231231.xlsx",
@@ -13237,7 +15217,12 @@
       "평택전력",
       "금암반영",
       "20231231"
-    ]
+    ],
+    "preview_id": "51d094b552bc4a05eefb2776",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/02_OPGW_광통신/계통도_선번/334_f91c3647/(중요)송변전광단말 계통도_평택전력_금암예정_20231231.pptx": {
     "title": "(중요)송변전광단말 계통도_평택전력_금암예정_20231231.pptx",
@@ -13277,7 +15262,12 @@
       "평택전력",
       "금암예정",
       "20231231"
-    ]
+    ],
+    "preview_id": "7b34b2bd017dd4b6ad08b12d",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/02_OPGW_광통신/계통도_선번/336_f2d43905/1_광계통도_경기(종합)_210601.xlsx": {
     "title": "1_광계통도_경기(종합)_210601.xlsx",
@@ -13317,7 +15307,12 @@
       "경기",
       "종합",
       "210601"
-    ]
+    ],
+    "preview_id": "f5f44cbf913a813500a42351",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/02_OPGW_광통신/계통도_선번/340_7ad9e768/[241016] 송변전광단말 링 계통도(경기본부).xlsx": {
     "title": "[241016] 송변전광단말 링 계통도(경기본부).xlsx",
@@ -13355,7 +15350,12 @@
       "241016",
       "송변전광단말",
       "링"
-    ]
+    ],
+    "preview_id": "f7b2c36dc316206d1b5eda21",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/02_OPGW_광통신/계통도_선번/341_482c2241/◆2022-10_차세대 KEPCIT 계통도(경기본부).xlsx": {
     "title": "◆2022-10_차세대 KEPCIT 계통도(경기본부).xlsx",
@@ -13394,7 +15394,12 @@
       "10",
       "차세대",
       "kepcit"
-    ]
+    ],
+    "preview_id": "13de0ee19fc4100a6a74b8ad",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/03_설계_공사/OPGW_광선로/322_712177b2/송부_공사설계서_삼죽분기TL OPGW 긴급 복구공사_v6.0.xlsx": {
     "title": "송부_공사설계서_삼죽분기TL OPGW 긴급 복구공사_v6.0.xlsx",
@@ -13437,7 +15442,12 @@
       "복구공사",
       "v6",
       "0"
-    ]
+    ],
+    "preview_id": "ae940d98816e5c45db970a8f",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/03_설계_공사/PS-LTE_비상통신망/323_ab31f8e4/복사본 (붙임1) 공사설계서(비상통신망)_군포.xlsx": {
     "title": "복사본 (붙임1) 공사설계서(비상통신망)_군포.xlsx",
@@ -13478,7 +15488,12 @@
       "붙임1",
       "공사설계서",
       "군포"
-    ]
+    ],
+    "preview_id": "d24009974e9e4b3f70851a81",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/05_설비현황_자산/335_97847f65/+250213_케이블타워 현황_경기본부.xlsx": {
     "title": "+250213_케이블타워 현황_경기본부.xlsx",
@@ -13514,7 +15529,12 @@
       "250213",
       "케이블타워",
       "현황"
-    ]
+    ],
+    "preview_id": "658380a3d4dab5c73faf981e",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/05_설비현황_자산/339_4a6c4237/250326_변전소 건설 현황.hwp": {
     "title": "250326_변전소 건설 현황.hwp",
@@ -13550,7 +15570,12 @@
       "변전소",
       "건설",
       "현황"
-    ]
+    ],
+    "preview_id": "3475bf00533015312f6ba43f",
+    "preview_engine": "rhwp v0.7.11",
+    "preview_available": true,
+    "preview_pages": 4,
+    "preview_redacted": false
   },
   "99_보존_중복/02_한전_경기본부/05_설비현황_자산/343_be669135/관내 154계통도(최용문).xlsx": {
     "title": "관내 154계통도(최용문).xlsx",
@@ -13586,7 +15611,12 @@
       "관내",
       "154계통도",
       "최용문"
-    ]
+    ],
+    "preview_id": "f56131ee395466d2fab4058c",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/80_RTU_DB_백업/342_f2a11184/★★★★★RTU구성도_20250124_backup.xlsx": {
     "title": "★★★★★RTU구성도_20250124_backup.xlsx",
@@ -13623,7 +15653,12 @@
       "rtu구성도",
       "20250124",
       "backup"
-    ]
+    ],
+    "preview_id": "a634e11dda8f7e38fd4483c4",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/90_작업중_초안/설계/324_e7935077/설계서 검토 및 수정 할 부분.hwpx": {
     "title": "설계서 검토 및 수정 할 부분.hwpx",
@@ -13662,7 +15697,12 @@
       "수정",
       "할",
       "부분"
-    ]
+    ],
+    "preview_id": "7e56fc1d8e56466b8adb296b",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/02_한전_경기본부/90_작업중_초안/설계/325_3a572ad6/수정중_1. 공사설계서(240923)평택x.xlsx": {
     "title": "수정중_1. 공사설계서(240923)평택x.xlsx",
@@ -13701,7 +15741,12 @@
       "공사설계서",
       "240923",
       "평택x"
-    ]
+    ],
+    "preview_id": "33ca29c16709783a09fe3f41",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/70_소프트웨어/이동형_공사현장_모니터링/326_eae346bf/SmartTSM2_20230421(일반)_수정.apk": {
     "title": "SmartTSM2_20230421(일반)_수정.apk",
@@ -13737,7 +15782,12 @@
       "20230421",
       "일반",
       "수정"
-    ]
+    ],
+    "preview_id": "584e3ecb39a091da21dd7c17",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/70_소프트웨어/이동형_공사현장_모니터링/332_8186ae8a/화면구성관리 및 실시간영상 정보.pptx": {
     "title": "화면구성관리 및 실시간영상 정보.pptx",
@@ -13773,7 +15823,12 @@
       "및",
       "실시간영상",
       "정보"
-    ]
+    ],
+    "preview_id": "e47b20c7d0a3e64db3e71a56",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/329_d68b6216/SmartBlackBoxSetup.msi": {
     "title": "SmartBlackBoxSetup.msi",
@@ -13815,7 +15870,12 @@
       "329",
       "d68b6216",
       "smartblackboxsetup"
-    ]
+    ],
+    "preview_id": "a153f1039da984c25ca8a0c9",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/330_f098be84/setup.exe": {
     "title": "setup.exe",
@@ -13857,7 +15917,12 @@
       "330",
       "f098be84",
       "setup"
-    ]
+    ],
+    "preview_id": "47abe239086580b3cbd74af5",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/DotNetFX472/327_c908f0a5/NDP472-KB4054530-x86-x64-AllOS-ENU.exe": {
     "title": "NDP472-KB4054530-x86-x64-AllOS-ENU.exe",
@@ -13905,7 +15970,12 @@
       "x64",
       "allos",
       "enu"
-    ]
+    ],
+    "preview_id": "0848e4575d51445cb0fc5f07",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/DotNetFX472/328_aaca89d8/NDP472-KB4054530-x86-x64-AllOS-KOR.exe": {
     "title": "NDP472-KB4054530-x86-x64-AllOS-KOR.exe",
@@ -13953,7 +16023,12 @@
       "x64",
       "allos",
       "kor"
-    ]
+    ],
+    "preview_id": "9757990fca41e78e12146cbe",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   },
   "99_보존_중복/70_소프트웨어/이동형_공사현장_모니터링/smartTSM_PC용_통합뷰어_v1.0.2.5_230419/vcredist_x86/331_67313b3d/vcredist_x86.exe": {
     "title": "vcredist_x86.exe",
@@ -13997,6 +16072,11 @@
       "x86",
       "331",
       "67313b3d"
-    ]
+    ],
+    "preview_id": "6a30d40e2f05b1eb4d48097b",
+    "preview_engine": "preserved-prior-extraction",
+    "preview_available": true,
+    "preview_pages": 0,
+    "preview_redacted": true
   }
 }

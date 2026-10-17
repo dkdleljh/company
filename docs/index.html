@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/viewer.css" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -91,7 +92,7 @@
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>문서</th><th>분야</th><th>형식</th><th>크기</th><th>원문</th></tr></thead>
+            <thead><tr><th>문서</th><th>분야</th><th>형식</th><th>크기</th><th>웹 보기</th><th>원문</th></tr></thead>
             <tbody id="documentRows"></tbody>
           </table>
         </div>
@@ -109,6 +110,24 @@
     <p id="dialogSummary" class="dialog-summary"></p>
     <article id="dialogContent" class="markdown-body"></article>
     <a id="dialogNotionLink" class="dialog-link" target="_blank" rel="noopener">Notion 원문에서 보기 ↗</a>
+  </dialog>
+
+  <dialog id="documentDialog" class="document-dialog">
+    <header class="viewer-header">
+      <div>
+        <p id="viewerFormat" class="dialog-category"></p>
+        <h2 id="viewerTitle">문서 미리보기</h2>
+        <p id="viewerPath" class="viewer-path"></p>
+      </div>
+      <button id="closeDocumentDialog" class="dialog-close" aria-label="닫기">×</button>
+    </header>
+    <div class="viewer-toolbar">
+      <span id="viewerEngine"></span>
+      <label>본문 찾기 <input id="viewerSearch" type="search" placeholder="현재 문서에서 검색" /></label>
+      <a id="viewerNotionLink" class="dialog-link" target="_blank" rel="noopener">Notion 원본 ↗</a>
+    </div>
+    <div id="viewerStatus" class="viewer-status">문서를 불러오는 중입니다…</div>
+    <article id="viewerContent" class="viewer-content"></article>
   </dialog>
 
   <script src="./assets/app.js" defer></script>
