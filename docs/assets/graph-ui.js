@@ -17,7 +17,7 @@ export class GraphView {
   });
   this.resizeObserver=new ResizeObserver(()=>{if(this.dialog.open){this.resize();this.drawSoon();}});this.resizeObserver.observe($('#graphStage'));
  }
- resetState(){this.model=null;this.data=null;this.selected=null;this.hover=null;this.visible={nodes:[],edges:[]};this.camera={x:0,y:0,k:1};this.hitPoints=[];this.byId=new Map();this.worker=null;this.colors=new Map();this.adjacent=new Set();this.lastClick=null;this.pointers?.clear();}
+ resetState(){this.model=null;this.data=null;this.selected=null;this.hover=null;this.matches=null;this.visible={nodes:[],edges:[]};this.camera={x:0,y:0,k:1};this.hitPoints=[];this.byId=new Map();this.worker=null;this.colors=new Map();this.adjacent=new Set();this.lastClick=null;this.pointers?.clear();}
  setData(documents,topics,index){
   this.clearData();const cats=[...new Set(topics.flatMap(t=>[t.category,t.categories].flatMap(v=>Array.isArray(v)?v:v?[v]:[])))].sort((a,b)=>a.localeCompare(b,'ko'));
   const compact=s=>window.CompanySearch.normalize(s).replace(/ /g,'');
@@ -40,7 +40,7 @@ export class GraphView {
   worker.postMessage(this.data);
  }
  update(fit=false){
-  if(!this.model)return;const query=$('#graphSearch').value.trim();const matches=query?this.search(query):null;
+  if(!this.model)return;const query=$('#graphSearch').value.trim();const matches=this.matches=query?this.search(query):null;
   const kinds=[...this.dialog.querySelectorAll('[data-edge-kind]:checked')].map(el=>el.dataset.edgeKind);
   this.visible=window.CompanyGraph.subset(this.model,{kinds,matches,category:$('#graphCategory').value,selected:this.selected,local:$('#graphLocal').checked,depth:Number($('#graphDepth').value)});
   this.adjacent=new Set(this.selected?[this.selected]:[]);for(const e of this.visible.edges){if(e.source===this.selected)this.adjacent.add(e.target);if(e.target===this.selected)this.adjacent.add(e.source);}
@@ -61,7 +61,8 @@ export class GraphView {
   const rows=[];
   if(n){const neighbors=new Map();const enabled=new Set([...this.dialog.querySelectorAll('[data-edge-kind]:checked')].map(el=>el.dataset.edgeKind));for(const e of this.model.edges){if(!enabled.has(e.kind))continue;const other=e.source===n.id?e.target:e.target===n.id?e.source:null;if(other){const entry=neighbors.get(other)||{node:this.byId.get(other),reasons:[]};entry.reasons.push(e.kind==='similarity'?`본문 유사도 ${e.score}% · 추정`:window.CompanyGraph.KINDS[e.kind]);neighbors.set(other,entry);}}rows.push(...neighbors.values());}
   else rows.push(...this.visible.nodes.filter(x=>['document','topic'].includes(x.kind)).map(node=>({node,reasons:[node.kind==='topic'?'백과 문서':'원본 문서']})));
-  rows.sort((a,b)=>a.node.label.localeCompare(b.node.label,'ko'));
+  const q=window.CompanyGraph.normalize($('#graphSearch').value);const order=new Map([...(this.matches||[])].map((id,i)=>[id,i]));
+  rows.sort((a,b)=>{if(q&&!n){const rank=node=>{const title=window.CompanyGraph.normalize(node.label);return title===q?0:title.includes(q)?1:2;};return rank(a.node)-rank(b.node)||(order.get(a.node.id)??Infinity)-(order.get(b.node.id)??Infinity)||a.node.label.localeCompare(b.node.label,'ko');}return a.node.label.localeCompare(b.node.label,'ko');});
   const count=document.createElement('p');count.className='graph-list-count';count.textContent=n?`연결된 항목 ${rows.length}개 · 전체 자료 기준`:`문서 찾아가기 · ${rows.length}개`;panel.append(count);
   const list=document.createElement('ul');list.className='graph-neighbors';panel.append(list);let shown=0;
   const more=button('더 보기',append,'graph-more');
