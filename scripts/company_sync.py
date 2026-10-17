@@ -44,6 +44,12 @@ def changes(old,new):
     updated={p for p in new if p not in old or old[p]['sha256']!=new[p]['sha256']}
     return {'updated':sorted(updated),'removed':sorted(removed),'renamed':renames}
 
+def apply_renames(entries,renames):
+    for new,old in renames.items():
+        entries[new]=dict(entries[old]);entries[new]['status']='active'
+        # A later new file at the old path must not reuse the moved page's ID.
+        entries[old]={'status':'renamed','renamed_to':new}
+
 def run(command,cwd=None,env=None,timeout=3600):
     r=subprocess.run(command,cwd=cwd,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
     if r.returncode:raise SyncError('command_failed:'+Path(command[0]).name+':'+Path(command[1]).name+':'+str(r.returncode))
@@ -279,12 +285,14 @@ async def sync(config,force=False):
     baseline=load(config['baseline']);topics=topics_cache or baseline['topics']
     previous_topics=json.dumps(topics,sort_keys=True,ensure_ascii=False)
     async with Notion(config['hermes']) as n:
-        for new,old in plan['renamed'].items():entries[new]=dict(entries[old]);entries[new]['status']='renamed'
+        apply_renames(entries,plan['renamed'])
         for rel in plan['updated']:
             item=files[rel];snapshot=state/'sources'/item['sha256']/Path(rel).name;snapshot.parent.mkdir(parents=True,exist_ok=True)
             if not snapshot.exists():shutil.copy2(Path(config['root'])/rel,snapshot)
             if digest(snapshot)!=item['sha256']:raise SyncError('snapshot_changed')
             entry=entries.setdefault(rel,{})
+            if entry.get('status')=='renamed' and not entry.get('page_id'):
+                entries[rel]=entry={};journal.pop(rel+'|'+item['sha256'],None)
             await update_document(n,config,rel,item,entry,snapshot,journal,jpath);save(state/'notion-ledger.json',entries)
             save(state/'status.json',dict(status,status='syncing_notion',completed=sum(e.get('sha256')==files[p]['sha256'] for p,e in entries.items() if p in files),files=len(files)))
         for rel in plan['removed']:

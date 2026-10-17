@@ -1,7 +1,7 @@
 import sys,tempfile,unittest,json,zipfile,hashlib
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from company_sync import scan,changes,fingerprint,upload_parts,SyncError,markdown_literal
+from company_sync import scan,changes,fingerprint,upload_parts,SyncError,markdown_literal,apply_renames
 from company_notion import plain
 class SyncTests(unittest.TestCase):
  def test_inventory_add_modify_rename_remove(self):
@@ -38,6 +38,11 @@ class SyncTests(unittest.TestCase):
   path="98_정리기록/_(문서)_검증-v1.0.txt"
   self.assertEqual(plain(markdown_literal(path)),path)
   self.assertEqual(plain("`"+path+"`"),path)
+ def test_rename_does_not_leave_old_path_owning_the_same_page(self):
+  entries={'old.txt':{'page_id':'page','sha256':'same','status':'active'}}
+  apply_renames(entries,{'new.txt':'old.txt'})
+  self.assertEqual(entries['new.txt']['page_id'],'page')
+  self.assertNotIn('page_id',entries['old.txt']);self.assertEqual(entries['old.txt']['renamed_to'],'new.txt')
  def test_mtime_only_does_not_publish(self):
   a={'a':{'sha256':'a','size':1,'mtime_ns':1}};b={'a':{'sha256':'a','size':1,'mtime_ns':2}}
   self.assertEqual(fingerprint(a),fingerprint(b));self.assertEqual(changes(a,b)['updated'],[])
