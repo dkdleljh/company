@@ -188,7 +188,7 @@ def build_and_publish(config,files,entries,topics,baseline):
     state=Path(config['state']);repo=Path(config['repo']);assets=Path(config['assets_repo']);rendered=Path(config['rendered'])
     dirty=run(['git','status','--porcelain'],repo)
     # This dedicated checkout owns only the generated manifest. Recover interrupted writes.
-    if dirty and all(line.lstrip()[2:]=='docs/secure/manifest.json' for line in dirty.splitlines()):
+    if dirty and all(re.sub(r'^[ MARCUD?!]{1,2} +','',line)=='docs/secure/manifest.json' for line in dirty.splitlines()):
         run(['git','restore','--staged','--worktree','docs/secure/manifest.json'],repo)
     elif dirty:raise SyncError('sync_checkout_not_clean')
     run(['git','fetch','origin','main'],repo);run(['git','merge','--ff-only','origin/main'],repo)
