@@ -49,6 +49,8 @@ def run(command,cwd=None,env=None,timeout=3600):
     if r.returncode:raise SyncError('command_failed:'+Path(command[0]).name)
     return r.stdout.decode(errors='replace').strip()
 
+def markdown_literal(value):return re.sub(r'([\\`*_{}\[\]()#+.!|>~-])',r'\\\1',str(value))
+
 def attachment_name(url):return unquote(Path(urlparse(url).path).name)
 def verify_attachments(urls,expected,work):
     import requests
@@ -121,7 +123,7 @@ async def update_document(n,config,rel,record,entry,snapshot,journal,jpath):
         elif job.get('create_intent'):raise SyncError('uncertain_create_requires_reconciliation')
         else:
             job['create_intent']=now();save(jpath,journal)
-            result=await n.call('notion-create-pages',{'parent':{'data_source_id':config['notion_source'].removeprefix('collection://')},'pages':[{'properties':{'원본 제목':Path(rel).name,'상대경로':rel,'검증메모':'로컬 자동 동기화 준비 중'},'content':'로컬 파일 연결을 준비하고 있습니다.'}],'allow_async':False})
+            result=await n.call('notion-create-pages',{'parent':{'data_source_id':config['notion_source'].removeprefix('collection://')},'pages':[{'properties':{'원본 제목':markdown_literal(Path(rel).name),'상대경로':markdown_literal(rel),'검증메모':'로컬 자동 동기화 준비 중'},'content':'로컬 파일 연결을 준비하고 있습니다.'}],'allow_async':False})
             pages=result.get('pages',[]) if isinstance(result,dict) else []
             if not pages:raise SyncError('created_page_requires_reconciliation')
             pid=pages[0].get('id') or pages[0].get('url')
@@ -139,7 +141,7 @@ async def update_document(n,config,rel,record,entry,snapshot,journal,jpath):
             for p in upload_parts(snapshot,Path(tmp)):uploads.append(await upload(n,p))
         job.update(uploads=uploads,uploaded_at=time.time());save(jpath,journal)
     note=f'로컬 자동 동기화 / {marker} / {record["size"]} bytes / {now()}'
-    await n.call('notion-update-page',{'page_id':pid,'command':'update_properties','properties':{'원본 제목':Path(rel).name,'상대경로':rel,'검증메모':note,'원본 파일':[{'type':'file_upload','file_upload':{'id':u['id']}} for u in uploads]},'allow_async':False})
+    await n.call('notion-update-page',{'page_id':pid,'command':'update_properties','properties':{'원본 제목':markdown_literal(Path(rel).name),'상대경로':markdown_literal(rel),'검증메모':note,'원본 파일':[{'type':'file_upload','file_upload':{'id':u['id']}} for u in uploads]},'allow_async':False})
     current=await n.fetch(pid);body=page_body(current)
     start='## 자동 동기화 원본';end='## 기존 문서 기록'
     content=f'{start}\n현재 로컬 파일의 원본입니다. 아래 기존 기록보다 이 첨부 파일을 우선 사용하세요.\n\n상대경로: `{rel}`\n\n{marker}\n\n'+ '\n'.join(u['markdown'] for u in uploads)+'\n\n'
@@ -162,8 +164,12 @@ async def refresh_topics(n,topics):
 
 def build_and_publish(config,files,entries,topics,baseline):
     state=Path(config['state']);repo=Path(config['repo']);assets=Path(config['assets_repo']);rendered=Path(config['rendered'])
+    dirty=run(['git','status','--porcelain'],repo)
+    # This dedicated checkout owns only the generated manifest. Recover interrupted writes.
+    if dirty and all(line.lstrip()[2:]=='docs/secure/manifest.json' for line in dirty.splitlines()):
+        run(['git','restore','--staged','--worktree','docs/secure/manifest.json'],repo)
+    elif dirty:raise SyncError('sync_checkout_not_clean')
     run(['git','fetch','origin','main'],repo);run(['git','merge','--ff-only','origin/main'],repo)
-    if run(['git','status','--porcelain'],repo):raise SyncError('sync_checkout_not_clean')
     source=state/'inputs';data=source/'docs/data';data.mkdir(parents=True,exist_ok=True)
     old={d['relative_path']:d for d in baseline['documents']};docs={};catalog=[]
     for rel,item in files.items():
@@ -188,8 +194,10 @@ def build_and_publish(config,files,entries,topics,baseline):
     for p in objects.glob('*.bin'):
         target=assets/'objects'/p.name
         if not target.exists():os.link(p,target);pending.append('objects/'+p.name)
-    if pending:
-        run(['git','add','--',*pending],assets);run(['git','commit','-m','Update encrypted company document snapshot'],assets)
+    # Include objects left by an interrupted run, even when they already exist locally.
+    run(['git','add','--','objects'],assets)
+    if run(['git','diff','--cached','--name-only'],assets):
+        run(['git','commit','-m','Update encrypted company document snapshot'],assets)
     run(['git','push','origin','HEAD:encrypted-assets-v2'],assets,timeout=3600)
     asset_commit=run(['git','rev-parse','HEAD'],assets)
     manifest=load(output/'docs/secure/manifest.json');manifest['asset_base']=f'https://raw.githubusercontent.com/dkdleljh/company/{asset_commit}/objects/'
@@ -261,6 +269,8 @@ async def sync(config,force=False):
             entry=entries[rel]
             if entry.get('status')!='removed':
                 await n.call('notion-update-page',{'page_id':entry['page_id'],'command':'update_properties','properties':{'검증메모':f'로컬 삭제 감지 {now()}. 이전 원본은 복구용으로 보존합니다. SHA-256: {entry["sha256"]}'},'allow_async':False})
+                removed=page_properties(await n.fetch(entry['page_id']))
+                if '로컬 삭제 감지' not in str(removed.get('검증메모','')):raise SyncError('notion_removal_verification_failed')
                 entry['status']='removed';save(state/'notion-ledger.json',entries)
         topics=await refresh_topics(n,topics)
     save(state/'topics.json',topics);save(state/'topics-check.json',{'at':time.time()})

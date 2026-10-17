@@ -1,5 +1,5 @@
 """Headless Notion MCP client using the existing Hermes OAuth token store."""
-import asyncio,json,re,sys,time
+import asyncio,json,re,sys,time,uuid
 from pathlib import Path
 
 def unpack(result):
@@ -38,6 +38,9 @@ class Notion:
         if self.server:await self.server.shutdown()
     async def call(self,name,args):
         # A mutation with an uncertain outcome is reconciled by the caller, not blindly replayed.
+        if 'page_id' in args:
+            args=dict(args);raw=args['page_id'].split('?')[0].rstrip('/').rsplit('/',1)[-1]
+            args['page_id']=str(uuid.UUID(raw))
         async with self.lock:
             await asyncio.sleep(max(0,.4-(time.monotonic()-self.last)));self.last=time.monotonic()
         result=await self.server.session.call_tool(name,args)
