@@ -187,6 +187,9 @@ async def refresh_topics(n,topics,source=None):
                     try:field=json.loads(field)
                     except ValueError:field=[plain(field)] if field else []
                 copy[target]=field
+            elif target in ('source_relations','related_relations'):
+                # Notion omits empty relation properties; do not retain removed links.
+                copy[target]=[]
         copy.setdefault('summary','');result.append(copy)
     return result
 

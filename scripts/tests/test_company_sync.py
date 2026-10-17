@@ -80,6 +80,14 @@ class NotionSyncTests(unittest.IsolatedAsyncioTestCase):
   topics=await refresh_topics(FakeNotion(),[{'id':'old','url':'https://www.notion.so/old'}],'collection://test')
   self.assertEqual(len(topics),1);self.assertEqual(topics[0]['id'],'new');self.assertEqual(topics[0]['content_markdown'],'New body');self.assertEqual(topics[0]['category'],['ICT 공통']);self.assertEqual(topics[0]['related_relations'],['https://www.notion.so/related'])
 
+ async def test_removed_notion_relations_do_not_survive_refresh(self):
+  class FakeNotion:
+   async def fetch(self,*args):return {'text':'<properties>'+json.dumps({'문서명':'Same topic','분야':['ICT 공통']})+'</properties><content>Body</content>'}
+  previous={'id':'same','url':'https://www.notion.so/same','source_relations':['https://www.notion.so/source'],'related_relations':['https://www.notion.so/related']}
+  topics=await refresh_topics(FakeNotion(),[previous])
+  self.assertEqual(topics[0]['source_relations'],[]);self.assertEqual(topics[0]['related_relations'],[])
+  self.assertEqual(len(previous['related_relations']),1)
+
 class SyncSafetyTests(unittest.IsolatedAsyncioTestCase):
  async def test_first_observation_waits_without_remote_mutations(self):
   with tempfile.TemporaryDirectory() as d:
