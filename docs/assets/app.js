@@ -37,7 +37,7 @@ $('#loginForm').addEventListener('submit',async event=>{
     $('#topicCount').textContent=topics.length;$('#docCount').textContent=documents.length;
     $('#viewableCount').textContent=documents.filter(d=>d.viewer?.kind!=='unsupported').length;
     const stamp=new Date(data.generated_at).toLocaleDateString('ko-KR');
-    $('#syncState').textContent=`사이트 갱신 ${stamp}`;$('#snapshotInfo').textContent=`Notion 저장본 · 사이트 갱신 ${stamp}`;
+    $('#syncState').textContent=`${data.sync?'자동 동기화 · 자료 갱신':'사이트 갱신'} ${stamp}`;$('#snapshotInfo').textContent=data.sync?`로컬 → Notion → 웹 · ${Math.round(data.sync.interval_seconds/60)}분마다 변경 확인 · 자료 반영 ${new Date(data.generated_at).toLocaleString('ko-KR')}`:`Notion 저장본 · 사이트 갱신 ${stamp}`;
     createFilters();renderAll();$('#loginView').hidden=true;$('#appView').hidden=false;
     $('#loginError').textContent='';$('#searchInput').focus();
   } catch(error){vault.lock();$('#loginError').textContent=error.message;$('#password').select();}

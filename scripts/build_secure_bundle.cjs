@@ -23,10 +23,13 @@ function decrypt(data, key, aad) {
 async function main() {
   const [sourceSite, renderedRoot, outputSite, privateRoot] = process.argv.slice(2);
   if (!privateRoot) throw new Error('Usage: build_secure_bundle.cjs sourceSite renderedRoot outputSite privateRoot < password-input');
-  const password = fs.readFileSync(0,'utf8').trimEnd();
-  if (!password) throw new Error('Password required on stdin');
+  const prior = process.env.COMPANY_REUSE_MANIFEST ? JSON.parse(fs.readFileSync(process.env.COMPANY_REUSE_MANIFEST)) : null;
+  if(prior && (prior.version!==2 || prior.iterations!==ITERATIONS || !prior.wrapped_key || !prior.salt))throw new Error('Invalid existing key envelope');
+  const password = prior ? '' : fs.readFileSync(0,'utf8').trimEnd();
+  if (!prior && !password) throw new Error('Password required on stdin');
   fs.mkdirSync(privateRoot,{recursive:true,mode:0o700});
   const keyPath = path.join(privateRoot,'data-key.bin');
+  if(prior && !fs.existsSync(keyPath))throw new Error('Existing data key required for unattended refresh');
   const key = fs.existsSync(keyPath) ? fs.readFileSync(keyPath) : crypto.randomBytes(32);
   if(key.length!==32) throw new Error('Invalid private key length');
   fs.writeFileSync(keyPath,key,{mode:0o600}); fs.chmodSync(keyPath,0o600);
@@ -51,7 +54,7 @@ async function main() {
   const topics=JSON.parse(fs.readFileSync(path.join(sourceSite,'docs/data/topics.json')));
   const rendered=JSON.parse(fs.readFileSync(path.join(renderedRoot,'manifest.json')));
   const renders=new Map(rendered.documents.map(d=>[d.relative_path,d]));
-  const sourceCatalog=JSON.parse(fs.readFileSync('/home/zenith/memory/documents/company-corpus/catalog.json'));
+  const sourceCatalog=JSON.parse(fs.readFileSync(process.env.COMPANY_CATALOG||'/home/zenith/memory/documents/company-corpus/catalog.json'));
   const sources=new Map(sourceCatalog.map(d=>[d.relative_path,d]));
   const documents=[]; const counts={};
   for(const [relative,doc] of Object.entries(documentsRaw)) {
@@ -80,9 +83,11 @@ async function main() {
     documents.push({...copy,search_text:text,viewer:{kind:r.kind,assets,page_count:r.page_count,reason:r.reason||'',renderer:r.renderer||'',fidelity:r.fidelity||'',source_sha256:r.source_sha256,text:textAsset,original}});
   }
   const timestamp=new Date().toISOString();
-  const index=await put(Buffer.from(JSON.stringify({version:2,generated_at:timestamp,documents,topics,counts})),'application/json');
-  const salt=crypto.randomBytes(16); const wrappingKey=crypto.pbkdf2Sync(password,salt,ITERATIONS,32,'sha256');
-  const wrapped=encrypt(key,wrappingKey,'company-v2:key');
+  const syncPath=path.join(sourceSite,'docs/data/sync.json');
+  const sync=fs.existsSync(syncPath)?JSON.parse(fs.readFileSync(syncPath)):null;
+  const index=await put(Buffer.from(JSON.stringify({version:2,generated_at:timestamp,documents,topics,counts,sync})),'application/json');
+  const salt=prior?Buffer.from(prior.salt,'base64'):crypto.randomBytes(16);
+  const wrapped=prior?Buffer.from(prior.wrapped_key,'base64'):encrypt(key,crypto.pbkdf2Sync(password,salt,ITERATIONS,32,'sha256'),'company-v2:key');
   const manifest={version:2,kdf:'PBKDF2-SHA256',iterations:ITERATIONS,salt:salt.toString('base64'),wrapped_key:wrapped.toString('base64'),index,generated_at:timestamp,counts:{documents:documents.length,topics:topics.length,...counts}};
   const size=[...descriptors.values()].reduce((s,d)=>s+d.bytes,0);
   if(size>5*1024**3) throw new Error(`Encrypted content exceeds repository budget: ${size}`);
