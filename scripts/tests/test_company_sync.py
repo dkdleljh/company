@@ -1,7 +1,8 @@
 import sys,tempfile,unittest,json,zipfile,hashlib
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from company_sync import scan,changes,fingerprint,upload_parts,SyncError
+from company_sync import scan,changes,fingerprint,upload_parts,SyncError,markdown_literal
+from company_notion import plain
 class SyncTests(unittest.TestCase):
  def test_inventory_add_modify_rename_remove(self):
   with tempfile.TemporaryDirectory() as d:
@@ -32,6 +33,10 @@ class SyncTests(unittest.TestCase):
     self.assertLess(part.stat().st_size,20*1024**2)
     with zipfile.ZipFile(part) as z:joined+=z.read(z.namelist()[0])
    self.assertEqual(hashlib.sha256(joined).digest(),hashlib.sha256(raw).digest())
+ def test_notion_literal_paths(self):
+  path="98_정리기록/_(문서)_검증-v1.0.txt"
+  self.assertEqual(plain(markdown_literal(path)),path)
+  self.assertEqual(plain("`"+path+"`"),path)
  def test_mtime_only_does_not_publish(self):
   a={'a':{'sha256':'a','size':1,'mtime_ns':1}};b={'a':{'sha256':'a','size':1,'mtime_ns':2}}
   self.assertEqual(fingerprint(a),fingerprint(b));self.assertEqual(changes(a,b)['updated'],[])

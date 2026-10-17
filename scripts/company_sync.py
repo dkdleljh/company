@@ -175,7 +175,7 @@ def build_and_publish(config,files,entries,topics,baseline):
     for rel,item in files.items():
         entry=entries[rel];pid=entry['page_id'];pid=pid.rsplit('/',1)[-1].split('?')[0]
         doc=dict(old.get(rel,{}));doc.update(title=Path(rel).name,relative_path=rel,extension=Path(rel).suffix.lower(),size_bytes=item['size'],notion_page_id=pid,notion_url='https://www.notion.so/'+pid.replace('-',''))
-        doc.setdefault('format',Path(rel).suffix.lstrip('.').upper() or '기타');doc.setdefault('scope',rel.split('/')[0]);doc.setdefault('category','ICT 공통');doc.setdefault('search_tokens',[])
+        doc.setdefault('format',next((d['format'] for d in baseline['documents'] if d.get('extension')==Path(rel).suffix.lower()),Path(rel).suffix.lstrip('.').upper() or '기타'));doc['scope']=rel.split('/')[0];doc.setdefault('category',rel.split('/')[1] if len(rel.split('/'))>2 else rel.split('/')[0]);doc.setdefault('search_tokens',[])
         for k in ['search_text','viewer']:doc.pop(k,None)
         docs[rel]=doc
         staged=state/'sources'/item['sha256']/Path(rel).name

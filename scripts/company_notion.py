@@ -1,5 +1,5 @@
 """Headless Notion MCP client using the existing Hermes OAuth token store."""
-import asyncio,json,re,sys,time,uuid
+import asyncio,json,re,sys,time,uuid,string
 from pathlib import Path
 
 def unpack(result):
@@ -21,11 +21,12 @@ def page_body(value):
     return m.group(1) if m else ''
 def plain(value):
     text=str(value or '')
+    if text.startswith('`') and text.endswith('`'):text=text[1:-1]
     for _ in range(5):
         clean=re.sub(r'\[([^\]]+)\]\([^)]+\)',r'\1',text)
         if clean==text:break
         text=clean
-    return re.sub(r'\\([\\*~`$\[\]<>{}|^_])',r'\1',text)
+    return re.sub(r'\\(['+re.escape(string.punctuation)+r'])',r'\1',text)
 
 class Notion:
     def __init__(self,hermes):self.hermes=hermes;self.server=None;self.last=0;self.lock=asyncio.Lock()
