@@ -1,0 +1,182 @@
+[
+  {
+    "id": "3fc8fb17-4e9e-8183-9366-d1496242f207",
+    "title": "전력 ICT 전체 구조",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81839366d1496242f207",
+    "summary": "전력 ICT는 전력계통의 감시·제어와 업무를 지원하는 정보시스템, 통신망, 현장설비와 기반설비를 하나의 운영체계로 묶은 구조다.",
+    "content_markdown": "## 한줄정의\n전력 ICT는 전력계통의 감시·제어와 업무를 지원하는 정보시스템, 통신망, 현장설비와 기반설비를 하나의 운영체계로 묶은 구조다.\n## 필요성\n- 전력설비 정보의 정확하고 신속한 전달\n- 제어·자동화와 업무서비스의 연속성 확보\n- 장애 확산 예방과 공통 책임·절차 정립\n## 구성과 흐름\n1. 업무·서비스 계층\n2. 응용·제어 계층\n3. 광·데이터·유무선 통신 계층\n4. 현장 단말·원격장치 계층\n5. 전원·접지·공조·소화 기반설비\n6. 관제·변경·점검·품질·복구 관리\n생애주기는 `수요·위험 분석 → 계획 → 설계·구축 → 시험·인수 → 운영 → 점검·유지보수 → 장애복구 → 개선`이다.\n## 운영·점검\n- 구성자료와 변경이력을 실제 상태와 대조한다.\n- 중요도에 따라 일상·정기·특별점검을 구분한다.\n- 관제 경보와 신고의 영향도를 판단하고 복구 결과를 확인한다.\n- 예비전원, 환경설비, 백업과 대체 통신수단을 시험한다.\n## 주의사항\n실제 망 구성, 주소, 계정, 회선 식별정보 및 보안통제 세부사항은 포함하지 않는다. 인용 문서가 현행 최종본인지는 별도 확인이 필요하다.",
+    "category": ["ICT 공통"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e8108a031dc4f96ed99da", "https://app.notion.com/p/3fc8fb174e9e81c39439cadb23abce3f", "https://app.notion.com/p/3fc8fb174e9e8182a678c5925e7508b3"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-810a-88d3-dc8675424dcb",
+    "title": "ICT 시설기준 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e810a88d3dc8675424dcb",
+    "summary": "ICT 시설기준은 장비의 안정 운전을 위해 공간, 배치, 배선, 전원, 접지, 공조, 소화 및 구내통신의 설계·시공 원칙을 정한 체계다.",
+    "content_markdown": "## 한줄정의\nICT 시설기준은 장비의 안정 운전을 위해 공간, 배치, 배선, 전원, 접지, 공조, 소화 및 구내통신의 설계·시공 원칙을 정한 체계다.\n## 구성과 흐름\n1. 장비 규모·중요도·확장성·법령 검토\n2. 전용공간, 작업동선, 냉각흐름과 유지보수 여유 확보\n3. 통신·전원·접지 배선 분리와 식별\n4. 전원·환경감시·공조·소화 구성\n5. 설계도서와 현장조건 대조, 시험·검사·인계\n## 운영·점검\n- 전원·예비전원, 접지, 온도, 공조, 소화와 배선 상태를 확인한다.\n- 증설 전 전력·냉방·공간·배선 여유와 구조 안전성을 재평가한다.\n- 준공도면·시험성적서·설비목록을 현장과 일치시킨다.\n## 주의사항\n구체 치수와 용량은 현행 기준과 현장 계산을 따른다. 위치·출입통제·상세 배치·보안설비는 기록하지 않는다.",
+    "category": ["ICT 공통", "전원·부대설비"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e8182a678c5925e7508b3", "https://app.notion.com/p/3fc8fb174e9e81fea5c2fb7efb931676", "https://app.notion.com/p/3fc8fb174e9e810186f8cce372c6ee8c"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-8150-b9b0-f1aaf0b90bbb",
+    "title": "ICT 운영과 비상대응",
+    "url": "https://app.notion.com/p/3fc8fb174e9e8150b9b0f1aaf0b90bbb",
+    "summary": "ICT 운영과 비상대응은 평상시 장애를 예방하고 이상 발생 시 판단·보고·우회·복구·사후개선을 수행해 서비스 연속성을 지키는 활동이다.",
+    "content_markdown": "## 한줄정의\nICT 운영과 비상대응은 평상시 장애를 예방하고 이상 발생 시 판단·보고·우회·복구·사후개선을 수행해 서비스 연속성을 지키는 활동이다.\n## 흐름\n`평상시 관제·점검 → 예방·대비 → 징후감지 → 초기대응 → 우회·절체·복구 → 정상화 → 원인분석·개선`\n## 핵심\n- 관제는 상태감시, 중요도 판단, 보고, 출동 조정과 복구확인을 수행한다.\n- 복구 우선순위는 인명안전, 계통운영, 재난지휘·통신, 핵심업무, 일반서비스 순의 영향도를 고려한다.\n- 모의고장·복구훈련으로 보고와 의사결정 절차를 검증한다.\n- 임시복구 후 본복구 계획과 완료기준을 관리한다.\n## 주의사항\n인명과 작업안전을 속도보다 우선한다. 연락처·출동지·계정·주소·회선 식별정보·상세 망은 제외한다. 현행 경보단계와 지휘체계를 적용한다.",
+    "category": ["ICT 공통", "안전·점검·복구"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81c39439cadb23abce3f", "https://app.notion.com/p/3fc8fb174e9e8132bcf8c09904bfe9e8", "https://app.notion.com/p/3fc8fb174e9e8108a031dc4f96ed99da"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-810a-bf07-f2ed4e22dbcc",
+    "title": "ICT 업무 체계",
+    "url": "https://app.notion.com/p/3fc8fb174e9e810abf07f2ed4e22dbcc",
+    "summary": "ICT 업무 체계는 전사 정책과 기준을 계획·구축·운영·유지보수·복구로 연결하고 각 단계의 책임·승인·기록을 관리하는 구조다.",
+    "content_markdown": "## 한줄정의\nICT 업무 체계는 전사 정책과 기준을 계획·구축·운영·유지보수·복구로 연결하고 각 단계의 책임·승인·기록을 관리하는 구조다.\n## 흐름\n`요구 접수 → 영향 검토 → 계획·승인 → 설계·계약 → 구축·시험 → 인수·운영이관 → 운영·변경 → 성과·장애 분석 → 개선`\n## 핵심\n- 운영계획에 범위·일정·자원·예산·역할·품질·형상관리를 함께 반영한다.\n- 변경은 요청, 영향검토, 승인, 시행, 사후확인, 기록 순으로 관리한다.\n- 신설·증설·이설·폐지 뒤 현황과 문서를 실제 상태에 맞게 갱신한다.\n- 장애는 접수, 확인, 응급조치, 복구, 원인분석, 보고, 재발방지로 관리한다.\n## 주의사항\n조직명보다 기능과 승인권한 중심으로 해석한다. 계정·주소·출입절차·회선 식별정보는 제외했으며 실제 적용 전 현행 규정을 확인한다.",
+    "category": ["ICT 공통"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e8108a031dc4f96ed99da", "https://app.notion.com/p/3fc8fb174e9e81c39439cadb23abce3f", "https://app.notion.com/p/3fc8fb174e9e81e4a4d9f05bcd10cf2a"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81f7-beba-d9cc8fc3da2d",
+    "title": "ICT 안전작업 원칙",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81f7bebad9cc8fc3da2d",
+    "summary": "ICT 안전작업은 작업 전 위험요인을 함께 확인하고 방호조치를 완료한 뒤 조건 변화나 급박한 위험 시 즉시 중지·대피하는 방식이다.",
+    "content_markdown": "## 한줄정의\nICT 안전작업은 작업 전 위험요인을 함께 확인하고 방호조치를 완료한 뒤 조건 변화나 급박한 위험 시 즉시 중지·대피하는 방식이다.\n## 흐름\n`작업계획 → 작업 전 안전회의 → 현장 위험성평가 → 착수 전 공구·보호구·전원 통제 확인 → 작업 → 조건 변화 시 중지·재평가 → 설비 복구·정리·기록`\n## 점검\n역할과 위험 이해, 작업자 상태, 공구·계측기·보호구, 전원 차단·검전·잔류에너지, 추락·낙하·협착·화재·환기, 출입통제와 감시체계, 종료 후 체결·접지·인원 철수.\n## 주의사항\n체크리스트 서명만으로 안전조치가 끝나지 않는다. 반복작업도 환경이 바뀌면 재평가한다. 일정과 서비스 영향보다 작업중지·대피를 우선한다. UPS·축전지는 감전·단락·아크·화학 위험을 별도로 통제한다.",
+    "category": ["안전·점검·복구"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e8128bd21c096c119dd33", "https://app.notion.com/p/3fc8fb174e9e81e49ab4cde2833ba64a"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-8199-a69e-e3a70df3fc7d",
+    "title": "RTU·SCADA·EMS 관계",
+    "url": "https://app.notion.com/p/3fc8fb174e9e8199a69ee3a70df3fc7d",
+    "summary": "RTU는 현장 접점, SCADA는 지역 실시간 감시제어, EMS는 광역 계통운영 판단을 담당하는 상·하위 연계 구조다.",
+    "content_markdown": "## 한줄정의\nRTU는 현장 접점, SCADA는 지역 실시간 감시제어, EMS는 광역 계통운영 판단을 담당하는 상·하위 연계 구조다.\n## 데이터 흐름\n- 상향: `현장설비 → RTU → SCADA → EMS`\n- 하향: `운영 판단 → SCADA 제어 요청 → RTU → 현장설비 → 되먹임`\nEMS가 모든 현장설비를 직접 제어한다고 이해하면 안 된다. 실제 권한과 경로는 운영규칙에 따라 달라진다.\n## 운영·점검\n- 현장 입력부터 EMS 연계값까지 끝단 간 비교\n- 포인트명·상태 의미·단위·스케일·시각·품질정보 정합성 확인\n- 명령 수신, RTU 처리, 출력, 되먹임과 이력 순차 검증\n- 통신·시각동기와 이중화·후비 절체시험\n- 신·증설과 DB 변경을 전 계층의 한 변경 건으로 관리\n## 장애 위치 구분\nRTU 내부는 정상이나 SCADA가 다르면 통신·전단처리·포인트 DB를, SCADA는 정상이나 EMS가 다르면 상위 연계와 DB 정합성을 확인한다.\n## 주의사항\n통신 정상과 데이터 정상은 다르다. 상세 토폴로지·주소·계정·회선정보는 기록하지 않는다.",
+    "category": ["RTU·SCADA·EMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81f88e78de6bb0a0a533", "https://app.notion.com/p/3fc8fb174e9e814d885cc1164a278617", "https://app.notion.com/p/3fc8fb174e9e8158abe2cd6e3572ba9c", "https://app.notion.com/p/3fc8fb174e9e817796dada9939b2ade4"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-8186-8f5c-f7a051252d12",
+    "title": "광전송선로 설계 원칙",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81868f5cf7a051252d12",
+    "summary": "광전송선로 설계는 통신 수요와 전력설비 조건을 바탕으로 케이블, 용량, 경로, 접속 방식과 시공조건을 정해 안전하고 확장 가능한 광선로를 구현하는 과정이다.",
+    "content_markdown": "## 한줄정의\n광전송선로 설계는 통신 수요와 전력설비 조건을 바탕으로 케이블, 용량, 경로, 접속 방식과 시공조건을 정해 안전하고 확장 가능한 광선로를 구현하는 과정이다.\n## 원칙\n- 현재 사용량과 장래수요·예비 코어를 고려한 용량\n- 가공·지중·구내 환경에 적합한 매체 선택\n- 구조물 안전, 이격, 횡단, 화재·침수·굴착 위험 반영\n- 불필요한 접속 최소화와 복구여장 확보\n- 길이·접속·커넥터 손실과 시스템 여유를 합한 광손실 예산\n- 허용장력·속도·곡률반경·측압에 맞는 공법\n## 흐름\n`수요 확인 → 현장조사 → 매체·경로·용량 선정 → 접속·성단 설계 → 광학·기계 검증 → 협의·승인 → 준공시험 환류`\n## 주의사항\n최단거리보다 안전·시공·유지보수·확장성과 생애주기 비용을 함께 본다. 세부 수치는 최신 케이블 규격으로 확정한다.",
+    "category": ["OPGW·광통신", "설계·공사·감리"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e810bb2dcca8c1c3e0123", "https://app.notion.com/p/3fc8fb174e9e81d2b6f7cf3ab0974a7a", "https://app.notion.com/p/3fc8fb174e9e81aca75ad0ef910df2c6"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81fd-bcd7-ec7edc653c5d",
+    "title": "전원·UPS·정류기·인버터 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81fdbcd7ec7edc653c5d",
+    "summary": "ICT 전원설비는 상용전원을 분배·변환하고 축전지와 UPS로 정전과 전압변동 중에도 AC 또는 DC 전원을 연속 공급하는 설비군이다.",
+    "content_markdown": "## 한줄정의\nICT 전원설비는 상용전원을 분배·변환하고 축전지와 UPS로 정전과 전압변동 중에도 AC 또는 DC 전원을 연속 공급하는 설비군이다.\n## 구성과 흐름\n- 분전반: 회로 분기·보호\n- 정류기·충전기: AC를 DC로 변환하고 축전지 충전\n- 축전지: 입력 상실 시 DC 버스 지지\n- 인버터: DC를 AC로 변환\n- UPS: 정류·충전·축전지·인버터·절체 기능으로 AC 부하 보호\n`용량 산정 → 구성·이중화 설계 → 설치·시험 → 정상운전 → 정전 시 축전지 공급 → 복전·재충전 → 점검·정비`\n## 점검\n입출력 전압·주파수·부하율·경보, 모듈 부하분담, 축전지 단자·부식·누액·팽창·온도·성능, 팬·필터·콘덴서, 차단기·접지·발열, 환기·냉각, 절체 후 부하 연속성을 확인한다.\n## 주의사항\n상용전원 차단 후에도 UPS와 축전지는 충전될 수 있다. 바이패스·절체·모듈교체는 역급전과 부하정전 위험을 통제한다.",
+    "category": ["전원·부대설비"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e8182a678c5925e7508b3", "https://app.notion.com/p/3fc8fb174e9e81c39439cadb23abce3f", "https://app.notion.com/p/3fc8fb174e9e81739dcfe55a1664d900", "https://app.notion.com/p/3fc8fb174e9e819d95c7c7b4fb0cccb8"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-8124-828e-e83aeb81d3cb",
+    "title": "RTU 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e8124828ee83aeb81d3cb",
+    "summary": "RTU는 현장 전력설비의 상태·계측값을 취득해 상위 시스템으로 보내고, 상위 명령을 현장 제어신호로 변환하는 원격소장치다.",
+    "content_markdown": "## 한줄정의\nRTU는 현장 전력설비의 상태·계측값을 취득해 상위 시스템으로 보내고, 상위 명령을 현장 제어신호로 변환하는 원격소장치다.\n## 구성과 데이터 흐름\n- 주처리부, 디지털 입출력, 계측부, 통신·시각동기, 전원·예비전원, 현장 접속부\n- `현장 접점·계측 → RTU 판독·변환 → SCADA 전송`\n- `SCADA 제어명령 → RTU 검증·선택·실행 → 현장 출력 → 되먹임 기록`\n## 운영·점검\n이중화 절체, 모듈 진단, 상·하위 통신, 시각동기, DB 백업, 전원·예비전원, 결선과 포인트 연동을 시험한다.\n## 장애 범주\n전원, 처리부, 입출력, 통신, DB·스케일 불일치, 현장 결선, 시각동기 장애.\n## 주의사항\n포인트 시험 전 원격제어 차단과 안전조치를 확인한다. 선택·실행과 인터록을 임의 우회하지 않는다.",
+    "category": ["RTU·SCADA·EMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81f88e78de6bb0a0a533", "https://app.notion.com/p/3fc8fb174e9e81f7a899cd1c8c22abf2", "https://app.notion.com/p/3fc8fb174e9e8167bdf3dde39c3b72cf", "https://app.notion.com/p/3fc8fb174e9e8158abe2cd6e3572ba9c"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81d7-ba20-e30fa47df7f6",
+    "title": "EMS 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81d7ba20e30fa47df7f6",
+    "summary": "전력계통 EMS는 SCADA 등에서 취득한 광역 운전정보를 바탕으로 전력수급과 계통운영의 감시·분석·의사결정을 지원하는 상위 운영시스템이다.",
+    "content_markdown": "## 한줄정의\n전력계통 EMS는 SCADA 등에서 취득한 광역 운전정보를 바탕으로 전력수급과 계통운영의 감시·분석·의사결정을 지원하는 상위 운영시스템이다.\n## 구성과 흐름\n`현장 RTU → 지역 SCADA → 승인된 연계 → EMS 통합·운영모델 → 광역 계통상황과 운영 판단`\n데이터 취득·연계, 실시간 처리, 운영 DB·모델, 화면·경보, 계통운영 응용, 자료교환, 이중화·후비 기반으로 구성된다.\n## 운영·점검\n- 포인트 누락·중복·값·상태·시각 정합성 확인\n- SCADA–EMS 연계 지연과 오류 점검\n- DB 변경 시 지역 SCADA부터 EMS까지 단계별 시험\n- 후비 전환 시 핵심 데이터와 기능 승계 확인\n## 장애 범주\n자료연계, 데이터 품질, DB·모델, 응용기능, 표시·경보, 기반설비, 후비, 절차 누락.\n## 주의사항\n통신장비 관리용 Element Management System과 구분한다. 세부 알고리즘과 기관별 운전기능은 자료 부족으로 일반화했다.",
+    "category": ["RTU·SCADA·EMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e8158abe2cd6e3572ba9c", "https://app.notion.com/p/3fc8fb174e9e817796dada9939b2ade4", "https://app.notion.com/p/3fc8fb174e9e81f88e78de6bb0a0a533", "https://app.notion.com/p/3fc8fb174e9e814d885cc1164a278617"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81f4-9a59-dc11a1ed8328",
+    "title": "TRS·D-TRS 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81f49a59dc11a1ed8328",
+    "summary": "TRS는 무선 채널을 공동 이용하는 주파수공용통신망이며 D-TRS는 디지털 구현으로 배전자동화 현장 단말과 관제 측 데이터 구간을 연결한다.",
+    "content_markdown": "## 한줄정의\nTRS는 무선 채널을 공동 이용하는 주파수공용통신망이며 D-TRS는 디지털 구현으로 배전자동화 현장 단말과 관제 측 데이터 구간을 연결한다.\n## 흐름\n`현장 RTU ↔ 데이터 단말(PAD) ↔ D-TRS 무선망·기지국 ↔ 교환·전송 ↔ 연동서버 ↔ DAS FEP`\nPAD는 전력 IT 프로토콜을 무선 서비스 형식에 맞게 변환·분절한다.\n## 운영·유지보수\n단말 등록·수신, 서버·RTU 통신이력, 재기동·전원상실, 기지국 송수신·전송·전원·공조·환경을 점검한다.\n## 성능·장애\nFEP 요청 대비 단말 응답 성공률을 본다. 장애는 미등록·수신불량, RTU 인터페이스, 연동서버, 기지국 모듈, 전원·공조·전송으로 구분한다.\n## 주의사항\nTRS와 D-TRS를 동일어로 무조건 치환하지 않는다. 주파수·식별번호·주소·접속정보는 제외한다.",
+    "category": ["TRS·DAS·ADMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e811a88d8d1ed029baada", "https://app.notion.com/p/3fc8fb174e9e81b0affcd631ff978933", "https://app.notion.com/p/3fc8fb174e9e816499eddc63568258cf", "https://app.notion.com/p/3fc8fb174e9e81cc8595caa2819bb240"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-8151-aab4-e54279bb64b1",
+    "title": "DAS 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e8151aab4e54279bb64b1",
+    "summary": "DAS는 배전설비를 집중 원격감시·제어하고 고장구간 검출과 계통전환을 지원하는 배전자동화시스템이다.",
+    "content_markdown": "## 한줄정의\nDAS는 배전설비를 집중 원격감시·제어하고 고장구간 검출과 계통전환을 지원하는 배전자동화시스템이다.\n## 흐름\n`개폐장치·보호기기 ↔ FRTU ↔ 통신설비 ↔ FEP ↔ DAS 서버·미들웨어 ↔ HMI`\n이력서버, 연계 게이트웨이, 통합 O&M, UPS·시각동기·공조가 보조한다.\n## 운영·유지보수\n주장치·소프트웨어·통신·부대설비, 알람·이력, 계통도와 DB 정합성을 점검한다. 고장보수는 원인분석 후 하드웨어 수리·교체 또는 소프트웨어 개선으로 수행한다.\n## 지표·장애\n가동률, 단말 통신성공률, 이벤트·계측 취득, 원격제어, DB 정합성을 본다. 장애는 서버·FEP·HMI·DB, FRTU, 통신, UPS·시각동기·공조, 연계로 구분한다.\n## 주의사항\nDAS는 서버뿐 아니라 현장설비·통신·소프트웨어·부대설비를 포함한다.",
+    "category": ["TRS·DAS·ADMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81fe8d9ef2f08fa99878", "https://app.notion.com/p/3fc8fb174e9e811a88d8d1ed029baada", "https://app.notion.com/p/3fc8fb174e9e813eb88bfe3d0d475f01"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81e0-9ea3-d0cfd11bde86",
+    "title": "정보통신공사 설계·시공·감리 흐름",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81e09ea3d0cfd11bde86",
+    "summary": "정보통신공사는 요구와 현장조건을 설계도서로 구체화하고 승인된 계획에 따라 시공한 뒤 감리·시험·검사·준공을 거쳐 인계하는 과정이다.",
+    "content_markdown": "## 한줄정의\n정보통신공사는 요구와 현장조건을 설계도서로 구체화하고 승인된 계획에 따라 시공한 뒤 감리·시험·검사·준공을 거쳐 인계하는 과정이다.\n## 업무 흐름\n`요구·현장조사 → 설계 → 착공계획·안전·품질 검토 → 자재검수·시공·감리 → 변경관리 → 시험·검사 → 준공도서·운영자료 인계`\n## 역할\n발주부서는 범위·성능·계약·검사를 총괄하고, 설계자는 도면·시방·물량·시험요구를 작성한다. 공사업자는 시공·자체검사·준공도서를 책임지고, 감리원은 자재·상세도·현장검측·필수 확인점과 부적합 시정을 확인한다.\n## 점검\n도면·시방·내역 일치, 자재 적합성, 은폐 전 배관·케이블·접지, 표시·접근성, 기능·성능시험, 준공도면과 실제 상태의 일치를 확인한다.\n## 주의사항\n감리가 시공자의 품질책임을 대신하지 않는다. 현장 편의로 임의 변경하지 않으며 법정 요건은 착수 시 최신 법령으로 재확인한다.",
+    "category": ["설계·공사·감리"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81e49ab4cde2833ba64a", "https://app.notion.com/p/3fc8fb174e9e81e6a262f2c9b56d2f22"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81b1-998a-df80fdaa6dad",
+    "title": "TRS·DAS·ADMS 연계",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81b1998adf80fdaa6dad",
+    "summary": "TRS·DAS·ADMS 연계는 D-TRS가 현장 RTU와 FEP 사이 통신을 제공하고 DAS 또는 ADMS가 데이터를 감시·제어·해석·복구에 쓰는 종단간 구조다.",
+    "content_markdown": "## 한줄정의\nTRS·DAS·ADMS 연계는 D-TRS가 현장 RTU와 FEP 사이 통신을 제공하고 DAS 또는 ADMS가 데이터를 감시·제어·해석·복구에 쓰는 종단간 구조다.\n## 흐름\n`개폐장치·FRTU → TRS 단말 → 무선망·기지국 → 연동서버 → FEP → DAS/ADMS 미들웨어·DB → HMI·응용`\n## 운영·점검\n단말·RTU, 무선 등록, 기지국·전송, 연동서버, FEP, 서버·DB, HMI 순으로 구간화한다. TRS 로그와 DAS/ADMS 이벤트 시각을 대조한다. 변경 전후 통신성공, 계측·이벤트, 원격제어, DB 정합성과 응용을 함께 확인한다.\n## 장애 구분\nRTU, TRS 단말·무선, 기지국·전송·연동서버, FEP, 서버·DB, HMI·응용, 전원·공조·시각동기.\n## 주의사항\n모든 환경에서 DAS 서버가 ADMS 서버로 직접 연결된다고 단정하지 않는다. 병행·전환 구조와 제어권한은 승인 구성자료로 확인한다.",
+    "category": ["TRS·DAS·ADMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e811a88d8d1ed029baada", "https://app.notion.com/p/3fc8fb174e9e81fe8d9ef2f08fa99878", "https://app.notion.com/p/3fc8fb174e9e813eb88bfe3d0d475f01", "https://app.notion.com/p/3fc8fb174e9e81cc8595caa2819bb240"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81e4-b813-f92174db53f6",
+    "title": "SCADA 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81e4b813f92174db53f6",
+    "summary": "SCADA는 분산된 전력설비 데이터를 원격 취득·시각화하고 운전자의 감시·제어를 지원하는 실시간 운영시스템이다.",
+    "content_markdown": "## 한줄정의\nSCADA는 분산된 전력설비 데이터를 원격 취득·시각화하고 운전자의 감시·제어를 지원하는 실시간 운영시스템이다.\n## 구성과 흐름\n- 전단처리·통신, 실시간 DB, 운영자 화면, 경보·이력·제어, 연계, 시각동기·전원, 후비체계\n- `RTU·현장장치 → 전단처리 → 실시간 DB → 화면·경보·이력`\n- 승인된 제어는 권한·대상·조건 확인 후 현장으로 전달되고 되먹임을 기록한다.\n## 운영·점검\n서버·전단처리·DB·화면·시각동기·네트워크·전원, 자원사용량과 로그, 주·예비 및 후비 절체를 점검한다. DB 변경은 백업·자체시험·현장시험·상위 연계시험과 함께 관리한다.\n## 장애 범주\n서버·소프트웨어, 통신, DB, 표시·경보, 제어, 전원·환경, 이중화·후비, 운영 오류.\n## 주의사항\n화면값만으로 현장을 단정하지 않는다. 제어는 권한·대상·되먹임을 재확인한다.",
+    "category": ["RTU·SCADA·EMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e814d885cc1164a278617", "https://app.notion.com/p/3fc8fb174e9e81c0adb9f26398188094", "https://app.notion.com/p/3fc8fb174e9e8158abe2cd6e3572ba9c", "https://app.notion.com/p/3fc8fb174e9e817796dada9939b2ade4"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81dd-8a42-ce26fc1aa5db",
+    "title": "자가 광통신망 시공·운영 흐름",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81dd8a42ce26fc1aa5db",
+    "summary": "자가 광통신망 시공·운영은 수요를 계획·설계로 구체화하고 포설·접속·시험·준공·인계 후 지속적으로 감시·유지보수하는 전 과정이다.",
+    "content_markdown": "## 한줄정의\n자가 광통신망 시공·운영은 수요를 계획·설계로 구체화하고 포설·접속·시험·준공·인계 후 지속적으로 감시·유지보수하는 전 과정이다.\n## 구성\n광케이블·관로·보호설비, 접속함체·융착부, 광분배장치·점퍼코드, OTDR·파워미터와 시험기록, 계획·감독·운영 조직.\n## 업무 흐름\n`계획 → 조사 → 설계·협의 → 검토·승인·계약 → 포설·접속·성단 → 시험·준공검사 → 인계·운영 → 고장·점검 결과 환류`\n## 운영·장애 대응\n기준 OTDR 파형과 손실 데이터를 보존한다. 장애 시 서비스 영향과 우회 가능성을 먼저 확인하고 이상구간을 좁힌 뒤 복구한다. 복구 후 양방향 OTDR, 광출력과 통신시험으로 정상화를 확인한다.\n## 주의사항\n허용장력·곡률반경·측압·비틀림 제한을 준수한다. 시공변경은 승인 절차를 거치며 준공도면은 실제 상태와 일치해야 한다.",
+    "category": ["OPGW·광통신", "설계·공사·감리"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81d2b6f7cf3ab0974a7a", "https://app.notion.com/p/3fc8fb174e9e810bb2dcca8c1c3e0123", "https://app.notion.com/p/3fc8fb174e9e8173a4f5ef29a4929d68"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-817c-96f5-df2c0ee2d156",
+    "title": "ADMS 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e817c96f5df2c0ee2d156",
+    "summary": "ADMS는 실시간 계통해석을 기반으로 배전계통 운영과 성능을 최적화하고 장애 상황에도 운영 지속을 지향하는 지능형 관제 플랫폼이다.",
+    "content_markdown": "## 한줄정의\nADMS는 실시간 계통해석을 기반으로 배전계통 운영과 성능을 최적화하고 장애 상황에도 운영 지속을 지향하는 지능형 관제 플랫폼이다.\n## 흐름\n`현장 개폐장치·FRTU → 통신 → FEP → 미들웨어·통합DB → HMI/GIS → 실시간·응용 소프트웨어`\n실시간 계통해석, 고장해석·복구, 분산형전원, 전압·보호협조, 계통 재구성, 정전관리를 지원한다.\n## 운영·유지보수\n플랫폼·응용·DB와 서버·OS·네트워크·통신·부대설비의 소관을 구분한다. 변경은 계획, 백업, 기능점검, 기록과 롤백을 포함한다. 후비 전환·원복 훈련을 정기 수행한다.\n## 장애 범주\n서버·클러스터, 네트워크·통신, HMI, FEP·DB·게이트웨이, 응용, 데이터 동기화, 현장 제어, 전원·공조.\n## 주의사항\n해석과 자동복구 제안은 입력 데이터와 모델 정합성에 의존한다. 실제 제어는 운전 규정과 권한을 우선한다.",
+    "category": ["TRS·DAS·ADMS"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e813eb88bfe3d0d475f01", "https://app.notion.com/p/3fc8fb174e9e816f8dead79b90162800", "https://app.notion.com/p/3fc8fb174e9e81fe8d9ef2f08fa99878"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-8183-85af-ccbdc4745b1b",
+    "title": "OPGW 점검과 긴급복구",
+    "url": "https://app.notion.com/p/3fc8fb174e9e818385afccbdc4745b1b",
+    "summary": "OPGW 점검과 긴급복구는 외관·광학 상태를 진단하고 장애 시 영향을 통제한 뒤 고장구간을 안전하게 복구하고 성능을 재검증하는 업무다.",
+    "content_markdown": "## 한줄정의\nOPGW 점검과 긴급복구는 외관·광학 상태를 진단하고 장애 시 영향을 통제한 뒤 고장구간을 안전하게 복구하고 성능을 재검증하는 업무다.\n## 흐름\n`점검계획 → 외관·드론점검 → 기준 파형 비교 → 영향분석·우회절체 → 양단 OTDR·현장 탐색 → 안전조정·복구 → 양방향 시험 → 기록·재발방지`\n## 점검대상\n소선·처짐, 클램프·댐퍼·점퍼부, 접속함체·인하케이블, 구간·접속 손실, 반사·굴곡·단선 징후.\n## 대응 원칙\n일상 금구류 정비와 OPGW·접속함체 교체를 구분한다. 복구 후 장애 전 기준값과 비교하고 우회절체 원복 뒤 상태를 관찰한다.\n## 주의사항\n감전·유도전압·추락·낙하 위험을 통제한다. 일반 가공지선처럼 단순 결속하지 않으며 승인 공법과 적합 자재를 사용한다. OTDR은 가능하면 양방향 결과를 종합한다.",
+    "category": ["OPGW·광통신", "안전·점검·복구"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81aca75ad0ef910df2c6", "https://app.notion.com/p/3fc8fb174e9e81d2b6f7cf3ab0974a7a", "https://app.notion.com/p/3fc8fb174e9e816eb4bbf5089795db08", "https://app.notion.com/p/3fc8fb174e9e8128bd21c096c119dd33"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-81e9-95b0-c073b177a3bc",
+    "title": "OPGW 개요",
+    "url": "https://app.notion.com/p/3fc8fb174e9e81e995b0c073b177a3bc",
+    "summary": "OPGW는 송전선로의 낙뢰차폐 기능과 광신호 전송 기능을 결합한 광섬유복합가공지선이다.",
+    "content_markdown": "## 한줄정의\nOPGW는 송전선로의 낙뢰차폐 기능과 광신호 전송 기능을 결합한 광섬유복합가공지선이다.\n## 역할과 구성\n전력계통 보호·감시·제어용 고신뢰 전송로를 제공한다. 광섬유 유니트, 금속 소선층, 클램프·댐퍼 등의 금구류, 접속함체·인하케이블·광분배장치로 구성된다.\n## 업무 흐름\n`수요·기존선로 조사 → 용량·기계·전기·광학 호환성 검토 → 설계 → 포설·접속·성단 → 광학시험·준공 → 운영·점검`\n## 점검\n소선·처짐·진동방지장치·클램프·접속함체 상태와 OTDR/광파워 측정값을 기준자료와 비교한다. 절단·교체 전 서비스 영향을 분석하고 우회경로를 우선 확보한다.\n## 주의사항\n충격, 압박, 비틀림, 과도한 장력과 작은 곡률반경을 피한다. 실제 장력·공법·휴전은 현행 기준과 작업계획을 따른다.",
+    "category": ["OPGW·광통신"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81aca75ad0ef910df2c6", "https://app.notion.com/p/3fc8fb174e9e810bb2dcca8c1c3e0123"]
+  },
+  {
+    "id": "3fc8fb17-4e9e-8181-a83a-f2c3ed1b75e6",
+    "title": "드론 기반 OPGW 점검",
+    "url": "https://app.notion.com/p/3fc8fb174e9e8181a83af2c3ed1b75e6",
+    "summary": "드론 기반 OPGW 점검은 철탑 오름을 줄이면서 케이블과 클램프·댐퍼·접지 부속품을 촬영하고 영상을 판독해 보수로 연결하는 방식이다.",
+    "content_markdown": "## 한줄정의\n드론 기반 OPGW 점검은 철탑 오름을 줄이면서 케이블과 클램프·댐퍼·접지 부속품을 촬영하고 영상을 판독해 보수로 연결하는 방식이다.\n## 흐름\n`대상 선정 → 비행·촬영 계획 → 전체·근접 촬영 → 현장 품질확인 → 영상 판독 → 결과 등록·공유 → 보수·재점검`\n## 점검항목\n클램프 편위·체결, 로드류 풀림·손상, 댐퍼 누락·변형, OPGW 소선 손상·부풀림·그을림·부식, 비정상 처짐·접촉, 접지선 체결·단선, 외부 요인과 촬영 누락.\n## 주의사항\n판독 불가 영상을 ‘이상 없음’으로 처리하지 않는다. AI 판독은 보조수단이며 담당자가 최종 판단한다. 타 부서 영상을 재사용할 때 촬영각도·해상도를 확인하고 최신 항공·현장·개인정보 규정을 따른다.",
+    "category": ["OPGW·광통신", "안전·점검·복구"],
+    "source_relations": ["https://app.notion.com/p/3fc8fb174e9e81aca75ad0ef910df2c6", "https://app.notion.com/p/3fc8fb174e9e816eb4bbf5089795db08", "https://app.notion.com/p/3fc8fb174e9e81a683fae2ab98de5f16"]
+  }
+]
