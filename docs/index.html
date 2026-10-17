@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./assets/styles.css?v=2">
   <link rel="stylesheet" href="./assets/viewer.css?v=2">
   <link rel="stylesheet" href="./assets/readability.css?v=4">
+  <link rel="stylesheet" href="./assets/graph.css?v=1">
 </head>
 <body>
   <section id="loginView" class="login-shell">
@@ -41,6 +42,7 @@
       <a class="brand" href="#top"><span class="brand-bolt" aria-hidden="true">ϟ</span><span>전력 ICT 지식백과</span></a>
       </div>
       <div class="top-actions">
+        <button id="graphButton" class="ghost-btn graph-launch" type="button" aria-haspopup="dialog" aria-controls="graphDialog">◉ 그래프</button>
         <span id="syncState" class="sync-state"></span>
         <button id="logoutBtn" class="ghost-btn">잠금</button>
       </div>
@@ -99,6 +101,7 @@
   <dialog id="categoryMenu" class="category-menu" aria-labelledby="menuTitle" aria-describedby="menuHelp">
     <header class="menu-header"><div><p class="eyebrow">POWER ICT LIBRARY</p><h2 id="menuTitle">문서 분류</h2></div><button id="closeMenu" class="ghost-btn" type="button" aria-label="분류 메뉴 닫기" autofocus>×</button></header>
     <p id="menuHelp">분류를 선택하면 해당 문서 목록으로 이동합니다.</p>
+    <button id="menuGraph" class="ghost-btn" type="button">◉ 문서 연결 그래프</button>
     <nav id="categoryNavigation" aria-label="분류별 문서"></nav>
     <p class="menu-note">숫자는 분류별 전체 문서 수입니다. 검색어와 파일 형식 필터는 유지됩니다.</p>
   </dialog>
@@ -106,6 +109,7 @@
     <button id="closeDialog" class="dialog-close" aria-label="백과 닫기">×</button>
     <div id="dialogCategory" class="dialog-category"></div><h2 id="dialogTitle"></h2>
     <p id="dialogSummary" class="dialog-summary"></p><article id="dialogContent" class="markdown-body"></article>
+    <button id="topicGraph" class="ghost-btn" type="button">연결 그래프</button>
     <a id="dialogNotionLink" class="dialog-link" target="_blank" rel="noopener noreferrer">Notion 원문 ↗</a>
   </dialog>
   <dialog id="documentDialog" class="document-dialog" aria-labelledby="viewerTitle">
@@ -115,6 +119,7 @@
     <div class="viewer-toolbar">
       <span id="viewerEngine"></span>
       <a id="viewerNotionLink" class="dialog-link" target="_blank" rel="noopener noreferrer">Notion 원본 ↗</a>
+      <button id="viewerGraph" type="button">연결 그래프</button>
       <button id="viewerDownload" type="button" hidden>파일 저장</button>
       <button id="viewerTextMode" type="button" aria-pressed="false">텍스트 보기</button>
     </div>
@@ -133,7 +138,30 @@
     <button id="retryLoad" type="button" hidden>다시 불러오기</button>
     <article id="viewerContent" class="viewer-content" tabindex="0" aria-label="문서 내용"></article>
   </dialog>
+  <dialog id="graphDialog" class="graph-dialog" aria-labelledby="graphTitle" aria-describedby="graphHelp">
+    <div class="graph-shell">
+      <header class="graph-header"><div><h2 id="graphTitle">문서 연결 그래프</h2><p id="graphStatus" role="status" aria-live="polite"></p></div><button id="closeGraph" type="button" aria-label="그래프 닫기" autofocus>닫기 ×</button></header>
+      <div class="graph-toolbar">
+        <label class="graph-search">찾기 <input id="graphSearch" type="search" aria-label="그래프 문서 검색" placeholder="제목·경로·본문으로 찾기"></label>
+        <label>분류 <select id="graphCategory" aria-label="그래프 분류"></select></label>
+        <button id="graphAll" type="button">전체 그래프</button>
+        <label><input id="graphLocal" type="checkbox">주변만 보기</label>
+        <label>연결 범위 <select id="graphDepth" aria-label="그래프 연결 범위"><option value="1">1단계</option><option value="2">2단계</option></select></label>
+      </div>
+      <fieldset class="graph-relations"><legend>연결 종류</legend>
+        <label><input type="checkbox" data-edge-kind="notion" checked>Notion 연결</label><label><input type="checkbox" data-edge-kind="reference" checked>문서 내 참조</label><label><input type="checkbox" data-edge-kind="duplicate" checked>같은 원본</label><label><input type="checkbox" data-edge-kind="category" checked>분류</label><label><input type="checkbox" data-edge-kind="folder">폴더</label><label><input type="checkbox" data-edge-kind="similarity" checked>본문 유사도 · 추정</label>
+        <small>분류·폴더는 중심점으로 묶습니다. 유사도는 내용상 연관성을 보장하지 않습니다.</small>
+      </fieldset>
+      <div class="graph-body"><div id="graphStage" class="graph-stage">
+        <canvas id="graphCanvas" tabindex="0" role="img" aria-label="문서 관계 그래프. 오른쪽 문서 목록으로도 모든 연결을 탐색할 수 있습니다."></canvas>
+        <p id="graphEmpty" class="graph-empty"></p><div class="graph-legend"><span>● 원본</span><span>◆ 백과</span><span>◉ 분류·폴더</span></div>
+        <div class="graph-canvas-tools"><button id="graphZoomIn" type="button" aria-label="그래프 확대">＋</button><button id="graphZoomOut" type="button" aria-label="그래프 축소">−</button><button id="graphFit" type="button">화면에 맞춤</button></div>
+      </div><aside id="graphSidebar" class="graph-sidebar" aria-label="선택한 문서와 연결 목록"></aside></div>
+      <p id="graphHelp" class="graph-help">드래그로 이동 · 휠/두 손가락으로 확대 · 점을 선택해 연결 확인 · 문서를 두 번 눌러 열기. 키보드: 방향키 이동, +/− 확대, 0 전체 맞춤. 본문이 없는 파일도 분류·폴더로 탐색할 수 있습니다.</p>
+    </div>
+  </dialog>
+  <script src="./assets/graph-model.js?v=1" defer></script>
   <script src="./assets/search.js?v=2" defer></script>
-  <script type="module" src="./assets/app.js?v=5"></script>
+  <script type="module" src="./assets/app.js?v=6"></script>
 </body>
 </html>

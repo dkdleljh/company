@@ -1,3 +1,4 @@
+import { GraphView } from './graph-ui.js?v=1';
 import { Vault } from './vault.js';
 import { matchParts, parseSvg, svgStrings, pdfBoxes, svgBoxes } from './viewer-search.js';
 const $=s=>document.querySelector(s);
@@ -6,6 +7,12 @@ const PAGE_SIZE=40;
 let topics=[],documents=[],index=null,category='전체',format='전체',query='',visible=PAGE_SIZE;
 let viewer=null,viewerSequence=0,renderSequence=0,renderTask=null,pdfLoading=null;
 let pdfLibrary=null,objectURLs=[];
+let activeTopic=null;
+const graph=new GraphView({onOpen:node=>{if(node.kind==='document'){const d=documents.find(d=>d.relative_path===node.ref);if(d)openDocument(d);}else {const t=topics.find(t=>t.id===node.ref);if(t)openTopic(t);}},search:value=>new Set([...window.CompanySearch.searchDocuments(index,value).map(window.CompanyGraph.docId),...window.CompanySearch.searchTopics(index,value).map(window.CompanyGraph.topicId)])});
+$('#graphButton').addEventListener('click',()=>graph.open());
+$('#menuGraph').addEventListener('click',()=>{$('#categoryMenu').close();graph.open();});
+$('#viewerGraph').addEventListener('click',()=>{if(viewer){const id=window.CompanyGraph.docId(viewer.doc);closeViewer();graph.open(id);}});
+$('#topicGraph').addEventListener('click',()=>{if(activeTopic){const id=window.CompanyGraph.topicId(activeTopic);$('#topicDialog').close();graph.open(id);}});
 const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeLink=value=>{try{const url=new URL(value);return url.protocol==='https:'&& /(^|\.)notion\.(so|com)$/.test(url.hostname)?url.href:'#';}catch{return '#';}};
 const normalize=v=>window.CompanySearch.normalize(v);
@@ -38,12 +45,13 @@ $('#loginForm').addEventListener('submit',async event=>{
     $('#viewableCount').textContent=documents.filter(d=>d.viewer?.kind!=='unsupported').length;
     const stamp=new Date(data.generated_at).toLocaleDateString('ko-KR');
     $('#syncState').textContent=`${data.sync?'자동 동기화 · 자료 갱신':'사이트 갱신'} ${stamp}`;$('#snapshotInfo').textContent=data.sync?`로컬 → Notion → 웹 · ${Math.round(data.sync.interval_seconds/60)}분마다 변경 확인 · 자료 반영 ${new Date(data.generated_at).toLocaleString('ko-KR')}`:`Notion 저장본 · 사이트 갱신 ${stamp}`;
-    createFilters();renderAll();$('#loginView').hidden=true;$('#appView').hidden=false;
+    graph.setData(documents,topics,index);createFilters();renderAll();$('#loginView').hidden=true;$('#appView').hidden=false;
     $('#loginError').textContent='';$('#searchInput').focus();
   } catch(error){vault.lock();$('#loginError').textContent=error.message;$('#password').select();}
   finally{button.disabled=false;}
 });
 function lockPortal(focus=true){
+  graph.clearData();activeTopic=null;
   closeViewer();$('#topicDialog').close();$('#categoryMenu').close();$('#menuButton').setAttribute('aria-expanded','false');$('#categoryNavigation').replaceChildren();vault.lock();topics=[];documents=[];index=null;
   $('#topicGrid').replaceChildren();$('#documentRows').replaceChildren();$('#dialogContent').replaceChildren();
   for(const id of ['viewerTitle','viewerPath','viewerEngine','viewerNote','dialogTitle','dialogSummary','dialogCategory','searchStatus','findStatus'])$('#'+id).textContent='';
@@ -108,10 +116,11 @@ function renderAll(){
   $('#loadMoreBtn').hidden=visible>=found.length;$('#loadMoreBtn').textContent=`더 보기 (${Math.min(visible,found.length)} / ${found.length})`;
   $('#topicGrid').innerHTML=ts.map((t,i)=>`<article class="topic-card" role="button" tabindex="0" data-topic-id="${escapeHtml(t.id)}"><span class="topic-index">${String(i+1).padStart(2,'0')}</span><h4>${escapeHtml(t.title)}</h4><p>${escapeHtml(t.summary)}</p><div class="topic-tags">${categories(t).map(c=>`<span>${escapeHtml(c)}</span>`).join('')}</div></article>`).join('')||'<p class="empty-state">일치하는 백과 문서가 없습니다.</p>';
 }
-$('#topicGrid').addEventListener('click',e=>{const id=e.target.closest('[data-topic-id]')?.dataset.topicId;const t=topics.find(t=>t.id===id);if(!t)return;
-  $('#dialogCategory').textContent=categories(t).join(' · ');$('#dialogTitle').textContent=t.title;$('#dialogSummary').textContent=t.summary;
-  $('#dialogContent').innerHTML=topicMarkup(t.content_markdown);$('#dialogNotionLink').href=safeLink(t.url);$('#topicDialog').showModal();
-});
+function openTopic(t){
+  activeTopic=t;$('#dialogCategory').textContent=categories(t).join(' · ');$('#dialogTitle').textContent=t.title;$('#dialogSummary').textContent=t.summary;
+  $('#dialogContent').innerHTML=topicMarkup(t.content_markdown);$('#dialogNotionLink').href=safeLink(t.url);if(!$('#topicDialog').open)$('#topicDialog').showModal();
+}
+$('#topicGrid').addEventListener('click',e=>{const id=e.target.closest('[data-topic-id]')?.dataset.topicId;const t=topics.find(t=>t.id===id);if(t)openTopic(t);});
 $('#topicGrid').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const card=e.target.closest('[data-topic-id]');if(card){e.preventDefault();card.click();}}});
 $('#closeDialog').addEventListener('click',()=>$('#topicDialog').close());
 function backdrop(event){if(event.target!==event.currentTarget)return;const r=event.currentTarget.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)event.currentTarget.close();}

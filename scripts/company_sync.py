@@ -180,7 +180,7 @@ async def refresh_topics(n,topics,source=None):
         url=row['url'];pid=identity(url);topic=previous.get(pid,{})
         value=await n.fetch(url);props=page_properties(value);copy=dict(topic)
         copy.update(id=topic.get('id',pid),url=url,content_markdown=page_body(value),title=plain(props.get('문서명') or value.get('title') or topic.get('title','')))
-        for source_key,target in [('분야','category'),('근거 문서','source_relations')]:
+        for source_key,target in [('분야','category'),('근거 문서','source_relations'),('관련 문서','related_relations')]:
             if source_key in props:
                 field=props[source_key]
                 if isinstance(field,str):

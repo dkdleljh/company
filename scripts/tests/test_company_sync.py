@@ -76,9 +76,9 @@ class NotionSyncTests(unittest.IsolatedAsyncioTestCase):
  async def test_topic_inventory_follows_current_notion_pages_and_metadata(self):
   class FakeNotion:
    async def rows(self,*args):return [{'url':'https://www.notion.so/new'}]
-   async def fetch(self,*args):return {'text':'<properties>'+json.dumps({'문서명':'New topic','분야':['ICT 공통'],'근거 문서':['https://www.notion.so/source']})+'</properties><content>New body</content>'}
+   async def fetch(self,*args):return {'text':'<properties>'+json.dumps({'문서명':'New topic','분야':['ICT 공통'],'근거 문서':['https://www.notion.so/source'],'관련 문서':'["https://www.notion.so/related"]'})+'</properties><content>New body</content>'}
   topics=await refresh_topics(FakeNotion(),[{'id':'old','url':'https://www.notion.so/old'}],'collection://test')
-  self.assertEqual(len(topics),1);self.assertEqual(topics[0]['id'],'new');self.assertEqual(topics[0]['content_markdown'],'New body');self.assertEqual(topics[0]['category'],['ICT 공통'])
+  self.assertEqual(len(topics),1);self.assertEqual(topics[0]['id'],'new');self.assertEqual(topics[0]['content_markdown'],'New body');self.assertEqual(topics[0]['category'],['ICT 공통']);self.assertEqual(topics[0]['related_relations'],['https://www.notion.so/related'])
 
 class SyncSafetyTests(unittest.IsolatedAsyncioTestCase):
  async def test_first_observation_waits_without_remote_mutations(self):
