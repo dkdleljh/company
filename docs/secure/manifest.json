@@ -5,22 +5,22 @@
   "salt": "cpLDqmxWuLAlFyQvdho4Sg==",
   "wrapped_key": "fu6zGkobYNHXdnLDnpriQMFMmLuF5z556EGelbhkvNqjPTgg1T4Ll+G9r3zltSjZNBVqvh7f8dixFVhq",
   "index": {
-    "url": "./secure/objects/b4420928585dc7e0b9024a7471f8ada4c4a9bd4c41293385b3e09ce150e65799.bin",
-    "id": "b4420928585dc7e0b9024a7471f8ada4c4a9bd4c41293385b3e09ce150e65799",
-    "sha256": "ca6764e13a91b221de3d3a47250092924feb9cc29c143c2e00bdaa0240be9d64",
-    "bytes": 19076031,
-    "decoded_bytes": 107742582,
+    "url": "./secure/objects/f2ed620c6431164d789bb8560d6ac7944ea14fab8c1d802ac3a9ec810e1809c1.bin",
+    "id": "f2ed620c6431164d789bb8560d6ac7944ea14fab8c1d802ac3a9ec810e1809c1",
+    "sha256": "35dc83f71ae366fefb77abcde271dfe717bcaf9e6bb032e69480d399bc2b53f0",
+    "bytes": 19094927,
+    "decoded_bytes": 107796374,
     "mime": "application/json"
   },
-  "generated_at": "2026-10-17T12:54:47.418Z",
+  "generated_at": "2026-10-20T04:43:43.451Z",
   "counts": {
-    "documents": 416,
+    "documents": 417,
     "topics": 20,
     "text": 15,
-    "pdf": 299,
+    "pdf": 300,
     "svg-pages": 59,
     "image": 25,
     "unsupported": 18
   },
-  "asset_base": "https://raw.githubusercontent.com/dkdleljh/company/0262df31cb2e8af8d71f536aa04f42bd82ebce8c/objects/"
+  "asset_base": "https://raw.githubusercontent.com/dkdleljh/company/81c8ae944f9da2063c97063c2313e1ca8c1b04d4/objects/"
 }
