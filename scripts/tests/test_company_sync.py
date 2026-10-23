@@ -38,6 +38,14 @@ class SyncTests(unittest.TestCase):
   path="98_정리기록/_(문서)_검증-v1.0.txt"
   self.assertEqual(plain(markdown_literal(path)),path)
   self.assertEqual(plain("`"+path+"`"),path)
+ def test_notion_html_code_paths_match_existing_page_identity(self):
+  for path in ['98_기록/2026-01-01_안내/00_설명.md',
+               '95_보안자료/03_지역/01_통신/설비_현황/장비목록.zip']:
+   self.assertEqual(plain('<code>'+path+'</code>'),path)
+ def test_notion_code_entities_decode_without_changing_literal_filenames(self):
+  self.assertEqual(plain('<code>A&amp;B/문서&lt;초안&gt;.txt</code>'),'A&B/문서<초안>.txt')
+  self.assertEqual(plain('A&amp;B.txt'),'A&amp;B.txt')
+  self.assertEqual(plain('folder/<code>literal</code>.txt'),'folder/<code>literal</code>.txt')
  def test_rename_does_not_leave_old_path_owning_the_same_page(self):
   entries={'old.txt':{'page_id':'page','sha256':'same','status':'active'}}
   apply_renames(entries,{'new.txt':'old.txt'})

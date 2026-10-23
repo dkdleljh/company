@@ -1,5 +1,5 @@
 """Headless Notion MCP client using the existing Hermes OAuth token store."""
-import asyncio,json,re,sys,time,uuid,string
+import asyncio,html,json,re,sys,time,uuid,string
 from pathlib import Path
 
 class NotionError(RuntimeError):pass
@@ -23,6 +23,10 @@ def page_body(value):
     return m.group(1) if m else ''
 def plain(value):
     text=str(value or '')
+    # MCP may serialize an inline-code property as HTML rather than backticks.
+    # Decode only a complete wrapper; literal filenames retain their entities.
+    code=re.fullmatch(r'<code>([^<]*)</code>',text,re.S)
+    if code:text=html.unescape(code.group(1))
     if text.startswith('`') and text.endswith('`'):text=text[1:-1]
     for _ in range(5):
         clean=re.sub(r'\[([^\]]+)\]\([^)]+\)',r'\1',text)
